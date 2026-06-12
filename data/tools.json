@@ -1,0 +1,1432 @@
+[
+ {
+  "name": "Langfuse",
+  "url": "https://langfuse.com",
+  "github": "https://github.com/langfuse/langfuse",
+  "category": "observability",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "Free Hobby tier (50k units/mo); Core $29/mo, Pro $199/mo, unlimited users on paid tiers; MIT core fully self-hostable",
+  "frameworks": [
+   "langchain",
+   "openai-sdk",
+   "llamaindex",
+   "litellm",
+   "opentelemetry",
+   "vercel-ai",
+   "haystack"
+  ],
+  "funding_note": "YC W23; $4M seed (Lightspeed, La Famiglia)",
+  "one_liner": "Open-source (MIT) LLM engineering platform combining tracing, prompt management, evals and datasets, widely used as the default self-hosted observability stack.",
+  "evidence_url": "https://langfuse.com/pricing"
+ },
+ {
+  "name": "LangSmith",
+  "url": "https://smith.langchain.com",
+  "github": null,
+  "category": "observability",
+  "open_source": false,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "Free developer seat; Plus ~$39/seat/mo plus usage-based trace billing; self-hosting is enterprise-only",
+  "frameworks": [
+   "langchain",
+   "langgraph",
+   "openai-sdk",
+   "opentelemetry"
+  ],
+  "funding_note": "LangChain raised $125M Series B (2025) at ~$1.25B valuation",
+  "one_liner": "Closed-source tracing, evals and monitoring platform from the LangChain team, deepest integration with LangChain/LangGraph but usable via OTel from any stack.",
+  "evidence_url": "https://www.langchain.com/pricing"
+ },
+ {
+  "name": "Braintrust",
+  "url": "https://www.braintrust.dev",
+  "github": null,
+  "category": "evals",
+  "open_source": false,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "Free developer tier; usage-based paid plans; enterprise hybrid/self-hosted data plane",
+  "frameworks": [
+   "openai-sdk",
+   "anthropic",
+   "langchain",
+   "vercel-ai"
+  ],
+  "funding_note": "$36M Series A (a16z, 2024) + $80M Series B (ICONIQ, Feb 2026, ~$800M valuation)",
+  "one_liner": "Eval-first AI engineering platform with logging, datasets, an LLM proxy and a purpose-built trace database (Brainstore), aimed at production regression-catching.",
+  "evidence_url": "https://www.braintrust.dev/pricing"
+ },
+ {
+  "name": "Arize Phoenix",
+  "url": "https://phoenix.arize.com",
+  "github": "https://github.com/Arize-ai/phoenix",
+  "category": "observability",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "free",
+  "pricing_note": "Fully free OSS (Elastic License v2); hosted Phoenix Cloud has a free tier",
+  "frameworks": [
+   "openai-sdk",
+   "langchain",
+   "llamaindex",
+   "dspy",
+   "opentelemetry",
+   "smolagents"
+  ],
+  "funding_note": "Backed by Arize AI ($70M Series C, Feb 2025)",
+  "one_liner": "Open-source, OpenTelemetry-based tracing and evaluation library that runs locally or self-hosted, serving as the OSS on-ramp to Arize's enterprise platform.",
+  "evidence_url": "https://phoenix.arize.com"
+ },
+ {
+  "name": "Arize AX",
+  "url": "https://arize.com",
+  "github": null,
+  "category": "observability",
+  "open_source": false,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "Free tier; Pro and enterprise tiers with custom pricing",
+  "frameworks": [
+   "openai-sdk",
+   "langchain",
+   "llamaindex",
+   "opentelemetry"
+  ],
+  "funding_note": "$70M Series C (Adams Street, M12, Datadog; Feb 2025), ~$131M total",
+  "one_liner": "Enterprise AI observability and evaluation platform extending Arize's ML-monitoring heritage to LLM and agent workloads at scale.",
+  "evidence_url": "https://arize.com/pricing/"
+ },
+ {
+  "name": "Helicone",
+  "url": "https://www.helicone.ai",
+  "github": "https://github.com/Helicone/helicone",
+  "category": "observability",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "Free tier + per-seat paid plans; reported in maintenance mode after Mintlify acquisition (Mar 2026)",
+  "frameworks": [
+   "openai-sdk",
+   "anthropic",
+   "langchain",
+   "litellm",
+   "vercel-ai"
+  ],
+  "funding_note": "YC W23; acquired by Mintlify (Mar 2026)",
+  "one_liner": "Proxy/gateway-based LLM logging with one-line setup, unified cost and latency visibility across providers; now under Mintlify ownership.",
+  "evidence_url": "https://www.helicone.ai/pricing"
+ },
+ {
+  "name": "W&B Weave",
+  "url": "https://wandb.ai/site/weave",
+  "github": "https://github.com/wandb/weave",
+  "category": "observability",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "Free tier on W&B cloud; usage-based ingestion pricing; enterprise self-hosting via W&B Server",
+  "frameworks": [
+   "openai-sdk",
+   "anthropic",
+   "langchain",
+   "llamaindex",
+   "mistral"
+  ],
+  "funding_note": "Weights & Biases acquired by CoreWeave (~$1.7B, 2025)",
+  "one_liner": "LLM tracing and evaluation toolkit from Weights & Biases, integrated with the broader W&B experiment-tracking ecosystem.",
+  "evidence_url": "https://wandb.ai/site/pricing/"
+ },
+ {
+  "name": "Galileo",
+  "url": "https://galileo.ai",
+  "github": null,
+  "category": "evals",
+  "open_source": false,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "Free tier added in 2025; enterprise pricing custom",
+  "frameworks": [
+   "langchain",
+   "openai-sdk",
+   "llamaindex",
+   "opentelemetry"
+  ],
+  "funding_note": "$45M Series B (Scale Venture Partners, 2024), $68M total",
+  "one_liner": "Evaluation and guardrails platform whose in-house Luna-2 small judge models target low-cost, low-latency scoring of agentic workloads.",
+  "evidence_url": "https://galileo.ai/pricing"
+ },
+ {
+  "name": "Confident AI (DeepEval)",
+  "url": "https://www.confident-ai.com",
+  "github": "https://github.com/confident-ai/deepeval",
+  "category": "evals",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "DeepEval framework free OSS (Apache-2.0); Confident AI cloud has free + paid tiers",
+  "frameworks": [
+   "openai-sdk",
+   "langchain",
+   "llamaindex",
+   "anthropic"
+  ],
+  "funding_note": "YC W25; $2.2M seed",
+  "one_liner": "Pytest-style open-source LLM evaluation framework (DeepEval) with a hosted platform for benchmarking, regression testing and red-teaming (DeepTeam).",
+  "evidence_url": "https://www.confident-ai.com/pricing"
+ },
+ {
+  "name": "Maxim AI",
+  "url": "https://www.getmaxim.ai",
+  "github": null,
+  "category": "evals",
+  "open_source": false,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "Free tier; paid plans + enterprise in-VPC deployment",
+  "frameworks": [
+   "openai-sdk",
+   "langchain",
+   "crewai",
+   "vercel-ai",
+   "litellm"
+  ],
+  "funding_note": "$3M seed (Elevation Capital)",
+  "one_liner": "End-to-end agent simulation, evaluation and observability platform pitched at cross-functional product and engineering teams.",
+  "evidence_url": "https://www.getmaxim.ai/pricing"
+ },
+ {
+  "name": "TruLens",
+  "url": "https://www.trulens.org",
+  "github": "https://github.com/truera/trulens",
+  "category": "evals",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "free",
+  "pricing_note": "Free OSS (MIT); maintained under Snowflake after TruEra acquisition",
+  "frameworks": [
+   "langchain",
+   "llamaindex",
+   "openai-sdk"
+  ],
+  "funding_note": "TruEra acquired by Snowflake (2024)",
+  "one_liner": "Open-source library for feedback-function-based evaluation and tracing of RAG and agent apps, now stewarded by Snowflake.",
+  "evidence_url": "https://github.com/truera/trulens"
+ },
+ {
+  "name": "Traceloop (OpenLLMetry)",
+  "url": "https://www.traceloop.com",
+  "github": "https://github.com/traceloop/openllmetry",
+  "category": "observability",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "OpenLLMetry SDK free (Apache-2.0); Traceloop cloud has free + paid tiers",
+  "frameworks": [
+   "opentelemetry",
+   "openai-sdk",
+   "anthropic",
+   "langchain",
+   "llamaindex"
+  ],
+  "funding_note": "YC W23",
+  "one_liner": "Vendor-neutral OpenTelemetry instrumentation for LLM apps (OpenLLMetry) that ships traces to any OTel backend, plus a hosted monitoring platform.",
+  "evidence_url": "https://www.traceloop.com/pricing"
+ },
+ {
+  "name": "Lunary",
+  "url": "https://lunary.ai",
+  "github": "https://github.com/lunary-ai/lunary",
+  "category": "observability",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "Free tier; per-seat paid plans; Apache-2.0 self-hosting",
+  "frameworks": [
+   "langchain",
+   "openai-sdk",
+   "anthropic",
+   "litellm"
+  ],
+  "funding_note": "",
+  "one_liner": "Lightweight open-source LLM observability with tracing, analytics, prompt templates and PII masking, formerly known as LLMonitor.",
+  "evidence_url": "https://lunary.ai/pricing"
+ },
+ {
+  "name": "Portkey",
+  "url": "https://portkey.ai",
+  "github": "https://github.com/Portkey-AI/gateway",
+  "category": "observability",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "OSS gateway free (MIT); cloud free tier + paid plans; enterprise via Palo Alto Networks",
+  "frameworks": [
+   "openai-sdk",
+   "anthropic",
+   "langchain",
+   "llamaindex",
+   "vercel-ai",
+   "litellm"
+  ],
+  "funding_note": "$15M Series A (Elevation, Feb 2026); acquired by Palo Alto Networks (May 2026)",
+  "one_liner": "AI gateway routing 1,600+ models with built-in logging, cost tracking, caching and guardrails; observability comes as a side effect of the proxy layer.",
+  "evidence_url": "https://portkey.ai/pricing"
+ },
+ {
+  "name": "PromptLayer",
+  "url": "https://www.promptlayer.com",
+  "github": null,
+  "category": "prompt-mgmt",
+  "open_source": false,
+  "self_hostable": false,
+  "pricing_model": "freemium",
+  "pricing_note": "Free tier + per-seat paid plans",
+  "frameworks": [
+   "openai-sdk",
+   "anthropic",
+   "langchain"
+  ],
+  "funding_note": "",
+  "one_liner": "Prompt CMS with visual versioning, release labels and A/B testing, positioned so non-engineers can edit and deploy prompts independently.",
+  "evidence_url": "https://www.promptlayer.com/pricing"
+ },
+ {
+  "name": "Humanloop",
+  "url": "https://humanloop.com",
+  "github": null,
+  "category": "prompt-mgmt",
+  "open_source": false,
+  "self_hostable": false,
+  "pricing_model": "enterprise",
+  "pricing_note": "Service shut down Sept 2025 after Anthropic acqui-hire; listed for migration reference only",
+  "frameworks": [
+   "openai-sdk",
+   "anthropic"
+  ],
+  "funding_note": "Team acquired by Anthropic (2025); previously YC S20",
+  "one_liner": "Former prompt management and evaluation platform; shut down September 2025 with official migration paths to W&B, PromptLayer and Agenta.",
+  "evidence_url": "https://blog.promptlayer.com/humanloop-shutdown-guide-to-migrating-your-prompts-and-evals-to-promptlayer/"
+ },
+ {
+  "name": "Langtrace",
+  "url": "https://www.langtrace.ai",
+  "github": "https://github.com/Scale3-Labs/langtrace",
+  "category": "observability",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "OSS self-host free; managed cloud with free + paid tiers",
+  "frameworks": [
+   "opentelemetry",
+   "openai-sdk",
+   "anthropic",
+   "langchain",
+   "crewai"
+  ],
+  "funding_note": "Built by Scale3 Labs",
+  "one_liner": "OpenTelemetry-native open-source tracing and metrics for LLM apps and agent frameworks, with a managed cloud option.",
+  "evidence_url": "https://www.langtrace.ai"
+ },
+ {
+  "name": "Opik (Comet)",
+  "url": "https://www.comet.com/site/products/opik/",
+  "github": "https://github.com/comet-ml/opik",
+  "category": "observability",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "Apache-2.0 self-host free; Comet cloud free tier + paid plans",
+  "frameworks": [
+   "openai-sdk",
+   "langchain",
+   "llamaindex",
+   "litellm",
+   "dspy",
+   "haystack"
+  ],
+  "funding_note": "Backed by Comet ML ($50M Series B, 2021)",
+  "one_liner": "Open-source LLM evaluation and tracing platform from Comet, combining trace logging, eval metrics and CI-friendly test suites.",
+  "evidence_url": "https://www.comet.com/site/pricing/"
+ },
+ {
+  "name": "AgentOps",
+  "url": "https://www.agentops.ai",
+  "github": "https://github.com/AgentOps-AI/agentops",
+  "category": "debugging",
+  "open_source": true,
+  "self_hostable": false,
+  "pricing_model": "freemium",
+  "pricing_note": "Free tier + paid plans; SDK is MIT OSS",
+  "frameworks": [
+   "crewai",
+   "autogen",
+   "openai-sdk",
+   "langchain",
+   "camel"
+  ],
+  "funding_note": "$2.6M pre-seed",
+  "one_liner": "Session-replay style observability for AI agents with time-travel debugging, cost tracking and first-class integrations into agent frameworks like CrewAI and AutoGen.",
+  "evidence_url": "https://www.agentops.ai"
+ },
+ {
+  "name": "LiteLLM",
+  "url": "https://www.litellm.ai",
+  "github": "https://github.com/BerriAI/litellm",
+  "category": "cost",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "MIT OSS proxy free; enterprise tier adds SSO/audit features",
+  "frameworks": [
+   "openai-sdk",
+   "anthropic",
+   "langchain",
+   "llamaindex"
+  ],
+  "funding_note": "YC W23 (BerriAI)",
+  "one_liner": "Open-source LLM proxy/SDK that normalizes 100+ providers behind the OpenAI format with per-key budgets, spend tracking and rate limits.",
+  "evidence_url": "https://www.litellm.ai/#pricing"
+ },
+ {
+  "name": "Datadog LLM Observability",
+  "url": "https://www.datadoghq.com/product/ai/llm-observability/",
+  "github": null,
+  "category": "observability",
+  "open_source": false,
+  "self_hostable": false,
+  "pricing_model": "paid",
+  "pricing_note": "Free up to 40k LLM spans/mo; Pro from ~$160/mo incl. 100k LLM spans, billed per span thereafter",
+  "frameworks": [
+   "openai-sdk",
+   "anthropic",
+   "langchain",
+   "amazon-bedrock",
+   "opentelemetry"
+  ],
+  "funding_note": "Public company (NASDAQ: DDOG)",
+  "one_liner": "LLM and agent tracing inside the Datadog APM suite, attractive to teams already standardized on Datadog for infrastructure monitoring.",
+  "evidence_url": "https://docs.datadoghq.com/llm_observability/monitoring/cost/"
+ },
+ {
+  "name": "New Relic AI Monitoring",
+  "url": "https://newrelic.com/platform/ai-monitoring",
+  "github": null,
+  "category": "observability",
+  "open_source": false,
+  "self_hostable": false,
+  "pricing_model": "freemium",
+  "pricing_note": "Included in New Relic usage-based pricing: 100GB free/mo, then ~$0.40-0.60/GB ingest plus per-seat fees",
+  "frameworks": [
+   "openai-sdk",
+   "amazon-bedrock",
+   "langchain",
+   "opentelemetry"
+  ],
+  "funding_note": "Owned by Francisco Partners/TPG (take-private 2023)",
+  "one_liner": "AI/LLM monitoring layer in the New Relic APM platform tracking model latency, token cost and errors alongside conventional app telemetry.",
+  "evidence_url": "https://newrelic.com/pricing"
+ },
+ {
+  "name": "OpenLIT",
+  "url": "https://openlit.io",
+  "github": "https://github.com/openlit/openlit",
+  "category": "observability",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "free",
+  "pricing_note": "Apache-2.0, fully free self-hosted; no managed cloud tier",
+  "frameworks": [
+   "opentelemetry",
+   "openai-sdk",
+   "anthropic",
+   "langchain",
+   "llamaindex",
+   "ollama"
+  ],
+  "funding_note": "",
+  "one_liner": "OpenTelemetry-native open-source platform covering LLM tracing, GPU monitoring, guardrails and a prompt vault with one-line auto-instrumentation of 50+ providers.",
+  "evidence_url": "https://github.com/openlit/openlit"
+ },
+ {
+  "name": "SigNoz",
+  "url": "https://signoz.io",
+  "github": "https://github.com/SigNoz/signoz",
+  "category": "observability",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "OSS self-host free; cloud from $49/mo usage-based",
+  "frameworks": [
+   "opentelemetry",
+   "openai-sdk",
+   "langchain"
+  ],
+  "funding_note": "YC W21; $6.5M seed",
+  "one_liner": "Open-source OpenTelemetry APM that handles LLM observability via standard OTel instrumentation rather than an LLM-specific SDK.",
+  "evidence_url": "https://signoz.io/pricing/"
+ },
+ {
+  "name": "Pydantic Logfire",
+  "url": "https://pydantic.dev/logfire",
+  "github": "https://github.com/pydantic/logfire",
+  "category": "observability",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "Free monthly span allowance, then usage-based per-span pricing; SDK is OSS",
+  "frameworks": [
+   "pydantic-ai",
+   "openai-sdk",
+   "anthropic",
+   "opentelemetry",
+   "fastapi"
+  ],
+  "funding_note": "Pydantic raised $12.5M Series A (Sequoia, 2023)",
+  "one_liner": "OpenTelemetry-based observability service from the Pydantic team with first-class PydanticAI and Python ecosystem integration.",
+  "evidence_url": "https://pydantic.dev/pricing"
+ },
+ {
+  "name": "PostHog LLM Analytics",
+  "url": "https://posthog.com/llm-analytics",
+  "github": "https://github.com/PostHog/posthog",
+  "category": "observability",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "Generous free tier; usage-based pricing per LLM event",
+  "frameworks": [
+   "openai-sdk",
+   "anthropic",
+   "langchain",
+   "vercel-ai"
+  ],
+  "funding_note": "YC W20; multiple rounds incl. Series D (2025)",
+  "one_liner": "LLM cost, latency and trace analytics bolted onto PostHog's product-analytics platform, letting teams join AI telemetry with user behavior data.",
+  "evidence_url": "https://posthog.com/pricing"
+ },
+ {
+  "name": "HoneyHive",
+  "url": "https://www.honeyhive.ai",
+  "github": null,
+  "category": "observability",
+  "open_source": false,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "Free developer tier; enterprise plans with dedicated/in-VPC deployment",
+  "frameworks": [
+   "openai-sdk",
+   "langchain",
+   "llamaindex",
+   "opentelemetry"
+  ],
+  "funding_note": "$7.4M seed/pre-seed (Insight Partners)",
+  "one_liner": "Evaluation and observability platform for production agents with prompt versioning, A/B tests and OTel-based tracing.",
+  "evidence_url": "https://www.honeyhive.ai/pricing"
+ },
+ {
+  "name": "Respan (formerly Keywords AI)",
+  "url": "https://www.respan.ai",
+  "github": null,
+  "category": "observability",
+  "open_source": false,
+  "self_hostable": false,
+  "pricing_model": "freemium",
+  "pricing_note": "Free tier + paid plans",
+  "frameworks": [
+   "openai-sdk",
+   "anthropic",
+   "langchain",
+   "vercel-ai"
+  ],
+  "funding_note": "YC W24",
+  "one_liner": "Unified gateway-plus-observability control plane for tracing and evaluating agent behavior, rebranded from Keywords AI.",
+  "evidence_url": "https://www.respan.ai"
+ },
+ {
+  "name": "Laminar",
+  "url": "https://laminar.sh",
+  "github": "https://github.com/lmnr-ai/lmnr",
+  "category": "debugging",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "OSS self-host (Docker) free; cloud free tier + paid plans",
+  "frameworks": [
+   "openai-sdk",
+   "anthropic",
+   "langchain",
+   "browser-use",
+   "playwright"
+  ],
+  "funding_note": "YC S24; $3M seed (Mar 2026)",
+  "one_liner": "Open-source observability for long-running AI agents that captures LLM calls, tool use and browser actions for step-level debugging and replay.",
+  "evidence_url": "https://laminar.sh"
+ },
+ {
+  "name": "Phospho",
+  "url": "https://phospho.ai",
+  "github": "https://github.com/phospho-app/phospho",
+  "category": "observability",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "OSS core; hosted tier with free plan",
+  "frameworks": [
+   "openai-sdk",
+   "langchain",
+   "mistral"
+  ],
+  "funding_note": "Y Combinator alum",
+  "one_liner": "Open-source text analytics on LLM app messages, clustering and scoring conversations to surface what users actually do.",
+  "evidence_url": "https://phospho.ai"
+ },
+ {
+  "name": "Fiddler AI",
+  "url": "https://www.fiddler.ai",
+  "github": null,
+  "category": "observability",
+  "open_source": false,
+  "self_hostable": true,
+  "pricing_model": "enterprise",
+  "pricing_note": "Enterprise custom pricing; Trust Service / Guardrails sold as platform modules",
+  "frameworks": [
+   "openai-sdk",
+   "amazon-bedrock",
+   "langchain"
+  ],
+  "funding_note": "~$68M raised (Series B + extensions)",
+  "one_liner": "Enterprise AI observability vendor from the ML-monitoring era, now offering LLM scoring, guardrails and bias/fairness auditing.",
+  "evidence_url": "https://www.fiddler.ai/llmops"
+ },
+ {
+  "name": "WhyLabs (whylogs/LangKit)",
+  "url": "https://whylabs.ai",
+  "github": "https://github.com/whylabs/whylogs",
+  "category": "observability",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "free",
+  "pricing_note": "Platform open-sourced under Apache-2.0 in Jan 2025; run on own infra",
+  "frameworks": [
+   "openai-sdk",
+   "langchain"
+  ],
+  "funding_note": "AI2 spin-out; pivoted to open source in 2025",
+  "one_liner": "Profile-based monitoring (whylogs) plus LangKit LLM metrics that summarize data locally so raw prompts never leave your infrastructure.",
+  "evidence_url": "https://whylabs.ai"
+ },
+ {
+  "name": "Dynatrace AI Observability",
+  "url": "https://www.dynatrace.com/platform/artificial-intelligence/ai-observability/",
+  "github": null,
+  "category": "observability",
+  "open_source": false,
+  "self_hostable": false,
+  "pricing_model": "paid",
+  "pricing_note": "Usage-based within Dynatrace platform pricing",
+  "frameworks": [
+   "openai-sdk",
+   "amazon-bedrock",
+   "langchain",
+   "opentelemetry"
+  ],
+  "funding_note": "Public company (NYSE: DT)",
+  "one_liner": "GenAI and LLM monitoring within the Dynatrace APM platform, covering tokens, cost and service health for enterprises already on Dynatrace.",
+  "evidence_url": "https://www.dynatrace.com/pricing/"
+ },
+ {
+  "name": "Grafana Cloud AI Observability",
+  "url": "https://grafana.com/products/cloud/ai-observability/",
+  "github": "https://github.com/grafana/grafana",
+  "category": "observability",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "Free Grafana Cloud tier; usage-based paid; integrates OpenLIT instrumentation",
+  "frameworks": [
+   "opentelemetry",
+   "openai-sdk",
+   "langchain"
+  ],
+  "funding_note": "Grafana Labs raised $270M+ (Series D)",
+  "one_liner": "OTel-based GenAI observability solution on Grafana Cloud, built on open-source instrumentation rather than a proprietary SDK.",
+  "evidence_url": "https://grafana.com/products/cloud/ai-observability/"
+ },
+ {
+  "name": "Sentry AI Agent Monitoring",
+  "url": "https://docs.sentry.io/product/insights/ai/agents/",
+  "github": "https://github.com/getsentry/sentry",
+  "category": "observability",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "Included in Sentry's free/team plans; usage-based span billing",
+  "frameworks": [
+   "vercel-ai",
+   "openai-sdk",
+   "anthropic",
+   "langchain",
+   "python",
+   "javascript"
+  ],
+  "funding_note": "Sentry raised $217M total",
+  "one_liner": "Agent-call tracing and error monitoring inside Sentry, giving app developers LLM visibility in the tool they already use for crash reporting.",
+  "evidence_url": "https://sentry.io/pricing/"
+ },
+ {
+  "name": "MLflow (Tracing & GenAI)",
+  "url": "https://mlflow.org",
+  "github": "https://github.com/mlflow/mlflow",
+  "category": "observability",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "free",
+  "pricing_note": "Apache-2.0, free; managed versions via Databricks",
+  "frameworks": [
+   "openai-sdk",
+   "langchain",
+   "llamaindex",
+   "dspy",
+   "anthropic",
+   "opentelemetry"
+  ],
+  "funding_note": "Linux Foundation project, primarily backed by Databricks",
+  "one_liner": "The MLOps standard's GenAI extension: trace logging, LLM evaluation and prompt registry inside open-source MLflow 3.",
+  "evidence_url": "https://mlflow.org/docs/latest/llms/tracing/index.html"
+ },
+ {
+  "name": "TrueFoundry",
+  "url": "https://www.truefoundry.com",
+  "github": null,
+  "category": "observability",
+  "open_source": false,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "Free tier; enterprise in-VPC deployment",
+  "frameworks": [
+   "openai-sdk",
+   "anthropic",
+   "litellm"
+  ],
+  "funding_note": "Series A (Intel Capital)",
+  "one_liner": "AI gateway and deployment platform with built-in request logging, cost attribution and rate limiting for enterprise Kubernetes environments.",
+  "evidence_url": "https://www.truefoundry.com/pricing"
+ },
+ {
+  "name": "Patronus AI",
+  "url": "https://www.patronus.ai",
+  "github": null,
+  "category": "evals",
+  "open_source": false,
+  "self_hostable": false,
+  "pricing_model": "freemium",
+  "pricing_note": "API free tier; usage-based eval pricing; enterprise custom",
+  "frameworks": [
+   "openai-sdk",
+   "anthropic",
+   "langchain",
+   "mongodb"
+  ],
+  "funding_note": "$17M Series A (2024)",
+  "one_liner": "Evaluation API and research-driven judge models (e.g. Lynx, Glider) for hallucination detection plus domain benchmarks like FinanceBench.",
+  "evidence_url": "https://www.patronus.ai/pricing"
+ },
+ {
+  "name": "Gentrace",
+  "url": "https://gentrace.ai",
+  "github": null,
+  "category": "evals",
+  "open_source": false,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "Free tier; per-seat paid plans; self-hosted enterprise option",
+  "frameworks": [
+   "openai-sdk",
+   "anthropic",
+   "langchain"
+  ],
+  "funding_note": "$8M Series A (2024)",
+  "one_liner": "Collaborative LLM testing and eval platform emphasizing UI-driven experiments shared between engineers and subject-matter experts.",
+  "evidence_url": "https://gentrace.ai/pricing"
+ },
+ {
+  "name": "Atla",
+  "url": "https://www.atla-ai.com",
+  "github": null,
+  "category": "evals",
+  "open_source": false,
+  "self_hostable": false,
+  "pricing_model": "freemium",
+  "pricing_note": "API free tier; usage-based pricing",
+  "frameworks": [
+   "openai-sdk",
+   "langchain",
+   "crewai"
+  ],
+  "funding_note": "$5M seed (2025, incl. Y Combinator)",
+  "one_liner": "Builds dedicated evaluator/judge models (Selene) and agent error-analysis tooling rather than a full observability suite.",
+  "evidence_url": "https://www.atla-ai.com"
+ },
+ {
+  "name": "Promptfoo",
+  "url": "https://www.promptfoo.dev",
+  "github": "https://github.com/promptfoo/promptfoo",
+  "category": "evals",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "CLI/library free (MIT); paid enterprise for red-teaming at scale",
+  "frameworks": [
+   "openai-sdk",
+   "anthropic",
+   "langchain",
+   "ollama",
+   "vercel-ai"
+  ],
+  "funding_note": "$5M seed (a16z, 2024)",
+  "one_liner": "Config-file-driven open-source CLI for prompt evals, regression testing and LLM red-teaming that runs in CI.",
+  "evidence_url": "https://www.promptfoo.dev/pricing/"
+ },
+ {
+  "name": "Ragas",
+  "url": "https://www.ragas.io",
+  "github": "https://github.com/explodinggradients/ragas",
+  "category": "evals",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "free",
+  "pricing_note": "Apache-2.0 OSS; hosted app in development by Exploding Gradients",
+  "frameworks": [
+   "langchain",
+   "llamaindex",
+   "openai-sdk",
+   "haystack"
+  ],
+  "funding_note": "Y Combinator alum (Exploding Gradients)",
+  "one_liner": "The de-facto open-source metric library for RAG evaluation (faithfulness, context precision/recall), used standalone or inside other platforms.",
+  "evidence_url": "https://github.com/explodinggradients/ragas"
+ },
+ {
+  "name": "Giskard",
+  "url": "https://www.giskard.ai",
+  "github": "https://github.com/Giskard-AI/giskard",
+  "category": "evals",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "OSS library free; LLM Evaluation Hub commercial",
+  "frameworks": [
+   "langchain",
+   "openai-sdk",
+   "huggingface"
+  ],
+  "funding_note": "French startup; EU/seed funded",
+  "one_liner": "Open-source testing framework that scans LLM apps for hallucination, injection and bias vulnerabilities, with a commercial evaluation hub.",
+  "evidence_url": "https://www.giskard.ai/products/llm-evaluation-hub"
+ },
+ {
+  "name": "Deepchecks",
+  "url": "https://www.deepchecks.com",
+  "github": "https://github.com/deepchecks/deepchecks",
+  "category": "evals",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "OSS package free; LLM evaluation SaaS with free + paid tiers",
+  "frameworks": [
+   "openai-sdk",
+   "langchain"
+  ],
+  "funding_note": "$14M seed (2022)",
+  "one_liner": "Continuous validation suite from the ML-testing world extended to LLM apps, scoring outputs across versions from dev to production.",
+  "evidence_url": "https://www.deepchecks.com/pricing/"
+ },
+ {
+  "name": "Evidently AI",
+  "url": "https://www.evidentlyai.com",
+  "github": "https://github.com/evidentlyai/evidently",
+  "category": "evals",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "Apache-2.0 library free; Evidently Cloud free tier + paid plans",
+  "frameworks": [
+   "openai-sdk",
+   "langchain"
+  ],
+  "funding_note": "YC alum; seed-funded",
+  "one_liner": "Open-source evaluation and monitoring library (100+ metrics) spanning tabular ML drift and LLM judge-based checks, with a managed cloud.",
+  "evidence_url": "https://www.evidentlyai.com/pricing"
+ },
+ {
+  "name": "Athina AI",
+  "url": "https://www.athina.ai",
+  "github": "https://github.com/athina-ai/athina-evals",
+  "category": "evals",
+  "open_source": false,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "Free tier; per-seat paid plans; eval SDK is OSS",
+  "frameworks": [
+   "openai-sdk",
+   "langchain",
+   "litellm"
+  ],
+  "funding_note": "Y Combinator alum",
+  "one_liner": "IDE-style platform for prompt experimentation, evals and monitoring aimed at mixed technical/non-technical AI teams.",
+  "evidence_url": "https://www.athina.ai/pricing"
+ },
+ {
+  "name": "Future AGI",
+  "url": "https://futureagi.com",
+  "github": null,
+  "category": "evals",
+  "open_source": false,
+  "self_hostable": false,
+  "pricing_model": "freemium",
+  "pricing_note": "Free tier + paid plans",
+  "frameworks": [
+   "openai-sdk",
+   "langchain",
+   "opentelemetry"
+  ],
+  "funding_note": "",
+  "one_liner": "Evaluation and observability platform with a focus on voice-agent simulation and programmatic re-scoring of historical scenarios.",
+  "evidence_url": "https://futureagi.com/pricing"
+ },
+ {
+  "name": "Inspect AI",
+  "url": "https://inspect.aisi.org.uk",
+  "github": "https://github.com/UKGovernmentBEIS/inspect_ai",
+  "category": "evals",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "free",
+  "pricing_note": "MIT OSS, free; no commercial tier",
+  "frameworks": [
+   "openai-sdk",
+   "anthropic",
+   "ollama",
+   "huggingface"
+  ],
+  "funding_note": "Built by the UK AI Security Institute (government)",
+  "one_liner": "Government-built open-source framework for rigorous LLM and agent evaluations, popular for safety benchmarks and sandboxed agentic tasks.",
+  "evidence_url": "https://github.com/UKGovernmentBEIS/inspect_ai"
+ },
+ {
+  "name": "OpenAI Evals",
+  "url": "https://github.com/openai/evals",
+  "github": "https://github.com/openai/evals",
+  "category": "evals",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "free",
+  "pricing_note": "MIT OSS framework; OpenAI platform also has a hosted Evals product billed via API usage",
+  "frameworks": [
+   "openai-sdk"
+  ],
+  "funding_note": "OpenAI",
+  "one_liner": "OpenAI's original open-source eval framework and registry; largely superseded by the hosted Evals API but still a reference implementation.",
+  "evidence_url": "https://github.com/openai/evals"
+ },
+ {
+  "name": "Okareo",
+  "url": "https://okareo.com",
+  "github": null,
+  "category": "evals",
+  "open_source": false,
+  "self_hostable": false,
+  "pricing_model": "freemium",
+  "pricing_note": "Free tier + paid plans",
+  "frameworks": [
+   "openai-sdk",
+   "langchain"
+  ],
+  "funding_note": "",
+  "one_liner": "Synthetic-user simulation that runs on every commit to catch regressions in agent tone, policy compliance, tool use and routing.",
+  "evidence_url": "https://okareo.com"
+ },
+ {
+  "name": "LangWatch",
+  "url": "https://langwatch.ai",
+  "github": "https://github.com/langwatch/langwatch",
+  "category": "evals",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "OSS self-host; cloud free tier + paid plans",
+  "frameworks": [
+   "openai-sdk",
+   "langchain",
+   "dspy",
+   "opentelemetry",
+   "vercel-ai"
+  ],
+  "funding_note": "Netherlands-based; seed stage",
+  "one_liner": "Open-source agent testing and observability built around the Scenario simulation framework, covering text, voice and adversarial tests.",
+  "evidence_url": "https://langwatch.ai/pricing"
+ },
+ {
+  "name": "Hamming AI",
+  "url": "https://hamming.ai",
+  "github": null,
+  "category": "evals",
+  "open_source": false,
+  "self_hostable": false,
+  "pricing_model": "paid",
+  "pricing_note": "Custom/contact pricing",
+  "frameworks": [
+   "openai-sdk",
+   "vapi",
+   "retell"
+  ],
+  "funding_note": "Y Combinator alum",
+  "one_liner": "Automated testing for voice agents that places thousands of simulated phone calls and scores transcripts against rubrics.",
+  "evidence_url": "https://hamming.ai"
+ },
+ {
+  "name": "Vantage",
+  "url": "https://www.vantage.sh",
+  "github": null,
+  "category": "cost",
+  "open_source": false,
+  "self_hostable": false,
+  "pricing_model": "freemium",
+  "pricing_note": "Free tier; paid plans scale with tracked spend",
+  "frameworks": [
+   "openai-sdk",
+   "anthropic",
+   "amazon-bedrock"
+  ],
+  "funding_note": "$21M Series A",
+  "one_liner": "Cloud cost platform with native token-level ingest for OpenAI/Anthropic and an MCP server for querying AI spend from coding assistants.",
+  "evidence_url": "https://www.vantage.sh/pricing"
+ },
+ {
+  "name": "CloudZero",
+  "url": "https://www.cloudzero.com",
+  "github": null,
+  "category": "cost",
+  "open_source": false,
+  "self_hostable": false,
+  "pricing_model": "enterprise",
+  "pricing_note": "Custom pricing tied to tracked spend",
+  "frameworks": [
+   "openai-sdk",
+   "amazon-bedrock"
+  ],
+  "funding_note": "Series B+ funded (incl. $32M Series B)",
+  "one_liner": "AI unit-economics platform mapping LLM and GPU spend to cost per feature, per customer and per deployment.",
+  "evidence_url": "https://www.cloudzero.com/pricing/"
+ },
+ {
+  "name": "Finout",
+  "url": "https://www.finout.io",
+  "github": null,
+  "category": "cost",
+  "open_source": false,
+  "self_hostable": false,
+  "pricing_model": "enterprise",
+  "pricing_note": "Custom pricing",
+  "frameworks": [
+   "openai-sdk",
+   "amazon-bedrock"
+  ],
+  "funding_note": "Series B funded",
+  "one_liner": "FinOps platform whose MegaBill model folds LLM/API spend into the same cost-allocation views as cloud infrastructure.",
+  "evidence_url": "https://www.finout.io/pricing"
+ },
+ {
+  "name": "Pay-i",
+  "url": "https://www.pay-i.com",
+  "github": null,
+  "category": "cost",
+  "open_source": false,
+  "self_hostable": false,
+  "pricing_model": "paid",
+  "pricing_note": "Contact/usage pricing",
+  "frameworks": [
+   "openai-sdk",
+   "anthropic",
+   "azure-openai"
+  ],
+  "funding_note": "Seed stage; ex-Microsoft founders",
+  "one_liner": "GenAI-specific FinOps tracking cost per request, per feature and per customer to give product teams real unit economics.",
+  "evidence_url": "https://www.pay-i.com"
+ },
+ {
+  "name": "OpenMeter",
+  "url": "https://openmeter.io",
+  "github": "https://github.com/openmeterio/openmeter",
+  "category": "cost",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "Apache-2.0 OSS; cloud with free tier + usage pricing",
+  "frameworks": [
+   "openai-sdk"
+  ],
+  "funding_note": "Seed stage (Y Combinator)",
+  "one_liner": "Open-source usage metering for AI/API products, commonly used to meter tokens for billing and internal chargeback.",
+  "evidence_url": "https://openmeter.io/pricing"
+ },
+ {
+  "name": "Tokencost",
+  "url": "https://github.com/AgentOps-AI/tokencost",
+  "github": "https://github.com/AgentOps-AI/tokencost",
+  "category": "cost",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "free",
+  "pricing_note": "MIT Python library; no commercial tier",
+  "frameworks": [
+   "openai-sdk",
+   "anthropic",
+   "litellm"
+  ],
+  "funding_note": "Maintained by AgentOps",
+  "one_liner": "Lightweight open-source library maintaining an up-to-date price table for estimating prompt/completion costs across 400+ models.",
+  "evidence_url": "https://github.com/AgentOps-AI/tokencost"
+ },
+ {
+  "name": "Vellum",
+  "url": "https://www.vellum.ai",
+  "github": null,
+  "category": "prompt-mgmt",
+  "open_source": false,
+  "self_hostable": false,
+  "pricing_model": "freemium",
+  "pricing_note": "Free tier; reported paid plans from ~$25/mo, enterprise custom",
+  "frameworks": [
+   "openai-sdk",
+   "anthropic"
+  ],
+  "funding_note": "YC W23; $5M seed, later Series A",
+  "one_liner": "Low-code platform for prompts, workflows, evaluations and deployments with environment management for product teams.",
+  "evidence_url": "https://www.vellum.ai/pricing"
+ },
+ {
+  "name": "Agenta",
+  "url": "https://agenta.ai",
+  "github": "https://github.com/Agenta-AI/agenta",
+  "category": "prompt-mgmt",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "MIT OSS self-host free; cloud free + paid tiers",
+  "frameworks": [
+   "openai-sdk",
+   "langchain",
+   "litellm"
+  ],
+  "funding_note": "Named as an official Humanloop migration path by Anthropic",
+  "one_liner": "Open-source prompt playground, registry and evaluation platform covering the prompt lifecycle from experimentation to deployment.",
+  "evidence_url": "https://agenta.ai/pricing"
+ },
+ {
+  "name": "PromptHub",
+  "url": "https://www.prompthub.us",
+  "github": null,
+  "category": "prompt-mgmt",
+  "open_source": false,
+  "self_hostable": false,
+  "pricing_model": "freemium",
+  "pricing_note": "Free tier + per-seat paid plans",
+  "frameworks": [
+   "openai-sdk",
+   "anthropic"
+  ],
+  "funding_note": "",
+  "one_liner": "Git-style prompt version control with branch/commit/merge semantics, runtime REST retrieval and CI/CD quality gates.",
+  "evidence_url": "https://www.prompthub.us/pricing"
+ },
+ {
+  "name": "Latitude",
+  "url": "https://latitude.so",
+  "github": "https://github.com/latitude-dev/latitude-llm",
+  "category": "prompt-mgmt",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "OSS self-host; cloud free tier + paid plans",
+  "frameworks": [
+   "openai-sdk",
+   "anthropic",
+   "vercel-ai"
+  ],
+  "funding_note": "",
+  "one_liner": "Open-source prompt engineering platform with versioning, evals and agent-running infrastructure (PromptL).",
+  "evidence_url": "https://latitude.so/pricing"
+ },
+ {
+  "name": "Freeplay",
+  "url": "https://freeplay.ai",
+  "github": null,
+  "category": "prompt-mgmt",
+  "open_source": false,
+  "self_hostable": false,
+  "pricing_model": "paid",
+  "pricing_note": "Contact pricing; team-oriented plans",
+  "frameworks": [
+   "openai-sdk",
+   "anthropic"
+  ],
+  "funding_note": "Seed-funded (Boulder, CO)",
+  "one_liner": "Prompt management, testing and human-review workflows aimed at cross-functional product teams shipping LLM features.",
+  "evidence_url": "https://freeplay.ai"
+ },
+ {
+  "name": "Orq.ai",
+  "url": "https://orq.ai",
+  "github": null,
+  "category": "prompt-mgmt",
+  "open_source": false,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "Free tier; paid plans + enterprise self-hosting",
+  "frameworks": [
+   "openai-sdk",
+   "anthropic",
+   "langchain"
+  ],
+  "funding_note": "Amsterdam-based; seed stage",
+  "one_liner": "Generative AI collaboration platform bundling prompt management, deployments, evals and observability for SaaS teams.",
+  "evidence_url": "https://orq.ai/pricing"
+ },
+ {
+  "name": "Langtail",
+  "url": "https://langtail.com",
+  "github": null,
+  "category": "prompt-mgmt",
+  "open_source": false,
+  "self_hostable": false,
+  "pricing_model": "freemium",
+  "pricing_note": "Free tier + paid plans",
+  "frameworks": [
+   "openai-sdk",
+   "anthropic"
+  ],
+  "funding_note": "Prague-based; pre-seed/seed",
+  "one_liner": "Spreadsheet-like prompt testing and deployment studio with assertions and security guardrails for smaller teams.",
+  "evidence_url": "https://langtail.com/pricing"
+ },
+ {
+  "name": "Coval",
+  "url": "https://www.coval.dev",
+  "github": null,
+  "category": "debugging",
+  "open_source": false,
+  "self_hostable": false,
+  "pricing_model": "paid",
+  "pricing_note": "Contact pricing",
+  "frameworks": [
+   "openai-sdk",
+   "vapi",
+   "retell",
+   "livekit"
+  ],
+  "funding_note": "$3.3M seed (MaC Venture Capital, 2024)",
+  "one_liner": "Simulation-first testing and replay for voice/chat agents, borrowing evaluation methodology from autonomous-vehicle testing.",
+  "evidence_url": "https://www.coval.dev"
+ },
+ {
+  "name": "Invariant Labs",
+  "url": "https://invariantlabs.ai",
+  "github": "https://github.com/invariantlabs-ai/invariant",
+  "category": "debugging",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "OSS analyzer/Explorer; commercial via Snyk after acquisition",
+  "frameworks": [
+   "openai-sdk",
+   "anthropic",
+   "mcp",
+   "swarm"
+  ],
+  "funding_note": "Acquired by Snyk (2025); ETH Zurich spin-off",
+  "one_liner": "Agent trace analysis and security scanning (incl. MCP tool-poisoning research), with an Explorer UI for debugging agent runs.",
+  "evidence_url": "https://invariantlabs.ai"
+ },
+ {
+  "name": "Guardrails AI",
+  "url": "https://www.guardrailsai.com",
+  "github": "https://github.com/guardrails-ai/guardrails",
+  "category": "guardrails",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "Apache-2.0 framework free; Guardrails Hub community validators; managed offering for enterprises",
+  "frameworks": [
+   "openai-sdk",
+   "anthropic",
+   "langchain",
+   "litellm"
+  ],
+  "funding_note": "$7.5M seed (2024)",
+  "one_liner": "Open-source output-validation framework where composable validators enforce schemas, policies and safety constraints on LLM I/O.",
+  "evidence_url": "https://www.guardrailsai.com"
+ },
+ {
+  "name": "NVIDIA NeMo Guardrails",
+  "url": "https://github.com/NVIDIA-NeMo/Guardrails",
+  "github": "https://github.com/NVIDIA-NeMo/Guardrails",
+  "category": "guardrails",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "free",
+  "pricing_note": "Apache-2.0, free; enterprise support via NVIDIA AI Enterprise",
+  "frameworks": [
+   "langchain",
+   "openai-sdk",
+   "colang"
+  ],
+  "funding_note": "NVIDIA",
+  "one_liner": "Programmable conversational guardrails toolkit using the Colang DSL, covering input, dialog, retrieval, execution and output rails.",
+  "evidence_url": "https://github.com/NVIDIA-NeMo/Guardrails"
+ },
+ {
+  "name": "Lakera Guard",
+  "url": "https://www.lakera.ai",
+  "github": null,
+  "category": "guardrails",
+  "open_source": false,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "Free community API tier; enterprise SLA-backed plans",
+  "frameworks": [
+   "openai-sdk",
+   "anthropic",
+   "langchain"
+  ],
+  "funding_note": "Acquired by Check Point (2025); previously $30M raised",
+  "one_liner": "Low-latency API guarding against prompt injection, data leakage and toxic content, backed by the Gandalf attack dataset.",
+  "evidence_url": "https://www.lakera.ai/pricing"
+ },
+ {
+  "name": "LLM Guard (Protect AI)",
+  "url": "https://llm-guard.com",
+  "github": "https://github.com/protectai/llm-guard",
+  "category": "guardrails",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "free",
+  "pricing_note": "MIT OSS scanners free; enterprise via Palo Alto Networks (Protect AI acquisition)",
+  "frameworks": [
+   "openai-sdk",
+   "langchain"
+  ],
+  "funding_note": "Protect AI acquired by Palo Alto Networks (2025)",
+  "one_liner": "Open-source input/output scanner toolkit (35+ scanners) for PII, injection and toxicity checks on LLM traffic.",
+  "evidence_url": "https://github.com/protectai/llm-guard"
+ },
+ {
+  "name": "Prompt Security",
+  "url": "https://www.prompt.security",
+  "github": null,
+  "category": "guardrails",
+  "open_source": false,
+  "self_hostable": true,
+  "pricing_model": "enterprise",
+  "pricing_note": "Custom enterprise pricing",
+  "frameworks": [
+   "openai-sdk",
+   "anthropic",
+   "azure-openai"
+  ],
+  "funding_note": "Acquired by SentinelOne (2025)",
+  "one_liner": "Enterprise GenAI security platform monitoring employee and application LLM usage for injection, leakage and shadow AI.",
+  "evidence_url": "https://www.prompt.security"
+ },
+ {
+  "name": "Cisco AI Defense (Robust Intelligence)",
+  "url": "https://www.cisco.com/site/us/en/products/security/ai-defense/index.html",
+  "github": null,
+  "category": "guardrails",
+  "open_source": false,
+  "self_hostable": false,
+  "pricing_model": "enterprise",
+  "pricing_note": "Enterprise pricing within Cisco security portfolio",
+  "frameworks": [
+   "openai-sdk",
+   "amazon-bedrock",
+   "azure-openai"
+  ],
+  "funding_note": "Robust Intelligence acquired by Cisco (2024)",
+  "one_liner": "AI model validation and runtime guardrails productized from Robust Intelligence inside Cisco's security stack.",
+  "evidence_url": "https://www.cisco.com/site/us/en/products/security/ai-defense/index.html"
+ },
+ {
+  "name": "Arthur",
+  "url": "https://www.arthur.ai",
+  "github": "https://github.com/arthur-ai/bench",
+  "category": "guardrails",
+  "open_source": true,
+  "self_hostable": true,
+  "pricing_model": "freemium",
+  "pricing_note": "Open-sourced engine components; enterprise platform custom-priced",
+  "frameworks": [
+   "openai-sdk",
+   "langchain"
+  ],
+  "funding_note": "$42M Series B (2022)",
+  "one_liner": "Model monitoring and firewall (Arthur Shield) for enterprise AI, focused on risk, bias and policy enforcement.",
+  "evidence_url": "https://www.arthur.ai"
+ },
+ {
+  "name": "Coralogix AI (Aporia)",
+  "url": "https://coralogix.com/ai-observability/",
+  "github": null,
+  "category": "guardrails",
+  "open_source": false,
+  "self_hostable": false,
+  "pricing_model": "paid",
+  "pricing_note": "Usage-based within Coralogix platform pricing",
+  "frameworks": [
+   "openai-sdk",
+   "amazon-bedrock",
+   "langchain"
+  ],
+  "funding_note": "Aporia acquired by Coralogix (Dec 2024)",
+  "one_liner": "Aporia's drift detection and AI guardrails folded into the Coralogix observability platform as its AI research arm.",
+  "evidence_url": "https://coralogix.com/ai-observability/"
+ },
+ {
+  "name": "Haize Labs",
+  "url": "https://www.haizelabs.com",
+  "github": "https://github.com/haizelabs",
+  "category": "guardrails",
+  "open_source": false,
+  "self_hostable": false,
+  "pricing_model": "paid",
+  "pricing_note": "Contact pricing",
+  "frameworks": [
+   "openai-sdk",
+   "anthropic"
+  ],
+  "funding_note": "NYC startup; seed-backed",
+  "one_liner": "Automated red-teaming ('haizing') that stress-tests LLM systems to find jailbreaks and failure modes before deployment.",
+  "evidence_url": "https://www.haizelabs.com"
+ },
+ {
+  "name": "CalypsoAI",
+  "url": "https://calypsoai.com",
+  "github": null,
+  "category": "guardrails",
+  "open_source": false,
+  "self_hostable": true,
+  "pricing_model": "enterprise",
+  "pricing_note": "Custom enterprise pricing",
+  "frameworks": [
+   "openai-sdk",
+   "azure-openai",
+   "amazon-bedrock"
+  ],
+  "funding_note": "~$38M raised; defense/enterprise focus",
+  "one_liner": "Inference-perimeter security platform with scanners and red-team agents guarding enterprise model traffic.",
+  "evidence_url": "https://calypsoai.com"
+ }
+]

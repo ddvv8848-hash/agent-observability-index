@@ -1,0 +1,496 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent Observability Index (2026) — 77 LLM observability, evals &amp; guardrails tools compared</title>
+<meta name="description" content="Every AI agent observability, evals, guardrails &amp; cost tool — compared by a neutral third party.">
+<link rel="canonical" href="https://akige.github.io/agent-observability-index/index.html">
+<script src="https://cdn.tailwindcss.com"></script></head>
+<body class="bg-slate-950 text-slate-200 antialiased">
+<nav class="border-b border-slate-800"><div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+<a href="index.html" class="font-bold text-white">Agent<span class="text-emerald-400">Obs</span> Index</a>
+<div class="flex gap-5 text-sm">
+<a href="index.html#tools" class="hover:text-white">Tools</a>
+<a href="index.html#compare" class="hover:text-white">Comparisons</a>
+<a href="advertise.html" class="text-emerald-400 hover:text-emerald-300">Get featured</a>
+</div></div></nav>
+<header class="max-w-5xl mx-auto px-6 pt-16 pb-10">
+<h1 class="text-4xl md:text-5xl font-bold text-white leading-tight">The neutral index of<br><span class="text-emerald-400">AI agent observability</span> tooling</h1>
+<p class="mt-5 text-lg text-slate-400 max-w-2xl">Every AI agent observability, evals, guardrails &amp; cost tool — compared by a neutral third party. 77 tools tracked across tracing, evals, guardrails, prompt management, cost and debugging — with licensing, self-hosting and pricing-model facts checked against primary sources. Built by an engineer who runs agent fleets in production, not by a vendor marketing team.</p>
+<div class="mt-4 text-sm text-slate-500">Maintained by <span class="text-slate-300">Panshi</span> · updated June 2026</div></header>
+<section id="compare" class="max-w-5xl mx-auto px-6 pb-4"><h2 class="text-xl font-semibold text-white mb-4">Popular comparisons</h2>
+<div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3"><a href="compare/langfuse-vs-langsmith.html" class="bg-slate-900 border border-slate-800 hover:border-slate-600 rounded-lg px-4 py-3 text-sm">Langfuse <span class="text-slate-500">vs</span> LangSmith</a><a href="compare/langfuse-vs-helicone.html" class="bg-slate-900 border border-slate-800 hover:border-slate-600 rounded-lg px-4 py-3 text-sm">Langfuse <span class="text-slate-500">vs</span> Helicone</a><a href="compare/langfuse-vs-arize-phoenix.html" class="bg-slate-900 border border-slate-800 hover:border-slate-600 rounded-lg px-4 py-3 text-sm">Langfuse <span class="text-slate-500">vs</span> Arize Phoenix</a><a href="compare/braintrust-vs-langsmith.html" class="bg-slate-900 border border-slate-800 hover:border-slate-600 rounded-lg px-4 py-3 text-sm">Braintrust <span class="text-slate-500">vs</span> LangSmith</a><a href="compare/opik-comet-vs-langfuse.html" class="bg-slate-900 border border-slate-800 hover:border-slate-600 rounded-lg px-4 py-3 text-sm">Opik (Comet) <span class="text-slate-500">vs</span> Langfuse</a><a href="compare/promptfoo-vs-confident-ai-deepeval.html" class="bg-slate-900 border border-slate-800 hover:border-slate-600 rounded-lg px-4 py-3 text-sm">Promptfoo <span class="text-slate-500">vs</span> Confident AI (DeepEval)</a><a href="compare/ragas-vs-promptfoo.html" class="bg-slate-900 border border-slate-800 hover:border-slate-600 rounded-lg px-4 py-3 text-sm">Ragas <span class="text-slate-500">vs</span> Promptfoo</a><a href="compare/agentops-vs-langfuse.html" class="bg-slate-900 border border-slate-800 hover:border-slate-600 rounded-lg px-4 py-3 text-sm">AgentOps <span class="text-slate-500">vs</span> Langfuse</a><a href="compare/datadog-llm-observability-vs-langsmith.html" class="bg-slate-900 border border-slate-800 hover:border-slate-600 rounded-lg px-4 py-3 text-sm">Datadog LLM Observability <span class="text-slate-500">vs</span> LangSmith</a><a href="compare/helicone-vs-portkey.html" class="bg-slate-900 border border-slate-800 hover:border-slate-600 rounded-lg px-4 py-3 text-sm">Helicone <span class="text-slate-500">vs</span> Portkey</a><a href="compare/guardrails-ai-vs-nvidia-nemo-guardrails.html" class="bg-slate-900 border border-slate-800 hover:border-slate-600 rounded-lg px-4 py-3 text-sm">Guardrails AI <span class="text-slate-500">vs</span> NVIDIA NeMo Guardrails</a><a href="compare/lakera-guard-vs-llm-guard-protect-ai.html" class="bg-slate-900 border border-slate-800 hover:border-slate-600 rounded-lg px-4 py-3 text-sm">Lakera Guard <span class="text-slate-500">vs</span> LLM Guard (Protect AI)</a></div></section>
+<section id="tools" class="max-w-5xl mx-auto px-6 py-10">
+<h2 class="text-xl font-semibold text-white mb-4">All tools</h2>
+<div class="flex flex-wrap gap-2 mb-6"><button data-f="all" class="fbtn bg-emerald-500 text-slate-950 px-3 py-1.5 rounded-lg text-sm font-semibold">All</button><button data-f="observability" class="fbtn border border-slate-700 px-3 py-1.5 rounded-lg text-sm hover:border-slate-500">Observability &amp; Tracing (27)</button><button data-f="evals" class="fbtn border border-slate-700 px-3 py-1.5 rounded-lg text-sm hover:border-slate-500">Evals &amp; Testing (20)</button><button data-f="guardrails" class="fbtn border border-slate-700 px-3 py-1.5 rounded-lg text-sm hover:border-slate-500">Guardrails &amp; Safety (10)</button><button data-f="prompt-mgmt" class="fbtn border border-slate-700 px-3 py-1.5 rounded-lg text-sm hover:border-slate-500">Prompt Management (9)</button><button data-f="cost" class="fbtn border border-slate-700 px-3 py-1.5 rounded-lg text-sm hover:border-slate-500">Cost &amp; FinOps (7)</button><button data-f="debugging" class="fbtn border border-slate-700 px-3 py-1.5 rounded-lg text-sm hover:border-slate-500">Agent Debugging &amp; Replay (4)</button></div>
+<div id="grid" class="grid md:grid-cols-2 gap-4"><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="prompt-mgmt">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/agenta.html" class="hover:text-emerald-400">Agenta</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Open-source prompt playground, registry and evaluation platform covering the prompt lifecycle from experimentation to deployment.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Prompt Management</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="debugging">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/agentops.html" class="hover:text-emerald-400">AgentOps</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Session-replay style observability for AI agents with time-travel debugging, cost tracking and first-class integrations into agent frameworks like CrewAI and AutoGen.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Agent Debugging &amp; Replay</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="observability">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/arize-ax.html" class="hover:text-emerald-400">Arize AX</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Enterprise AI observability and evaluation platform extending Arize&#x27;s ML-monitoring heritage to LLM and agent workloads at scale.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Observability &amp; Tracing</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="observability">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/arize-phoenix.html" class="hover:text-emerald-400">Arize Phoenix</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Open-source, OpenTelemetry-based tracing and evaluation library that runs locally or self-hosted, serving as the OSS on-ramp to Arize&#x27;s enterprise platform.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Observability &amp; Tracing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">free</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="guardrails">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/arthur.html" class="hover:text-emerald-400">Arthur</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Model monitoring and firewall (Arthur Shield) for enterprise AI, focused on risk, bias and policy enforcement.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/athina-ai.html" class="hover:text-emerald-400">Athina AI</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">IDE-style platform for prompt experimentation, evals and monitoring aimed at mixed technical/non-technical AI teams.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/atla.html" class="hover:text-emerald-400">Atla</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Builds dedicated evaluator/judge models (Selene) and agent error-analysis tooling rather than a full observability suite.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/braintrust.html" class="hover:text-emerald-400">Braintrust</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Eval-first AI engineering platform with logging, datasets, an LLM proxy and a purpose-built trace database (Brainstore), aimed at production regression-catching.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="guardrails">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/calypsoai.html" class="hover:text-emerald-400">CalypsoAI</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Inference-perimeter security platform with scanners and red-team agents guarding enterprise model traffic.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">enterprise</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="guardrails">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/cisco-ai-defense-robust-intelligence.html" class="hover:text-emerald-400">Cisco AI Defense (Robust Intelligence)</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"><span class="text-xs px-2 py-0.5 rounded bg-rose-800/60 border border-rose-700 text-rose-200">acquired</span></div></div>
+<p class="text-sm text-slate-400 mt-2">AI model validation and runtime guardrails productized from Robust Intelligence inside Cisco&#x27;s security stack.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">enterprise</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="cost">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/cloudzero.html" class="hover:text-emerald-400">CloudZero</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">AI unit-economics platform mapping LLM and GPU spend to cost per feature, per customer and per deployment.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Cost &amp; FinOps</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">enterprise</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/confident-ai-deepeval.html" class="hover:text-emerald-400">Confident AI (DeepEval)</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Pytest-style open-source LLM evaluation framework (DeepEval) with a hosted platform for benchmarking, regression testing and red-teaming (DeepTeam).</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="guardrails">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/coralogix-ai-aporia.html" class="hover:text-emerald-400">Coralogix AI (Aporia)</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"><span class="text-xs px-2 py-0.5 rounded bg-rose-800/60 border border-rose-700 text-rose-200">acquired</span></div></div>
+<p class="text-sm text-slate-400 mt-2">Aporia&#x27;s drift detection and AI guardrails folded into the Coralogix observability platform as its AI research arm.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">paid</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="debugging">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/coval.html" class="hover:text-emerald-400">Coval</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Simulation-first testing and replay for voice/chat agents, borrowing evaluation methodology from autonomous-vehicle testing.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Agent Debugging &amp; Replay</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">paid</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="observability">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/datadog-llm-observability.html" class="hover:text-emerald-400">Datadog LLM Observability</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">LLM and agent tracing inside the Datadog APM suite, attractive to teams already standardized on Datadog for infrastructure monitoring.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Observability &amp; Tracing</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">paid</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/deepchecks.html" class="hover:text-emerald-400">Deepchecks</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Continuous validation suite from the ML-testing world extended to LLM apps, scoring outputs across versions from dev to production.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="observability">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/dynatrace-ai-observability.html" class="hover:text-emerald-400">Dynatrace AI Observability</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">GenAI and LLM monitoring within the Dynatrace APM platform, covering tokens, cost and service health for enterprises already on Dynatrace.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Observability &amp; Tracing</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">paid</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/evidently-ai.html" class="hover:text-emerald-400">Evidently AI</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Open-source evaluation and monitoring library (100+ metrics) spanning tabular ML drift and LLM judge-based checks, with a managed cloud.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="observability">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/fiddler-ai.html" class="hover:text-emerald-400">Fiddler AI</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Enterprise AI observability vendor from the ML-monitoring era, now offering LLM scoring, guardrails and bias/fairness auditing.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Observability &amp; Tracing</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">enterprise</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="cost">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/finout.html" class="hover:text-emerald-400">Finout</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">FinOps platform whose MegaBill model folds LLM/API spend into the same cost-allocation views as cloud infrastructure.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Cost &amp; FinOps</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">enterprise</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="prompt-mgmt">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/freeplay.html" class="hover:text-emerald-400">Freeplay</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Prompt management, testing and human-review workflows aimed at cross-functional product teams shipping LLM features.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Prompt Management</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">paid</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/future-agi.html" class="hover:text-emerald-400">Future AGI</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Evaluation and observability platform with a focus on voice-agent simulation and programmatic re-scoring of historical scenarios.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/galileo.html" class="hover:text-emerald-400">Galileo</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Evaluation and guardrails platform whose in-house Luna-2 small judge models target low-cost, low-latency scoring of agentic workloads.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/gentrace.html" class="hover:text-emerald-400">Gentrace</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Collaborative LLM testing and eval platform emphasizing UI-driven experiments shared between engineers and subject-matter experts.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/giskard.html" class="hover:text-emerald-400">Giskard</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Open-source testing framework that scans LLM apps for hallucination, injection and bias vulnerabilities, with a commercial evaluation hub.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="observability">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/grafana-cloud-ai-observability.html" class="hover:text-emerald-400">Grafana Cloud AI Observability</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">OTel-based GenAI observability solution on Grafana Cloud, built on open-source instrumentation rather than a proprietary SDK.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Observability &amp; Tracing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="guardrails">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/guardrails-ai.html" class="hover:text-emerald-400">Guardrails AI</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Open-source output-validation framework where composable validators enforce schemas, policies and safety constraints on LLM I/O.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="guardrails">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/haize-labs.html" class="hover:text-emerald-400">Haize Labs</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Automated red-teaming (&#x27;haizing&#x27;) that stress-tests LLM systems to find jailbreaks and failure modes before deployment.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">paid</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/hamming-ai.html" class="hover:text-emerald-400">Hamming AI</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Automated testing for voice agents that places thousands of simulated phone calls and scores transcripts against rubrics.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">paid</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="observability">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/helicone.html" class="hover:text-emerald-400">Helicone</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"><span class="text-xs px-2 py-0.5 rounded bg-red-800/60 border border-red-700 text-red-200">⚠ sunset/maintenance</span></div></div>
+<p class="text-sm text-slate-400 mt-2">Proxy/gateway-based LLM logging with one-line setup, unified cost and latency visibility across providers; now under Mintlify ownership.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Observability &amp; Tracing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="observability">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/honeyhive.html" class="hover:text-emerald-400">HoneyHive</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Evaluation and observability platform for production agents with prompt versioning, A/B tests and OTel-based tracing.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Observability &amp; Tracing</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="prompt-mgmt">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/humanloop.html" class="hover:text-emerald-400">Humanloop</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"><span class="text-xs px-2 py-0.5 rounded bg-red-800/60 border border-red-700 text-red-200">⚠ sunset/maintenance</span></div></div>
+<p class="text-sm text-slate-400 mt-2">Former prompt management and evaluation platform; shut down September 2025 with official migration paths to W&amp;B, PromptLayer and Agenta.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Prompt Management</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">enterprise</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/inspect-ai.html" class="hover:text-emerald-400">Inspect AI</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Government-built open-source framework for rigorous LLM and agent evaluations, popular for safety benchmarks and sandboxed agentic tasks.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">free</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="debugging">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/invariant-labs.html" class="hover:text-emerald-400">Invariant Labs</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"><span class="text-xs px-2 py-0.5 rounded bg-rose-800/60 border border-rose-700 text-rose-200">acquired</span></div></div>
+<p class="text-sm text-slate-400 mt-2">Agent trace analysis and security scanning (incl. MCP tool-poisoning research), with an Explorer UI for debugging agent runs.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Agent Debugging &amp; Replay</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="guardrails">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/lakera-guard.html" class="hover:text-emerald-400">Lakera Guard</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"><span class="text-xs px-2 py-0.5 rounded bg-rose-800/60 border border-rose-700 text-rose-200">acquired</span></div></div>
+<p class="text-sm text-slate-400 mt-2">Low-latency API guarding against prompt injection, data leakage and toxic content, backed by the Gandalf attack dataset.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="debugging">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/laminar.html" class="hover:text-emerald-400">Laminar</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Open-source observability for long-running AI agents that captures LLM calls, tool use and browser actions for step-level debugging and replay.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Agent Debugging &amp; Replay</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="observability">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/langfuse.html" class="hover:text-emerald-400">Langfuse</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Open-source (MIT) LLM engineering platform combining tracing, prompt management, evals and datasets, widely used as the default self-hosted observability stack.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Observability &amp; Tracing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="observability">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/langsmith.html" class="hover:text-emerald-400">LangSmith</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Closed-source tracing, evals and monitoring platform from the LangChain team, deepest integration with LangChain/LangGraph but usable via OTel from any stack.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Observability &amp; Tracing</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="prompt-mgmt">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/langtail.html" class="hover:text-emerald-400">Langtail</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Spreadsheet-like prompt testing and deployment studio with assertions and security guardrails for smaller teams.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Prompt Management</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="observability">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/langtrace.html" class="hover:text-emerald-400">Langtrace</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">OpenTelemetry-native open-source tracing and metrics for LLM apps and agent frameworks, with a managed cloud option.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Observability &amp; Tracing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/langwatch.html" class="hover:text-emerald-400">LangWatch</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Open-source agent testing and observability built around the Scenario simulation framework, covering text, voice and adversarial tests.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="prompt-mgmt">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/latitude.html" class="hover:text-emerald-400">Latitude</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Open-source prompt engineering platform with versioning, evals and agent-running infrastructure (PromptL).</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Prompt Management</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="cost">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/litellm.html" class="hover:text-emerald-400">LiteLLM</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Open-source LLM proxy/SDK that normalizes 100+ providers behind the OpenAI format with per-key budgets, spend tracking and rate limits.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Cost &amp; FinOps</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="guardrails">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/llm-guard-protect-ai.html" class="hover:text-emerald-400">LLM Guard (Protect AI)</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"><span class="text-xs px-2 py-0.5 rounded bg-rose-800/60 border border-rose-700 text-rose-200">acquired</span></div></div>
+<p class="text-sm text-slate-400 mt-2">Open-source input/output scanner toolkit (35+ scanners) for PII, injection and toxicity checks on LLM traffic.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">free</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="observability">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/lunary.html" class="hover:text-emerald-400">Lunary</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Lightweight open-source LLM observability with tracing, analytics, prompt templates and PII masking, formerly known as LLMonitor.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Observability &amp; Tracing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/maxim-ai.html" class="hover:text-emerald-400">Maxim AI</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">End-to-end agent simulation, evaluation and observability platform pitched at cross-functional product and engineering teams.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="observability">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/mlflow-tracing-genai.html" class="hover:text-emerald-400">MLflow (Tracing &amp; GenAI)</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">The MLOps standard&#x27;s GenAI extension: trace logging, LLM evaluation and prompt registry inside open-source MLflow 3.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Observability &amp; Tracing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">free</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="observability">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/new-relic-ai-monitoring.html" class="hover:text-emerald-400">New Relic AI Monitoring</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">AI/LLM monitoring layer in the New Relic APM platform tracking model latency, token cost and errors alongside conventional app telemetry.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Observability &amp; Tracing</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="guardrails">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/nvidia-nemo-guardrails.html" class="hover:text-emerald-400">NVIDIA NeMo Guardrails</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Programmable conversational guardrails toolkit using the Colang DSL, covering input, dialog, retrieval, execution and output rails.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">free</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/okareo.html" class="hover:text-emerald-400">Okareo</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Synthetic-user simulation that runs on every commit to catch regressions in agent tone, policy compliance, tool use and routing.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/openai-evals.html" class="hover:text-emerald-400">OpenAI Evals</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">OpenAI&#x27;s original open-source eval framework and registry; largely superseded by the hosted Evals API but still a reference implementation.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">free</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="observability">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/openlit.html" class="hover:text-emerald-400">OpenLIT</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">OpenTelemetry-native open-source platform covering LLM tracing, GPU monitoring, guardrails and a prompt vault with one-line auto-instrumentation of 50+ providers.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Observability &amp; Tracing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">free</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="cost">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/openmeter.html" class="hover:text-emerald-400">OpenMeter</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Open-source usage metering for AI/API products, commonly used to meter tokens for billing and internal chargeback.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Cost &amp; FinOps</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="observability">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/opik-comet.html" class="hover:text-emerald-400">Opik (Comet)</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Open-source LLM evaluation and tracing platform from Comet, combining trace logging, eval metrics and CI-friendly test suites.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Observability &amp; Tracing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="prompt-mgmt">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/orq-ai.html" class="hover:text-emerald-400">Orq.ai</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Generative AI collaboration platform bundling prompt management, deployments, evals and observability for SaaS teams.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Prompt Management</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/patronus-ai.html" class="hover:text-emerald-400">Patronus AI</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Evaluation API and research-driven judge models (e.g. Lynx, Glider) for hallucination detection plus domain benchmarks like FinanceBench.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="cost">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/pay-i.html" class="hover:text-emerald-400">Pay-i</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">GenAI-specific FinOps tracking cost per request, per feature and per customer to give product teams real unit economics.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Cost &amp; FinOps</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">paid</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="observability">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/phospho.html" class="hover:text-emerald-400">Phospho</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Open-source text analytics on LLM app messages, clustering and scoring conversations to surface what users actually do.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Observability &amp; Tracing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="observability">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/portkey.html" class="hover:text-emerald-400">Portkey</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"><span class="text-xs px-2 py-0.5 rounded bg-rose-800/60 border border-rose-700 text-rose-200">acquired</span></div></div>
+<p class="text-sm text-slate-400 mt-2">AI gateway routing 1,600+ models with built-in logging, cost tracking, caching and guardrails; observability comes as a side effect of the proxy layer.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Observability &amp; Tracing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="observability">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/posthog-llm-analytics.html" class="hover:text-emerald-400">PostHog LLM Analytics</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">LLM cost, latency and trace analytics bolted onto PostHog&#x27;s product-analytics platform, letting teams join AI telemetry with user behavior data.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Observability &amp; Tracing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="guardrails">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/prompt-security.html" class="hover:text-emerald-400">Prompt Security</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"><span class="text-xs px-2 py-0.5 rounded bg-rose-800/60 border border-rose-700 text-rose-200">acquired</span></div></div>
+<p class="text-sm text-slate-400 mt-2">Enterprise GenAI security platform monitoring employee and application LLM usage for injection, leakage and shadow AI.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">enterprise</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/promptfoo.html" class="hover:text-emerald-400">Promptfoo</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Config-file-driven open-source CLI for prompt evals, regression testing and LLM red-teaming that runs in CI.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="prompt-mgmt">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/prompthub.html" class="hover:text-emerald-400">PromptHub</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Git-style prompt version control with branch/commit/merge semantics, runtime REST retrieval and CI/CD quality gates.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Prompt Management</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="prompt-mgmt">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/promptlayer.html" class="hover:text-emerald-400">PromptLayer</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Prompt CMS with visual versioning, release labels and A/B testing, positioned so non-engineers can edit and deploy prompts independently.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Prompt Management</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="observability">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/pydantic-logfire.html" class="hover:text-emerald-400">Pydantic Logfire</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">OpenTelemetry-based observability service from the Pydantic team with first-class PydanticAI and Python ecosystem integration.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Observability &amp; Tracing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/ragas.html" class="hover:text-emerald-400">Ragas</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">The de-facto open-source metric library for RAG evaluation (faithfulness, context precision/recall), used standalone or inside other platforms.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">free</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="observability">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/respan-formerly-keywords-ai.html" class="hover:text-emerald-400">Respan (formerly Keywords AI)</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Unified gateway-plus-observability control plane for tracing and evaluating agent behavior, rebranded from Keywords AI.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Observability &amp; Tracing</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="observability">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/sentry-ai-agent-monitoring.html" class="hover:text-emerald-400">Sentry AI Agent Monitoring</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Agent-call tracing and error monitoring inside Sentry, giving app developers LLM visibility in the tool they already use for crash reporting.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Observability &amp; Tracing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="observability">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/signoz.html" class="hover:text-emerald-400">SigNoz</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Open-source OpenTelemetry APM that handles LLM observability via standard OTel instrumentation rather than an LLM-specific SDK.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Observability &amp; Tracing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="cost">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/tokencost.html" class="hover:text-emerald-400">Tokencost</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Lightweight open-source library maintaining an up-to-date price table for estimating prompt/completion costs across 400+ models.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Cost &amp; FinOps</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">free</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="observability">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/traceloop-openllmetry.html" class="hover:text-emerald-400">Traceloop (OpenLLMetry)</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Vendor-neutral OpenTelemetry instrumentation for LLM apps (OpenLLMetry) that ships traces to any OTel backend, plus a hosted monitoring platform.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Observability &amp; Tracing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="observability">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/truefoundry.html" class="hover:text-emerald-400">TrueFoundry</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">AI gateway and deployment platform with built-in request logging, cost attribution and rate limiting for enterprise Kubernetes environments.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Observability &amp; Tracing</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/trulens.html" class="hover:text-emerald-400">TruLens</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"><span class="text-xs px-2 py-0.5 rounded bg-rose-800/60 border border-rose-700 text-rose-200">acquired</span></div></div>
+<p class="text-sm text-slate-400 mt-2">Open-source library for feedback-function-based evaluation and tracing of RAG and agent apps, now stewarded by Snowflake.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">free</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="cost">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/vantage.html" class="hover:text-emerald-400">Vantage</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Cloud cost platform with native token-level ingest for OpenAI/Anthropic and an MCP server for querying AI spend from coding assistants.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Cost &amp; FinOps</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="prompt-mgmt">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/vellum.html" class="hover:text-emerald-400">Vellum</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Low-code platform for prompts, workflows, evaluations and deployments with environment management for product teams.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Prompt Management</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="observability">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/w-b-weave.html" class="hover:text-emerald-400">W&amp;B Weave</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"><span class="text-xs px-2 py-0.5 rounded bg-rose-800/60 border border-rose-700 text-rose-200">acquired</span></div></div>
+<p class="text-sm text-slate-400 mt-2">LLM tracing and evaluation toolkit from Weights &amp; Biases, integrated with the broader W&amp;B experiment-tracking ecosystem.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Observability &amp; Tracing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
+</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="observability">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-semibold text-white"><a href="tools/whylabs-whylogs-langkit.html" class="hover:text-emerald-400">WhyLabs (whylogs/LangKit)</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"></div></div>
+<p class="text-sm text-slate-400 mt-2">Profile-based monitoring (whylogs) plus LangKit LLM metrics that summarize data locally so raw prompts never leave your infrastructure.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Observability &amp; Tracing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">free</span></div>
+</article></div></section>
+<script>
+document.querySelectorAll('.fbtn').forEach(b=>b.onclick=()=>{
+ document.querySelectorAll('.fbtn').forEach(x=>x.className=x.className.replace('bg-emerald-500 text-slate-950 font-semibold','').trim()+' border border-slate-700');
+ b.className=b.className.replace('border border-slate-700','').trim()+' bg-emerald-500 text-slate-950 font-semibold';
+ const f=b.dataset.f;document.querySelectorAll('#grid [data-cat]').forEach(c=>c.style.display=(f==='all'||c.dataset.cat===f)?'':'none');});
+</script>
+<footer class="border-t border-slate-800 mt-16"><div class="max-w-5xl mx-auto px-6 py-8 text-sm text-slate-500">
+<p>Agent Observability Index — independent directory, no vendor affiliation. Data manually verified; corrections welcome via <a class="text-emerald-400" href="mailto:sysetc@gmail.com">email</a>.</p>
+<p class="mt-2">© 2026 Panshi · <a class="hover:text-slate-300" href="index.html">Home</a> · <a class="hover:text-slate-300" href="advertise.html">Advertise</a></p>
+</div></footer></body></html>
