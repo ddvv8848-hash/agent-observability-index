@@ -20,7 +20,7 @@ COMPARE_PAIRS = [
  ("Langfuse","LangSmith"),("Langfuse","Helicone"),("Langfuse","Arize Phoenix"),
  ("Braintrust","LangSmith"),("Opik (Comet)","Langfuse"),("Promptfoo","Confident AI (DeepEval)"),
  ("Ragas","Promptfoo"),("AgentOps","Langfuse"),("Datadog LLM Observability","LangSmith"),
- ("Helicone","Portkey"),("Guardrails AI","NVIDIA NeMo Guardrails"),("Lakera Guard","LLM Guard (Protect AI)"),
+ ("Helicone","Portkey"),("Guardrails AI","NVIDIA NeMo Guardrails"),("Lakera Guard","LLM Guard (Protect AI)"),("garak","PyRIT"),("TensorZero","Langfuse"),
 ]
 
 def slug(s):
