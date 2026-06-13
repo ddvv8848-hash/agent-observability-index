@@ -33,6 +33,45 @@ try:
 except Exception:
     POSTS = []
 
+BEST_PAGES = [
+ {"slug": "best-self-hostable-llm-observability-tools",
+  "title": "Best self-hostable LLM observability tools (2026)",
+  "h1": "Best self-hostable LLM observability tools",
+  "lead": "LLM observability and tracing tools you can run inside your own infrastructure, ranked by our public GitHub maturity signal.",
+  "crit": "self-hostable + in the observability, debugging or cost categories",
+  "match": lambda t: t.get("self_hostable") and t.get("category") in ("observability", "debugging", "cost")},
+ {"slug": "best-opentelemetry-native-llm-observability-tools",
+  "title": "Best OpenTelemetry-native LLM observability tools (2026)",
+  "h1": "Best OpenTelemetry-native LLM observability tools",
+  "lead": "LLM tracing tools that speak OpenTelemetry (OTLP) natively, so there is no proprietary-SDK lock-in. Ranked by our GitHub maturity signal.",
+  "crit": "OpenTelemetry-native (verified from docs/repo)",
+  "match": lambda t: t.get("otel_native") is True},
+ {"slug": "best-open-source-llm-evals-tools",
+  "title": "Best open-source LLM evals & testing tools (2026)",
+  "h1": "Best open-source LLM evals & testing tools",
+  "lead": "Open-source frameworks for scoring LLM output, running regression suites and red-teaming, ranked by our GitHub maturity signal.",
+  "crit": "open-source + in the evals category",
+  "match": lambda t: t.get("open_source") and t.get("category") == "evals"},
+ {"slug": "best-free-llm-observability-tools",
+  "title": "Best free LLM observability tools (2026)",
+  "h1": "Best free LLM observability tools",
+  "lead": "LLM observability tools with a free or freemium tier, ranked by our GitHub maturity signal.",
+  "crit": "free or freemium pricing + in the observability category",
+  "match": lambda t: t.get("pricing_model") in ("free", "freemium") and t.get("category") == "observability"},
+ {"slug": "best-llm-guardrails-tools",
+  "title": "Best LLM guardrails & safety tools (2026)",
+  "h1": "Best LLM guardrails & safety tools",
+  "lead": "Tools that block prompt injection, PII leakage and unsafe output at runtime, ranked by our GitHub maturity signal.",
+  "crit": "in the guardrails & safety category",
+  "match": lambda t: t.get("category") == "guardrails"},
+ {"slug": "best-llm-cost-tracking-tools",
+  "title": "Best LLM cost tracking & FinOps tools (2026)",
+  "h1": "Best LLM cost tracking & FinOps tools",
+  "lead": "Tools to track token spend, unit economics and budgets across providers, ranked by our GitHub maturity signal.",
+  "crit": "in the cost & FinOps category",
+  "match": lambda t: t.get("category") == "cost"},
+]
+
 def slug(s):
     return re.sub(r"-+","-",re.sub(r"[^a-z0-9]+","-",s.lower())).strip("-")
 
@@ -347,6 +386,48 @@ def og_svg(n_tools):
             f'<text x="100" y="510" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="34" fill="#94a3b8">{n_tools} tools · observability · evals · guardrails · cost — facts checked vs primary sources</text>'
             f'</svg>')
 
+def best_page(spec, tools):
+    sel = [t for t in tools if spec["match"](t)]
+    sel.sort(key=lambda t: (maturity(t) or -1, t.get("gh_stars") or -1), reverse=True)
+    n = len(sel)
+    top = sel[0] if sel else None
+    rows = ""
+    for i, t in enumerate(sel, 1):
+        ms = maturity(t); ml = maturity_label(ms)
+        score = f"{ms}/100 ({ml[0]})" if ms is not None else "—"
+        flags = []
+        if t.get("open_source"): flags.append("OSS")
+        if t.get("self_hostable"): flags.append("self-host")
+        if t.get("otel_native"): flags.append("OTel-native")
+        rows += (f'<tr class="border-b border-slate-800"><td class="py-2 pr-4 text-slate-500">{i}</td>'
+                 f'<td class="py-2 pr-4"><a class="text-emerald-400" href="../tools/{slug(t["name"])}.html">{esc(t["name"])}</a></td>'
+                 f'<td class="py-2 pr-4">{esc(score)}</td>'
+                 f'<td class="py-2 pr-4">{esc(t.get("pricing_model") or "—")}</td>'
+                 f'<td class="py-2">{esc(", ".join(flags))}</td></tr>')
+    tp_name = esc(top["name"]) if top else "—"
+    lead_ans = (f"Top pick by our maturity signal: <strong class=\"text-slate-200\">{tp_name}</strong>. "
+                f"Below are all {n} {spec['crit']} tools we track, ranked by the same objective GitHub-derived score. "
+                "Maturity measures adoption and upkeep, not subjective quality — pick by your own constraints.")
+    body = f"""<main class="max-w-3xl mx-auto px-6 py-12">
+<p class="text-sm text-slate-500 mb-2"><a href="../index.html" class="hover:text-slate-300">Home</a> / Best lists</p>
+<h1 class="text-3xl font-bold text-white">{esc(spec['h1'])}</h1>
+<div class="mt-4 bg-slate-900 border-l-4 border-emerald-500 rounded-r-lg px-5 py-4"><p class="text-sm font-semibold text-emerald-400">Quick answer</p><p class="text-slate-300 mt-1">{lead_ans}</p></div>
+<p class="mt-4 text-slate-400">{esc(spec['lead'])} Ranking method is public — see <a class="text-emerald-400" href="../methodology.html">methodology</a>. Note: maturity reflects total GitHub adoption, so large general-purpose platforms (e.g. Grafana, Sentry, PostHog) can rank high on the strength of their parent project even where their LLM-specific features are newer — read the flags and pick by your constraints. Listings are free and editorially independent; sponsorship never changes facts or ranking.</p>
+<table class="w-full text-sm mt-8"><thead><tr class="text-left text-slate-300 border-b border-slate-700"><th class="py-2 pr-4">#</th><th class="py-2 pr-4">Tool</th><th class="py-2 pr-4">Maturity</th><th class="py-2 pr-4">Pricing</th><th class="py-2">Flags</th></tr></thead><tbody>{rows}</tbody></table></main>"""
+    items = [{"@type": "ListItem", "position": i, "name": t["name"],
+              "url": f"{BASE}/tools/{slug(t['name'])}.html"} for i, t in enumerate(sel, 1)]
+    qas = [(spec["h1"].replace("Best", "What is the best") + "?",
+            (f"By our public maturity signal (GitHub stars + recency + license), {top['name']} ranks highest among the {n} {spec['crit']} tools we track. Maturity reflects adoption and upkeep, not subjective quality." if top else "No tools currently match.")),
+           ("How is this ranking decided?",
+            "Tools are ranked by a reproducible maturity score computed only from public GitHub signals (log of stars + last-commit recency + license). The formula is published on our methodology page; ranking is never sold.")]
+    fhtml, fsch = faq(qas)
+    body = body.replace("</main>", fhtml + "</main>", 1)
+    jsonld = {"@context": "https://schema.org", "@graph": [
+        {"@type": "ItemList", "name": spec["h1"], "numberOfItems": n, "itemListElement": items},
+        fsch, crumbs([("Home", "index.html"), (spec["h1"], f"best/{spec['slug']}.html")])]}
+    return page(f"{spec['title']} | {SITE}",
+                spec["lead"][:155], body, f"best/{spec['slug']}.html", root="../", jsonld=jsonld)
+
 def main():
     tools = json.load(open("data/tools.json", encoding="utf-8"))
     tools.sort(key=lambda t: t["name"].lower())
@@ -365,6 +446,9 @@ def main():
         paths.append(compare_page(a, b))
         cmp_links.append(f'<a href="compare/{slug(an)}-vs-{slug(bn)}.html" class="bg-slate-900 border border-slate-800 hover:border-slate-600 rounded-lg px-4 py-3 text-sm">{esc(an)} <span class="text-slate-500">vs</span> {esc(bn)}</a>')
 
+    for spec in BEST_PAGES:
+        paths.append(best_page(spec, tools))
+
     for ck,(cn,cd) in CATS.items():
         items = "".join(card(t, root="../") for t in by.get(ck, []))
         body = f"""<main class="max-w-5xl mx-auto px-6 py-12">
@@ -378,6 +462,7 @@ def main():
 
     cat_chips = '<button data-f="all" class="fbtn bg-emerald-500 text-slate-950 px-3 py-1.5 rounded-lg text-sm font-semibold">All</button>' + "".join(
         f'<button data-f="{k}" class="fbtn border border-slate-700 px-3 py-1.5 rounded-lg text-sm hover:border-slate-500">{esc(v[0])} ({len(by.get(k,[]))})</button>' for k,v in CATS.items())
+    best_chips = "".join(f'<a href="best/{esc(sp["slug"])}.html" class="bg-slate-900 border border-slate-800 hover:border-slate-600 rounded-lg px-4 py-3 text-sm">{esc(sp["h1"])}</a>' for sp in BEST_PAGES)
     cards = "".join(card(t) for t in tools)
     body = f"""<header class="max-w-5xl mx-auto px-6 pt-16 pb-10">
 <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight">The neutral index of<br><span class="text-emerald-400">AI agent observability</span> tooling</h1>
@@ -385,6 +470,8 @@ def main():
 <div class="mt-4 text-sm text-slate-500">Maintained by <span class="text-slate-300">Panshi</span> · updated {BUILD_DATE}</div></header>
 <section id="compare" class="max-w-5xl mx-auto px-6 pb-4"><h2 class="text-xl font-semibold text-white mb-4">Popular comparisons</h2>
 <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3">{''.join(cmp_links)}</div></section>
+<section id="best" class="max-w-5xl mx-auto px-6 pb-4"><h2 class="text-xl font-semibold text-white mb-4">Best-of lists</h2>
+<div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3">{best_chips}</div></section>
 <section id="tools" class="max-w-5xl mx-auto px-6 py-10">
 <h2 class="text-xl font-semibold text-white mb-4">All tools</h2>
 <div class="flex flex-col sm:flex-row gap-3 mb-5">
