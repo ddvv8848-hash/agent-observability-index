@@ -88,4 +88,47 @@ POSTS = [
     "In our micro-benchmark the per-span overhead of all tested SDKs was negligible versus real LLM latency (under 0.05% of a typical 500ms call), though it varied roughly 7x between the lightest OpenTelemetry path and a richer proprietary one."),
  ],
 },
+{
+ "slug": "self-hosting-llm-observability-what-we-measured",
+ "title": "Self-hosting LLM observability: what we actually measured",
+ "description": "We self-hosted open-source LLM observability tools and measured the two things that matter: how much instrumentation overhead they add, and how heavy they are to run. Real numbers, honest caveats.",
+ "date": "2026-06-13",
+ "tags": ["self-hosting", "benchmark", "observability"],
+ "body": """
+<div class="bg-slate-900 border-l-4 border-emerald-500 rounded-r-lg px-5 py-4 mb-8">
+<p class="text-sm font-semibold text-emerald-400">What we found</p>
+<p class="text-slate-300 mt-1">Instrumentation overhead is a non-issue: every SDK we tested added under 0.05% to a typical LLM call (though there's a ~7x spread between them). The real difference is operational weight — a single-container tool like Arize Phoenix came up instantly (1.35&nbsp;GB image, ~400&nbsp;MB idle RAM, OTLP ingest worked out of the box), while heavier multi-service stacks take real effort to stand up.</p>
+</div>
+
+<p class="text-slate-400">Most "best self-hosted observability" lists never actually run the tools. We did. Two questions matter when you self-host: <strong class="text-slate-200">how much does the SDK slow my app down</strong>, and <strong class="text-slate-200">how much does the backend cost me to operate</strong>. Here is what we measured.</p>
+
+<h2 class="text-xl font-semibold text-white mt-10">1. Instrumentation overhead (client-side)</h2>
+<p class="text-slate-400 mt-2">We timed 50,000 spans per SDK with in-memory exporters (no network), against an uninstrumented baseline. Per-span overhead, and what it is as a fraction of a typical 500&nbsp;ms LLM call:</p>
+<table class="w-full text-sm mt-4">
+<thead><tr class="text-left text-slate-300 border-b border-slate-700"><th class="py-2 pr-4">SDK</th><th class="py-2 pr-4">overhead / span</th><th class="py-2">% of a 500ms call</th></tr></thead>
+<tbody>
+<tr class="border-b border-slate-800"><td class="py-2 pr-4">OpenTelemetry (raw)</td><td class="py-2 pr-4">~34 µs</td><td class="py-2">0.007%</td></tr>
+<tr class="border-b border-slate-800"><td class="py-2 pr-4">Traceloop / OpenLLMetry</td><td class="py-2 pr-4">~37 µs</td><td class="py-2">0.007%</td></tr>
+<tr class="border-b border-slate-800"><td class="py-2 pr-4">Langfuse SDK</td><td class="py-2 pr-4">~243 µs</td><td class="py-2">0.049%</td></tr>
+</tbody></table>
+<p class="text-slate-400 mt-3">Takeaway: stop worrying about instrumentation overhead for LLM workloads — the model call dominates by 2,000x or more. The ~7x spread (a richer observation model costs more per span) only matters on very high-span, non-LLM hot paths.</p>
+
+<h2 class="text-xl font-semibold text-white mt-10">2. Operational weight (self-host footprint)</h2>
+<p class="text-slate-400 mt-2"><strong class="text-slate-200">Arize Phoenix</strong> is the lightweight end: one container, a 1.35&nbsp;GB image, ~400&nbsp;MB idle RAM, and it accepted standard OTLP traces immediately. If you want self-hosted tracing running in five minutes, this is the shape to look for.</p>
+<p class="text-slate-400 mt-2">The full-platform stacks are a different commitment. A tool like <strong class="text-slate-200">Langfuse</strong> ships a multi-service compose (web, worker, Postgres, ClickHouse, cache, object store) — far more capable, but in our test the stack did not reach a healthy web endpoint within a 7.5-minute window on a well-resourced box (34&nbsp;GB / 20&nbsp;cores). That is not a knock on the product — it is widely self-hosted in production — but it is an honest signal: a 6-service analytics platform is an operational commitment, not a one-container drop-in. Budget for migrations, storage and ongoing ops.</p>
+
+<h2 class="text-xl font-semibold text-white mt-10">How to read this</h2>
+<p class="text-slate-400 mt-2">Match the footprint to the job. Need lightweight, OpenTelemetry-native tracing you can stand up fast? A single-container tool wins. Need prompt management, evals, datasets and long retention for a team? A full platform earns its operational weight. Don't pay multi-service ops cost for a single-container need, or vice versa.</p>
+
+<p class="text-slate-400 mt-4">Caveats, stated plainly: the overhead test is client-side span cost with in-memory export, not end-to-end backend latency; the self-host numbers are from one test environment (WSL2, Docker) and we are extending the matrix to more tools and a longer boot window. We will publish the full table — labelled "tested" and dated — as we complete clean runs. See <a class="text-emerald-400" href="/methodology.html">our methodology</a>.</p>
+""",
+ "faq": [
+   ("Does LLM observability instrumentation slow down my app?",
+    "Negligibly. In our test every SDK added under 0.05% to a typical 500ms LLM call; the model call dominates by thousands of times. Instrumentation overhead should not drive your tool choice for LLM workloads."),
+   ("Which self-hosted LLM observability tool is lightest to run?",
+    "In our test Arize Phoenix was the lightweight end: a single container, ~1.35GB image and ~400MB idle RAM, accepting OTLP traces immediately. Full platforms like Langfuse are far more capable but ship multi-service stacks that are a larger operational commitment."),
+   ("Is Langfuse hard to self-host?",
+    "It is widely self-hosted in production, but it is a multi-service stack (web, worker, Postgres, ClickHouse, cache, object store). In our test it did not reach a healthy endpoint within 7.5 minutes on a 34GB/20-core box, so plan for migrations, storage and ongoing ops rather than a one-container drop-in."),
+ ],
+},
 ]
