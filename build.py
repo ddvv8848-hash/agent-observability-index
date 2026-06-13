@@ -105,7 +105,7 @@ def page(title, desc, body, path, root="", jsonld=None, og_type="website"):
 <meta name="twitter:title" content="{esc(title)}">
 <meta name="twitter:description" content="{esc(desc)}">
 <meta name="twitter:image" content="{OG_IMAGE}">
-<script src="https://cdn.tailwindcss.com"></script>{CF_BEACON}{ld}</head>
+<link rel="stylesheet" href="/styles.css">{CF_BEACON}{ld}</head>
 <body class="bg-slate-950 text-slate-200 antialiased">
 <nav class="border-b border-slate-800"><div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
 <a href="{root}index.html" class="font-bold text-white">Agent<span class="text-emerald-400">Obs</span> Index</a>
