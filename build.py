@@ -28,6 +28,11 @@ COMPARE_PAIRS = [
  ("Helicone","Portkey"),("Guardrails AI","NVIDIA NeMo Guardrails"),("Lakera Guard","LLM Guard (Protect AI)"),("garak","PyRIT"),("TensorZero","Langfuse"),
 ]
 
+try:
+    from posts import POSTS
+except Exception:
+    POSTS = []
+
 def slug(s):
     return re.sub(r"-+","-",re.sub(r"[^a-z0-9]+","-",s.lower())).strip("-")
 
@@ -112,6 +117,7 @@ def page(title, desc, body, path, root="", jsonld=None, og_type="website"):
 <div class="flex gap-5 text-sm">
 <a href="{root}index.html#tools" class="hover:text-white">Tools</a>
 <a href="{root}index.html#compare" class="hover:text-white">Comparisons</a>
+<a href="{root}blog/index.html" class="hover:text-white">Blog</a>
 <a href="{root}methodology.html" class="hover:text-white">Methodology</a>
 <a href="{root}advertise.html" class="text-emerald-400 hover:text-emerald-300">Get featured</a>
 </div></div></nav>
@@ -482,6 +488,40 @@ maturity     = min(100, popularity + maintenance + openness)</pre>
     if os.path.isdir("static"):
         for fn in os.listdir("static"):
             shutil.copy(os.path.join("static", fn), os.path.join(OUT, fn))
+
+    # blog
+    for post in POSTS:
+        fhtml, fsch = faq(post.get("faq", []))
+        pbody = f"""<main class="max-w-3xl mx-auto px-6 py-12">
+<p class="text-sm text-slate-500 mb-2"><a href="../index.html" class="hover:text-slate-300">Home</a> / <a href="index.html" class="hover:text-slate-300">Blog</a></p>
+<h1 class="text-3xl font-bold text-white leading-tight">{esc(post['title'])}</h1>
+<p class="text-sm text-slate-500 mt-3">{esc(post['date'])} · {esc(', '.join(post.get('tags', [])))}</p>
+<div class="mt-8">{post['body']}</div>
+{fhtml}</main>"""
+        art = {"@type": "Article", "headline": post["title"], "description": post["description"],
+               "datePublished": post["date"], "author": {"@type": "Organization", "name": SITE},
+               "publisher": {"@type": "Organization", "name": "Panshi"},
+               "url": f"{BASE}/blog/{post['slug']}.html"}
+        pld = {"@context": "https://schema.org", "@graph": [art, fsch,
+               crumbs([("Home", "index.html"), ("Blog", "blog/index.html"), (post["title"], f"blog/{post['slug']}.html")])]}
+        paths.append(page(f"{post['title']} | {SITE}", post["description"], pbody,
+                          f"blog/{post['slug']}.html", root="../", jsonld=pld, og_type="article"))
+    if POSTS:
+        items = "".join(
+            f'<article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600">'
+            f'<h2 class="font-semibold text-white"><a class="hover:text-emerald-400" href="{esc(po["slug"])}.html">{esc(po["title"])}</a></h2>'
+            f'<p class="text-xs text-slate-500 mt-1">{esc(po["date"])}</p>'
+            f'<p class="text-sm text-slate-400 mt-2">{esc(po["description"])}</p></article>'
+            for po in POSTS)
+        bbody = f"""<main class="max-w-3xl mx-auto px-6 py-12">
+<h1 class="text-3xl font-bold text-white">Blog</h1>
+<p class="mt-2 text-slate-400">Field notes on AI agent observability, GEO and choosing a neutral tooling stack.</p>
+<div class="grid gap-4 mt-8">{items}</div></main>"""
+        bld = {"@context": "https://schema.org", "@graph": [
+            {"@type": "Blog", "name": f"{SITE} Blog", "url": f"{BASE}/blog/index.html"},
+            crumbs([("Home", "index.html"), ("Blog", "blog/index.html")])]}
+        paths.append(page(f"Blog | {SITE}", "Field notes on AI agent observability, GEO and neutral tooling selection.",
+                          bbody, "blog/index.html", root="../", jsonld=bld))
 
     sm = "".join(f"<url><loc>{BASE}/{p}</loc><lastmod>{BUILD_DATE}</lastmod></url>" for p in sorted(set(paths)))
     open(os.path.join(OUT,"sitemap.xml"),"w").write(f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sm}</urlset>')
