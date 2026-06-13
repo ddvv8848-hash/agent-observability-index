@@ -238,7 +238,7 @@
  {
   "name": "Lunary",
   "url": "https://lunary.ai",
-  "github": "https://github.com/lunary-ai/lunary",
+  "github": null,
   "category": "observability",
   "open_source": true,
   "self_hostable": true,
@@ -1397,7 +1397,7 @@
  {
   "name": "Haize Labs",
   "url": "https://www.haizelabs.com",
-  "github": "https://github.com/haizelabs",
+  "github": "https://github.com/haizelabs/verdict",
   "category": "guardrails",
   "open_source": false,
   "self_hostable": false,
@@ -1883,7 +1883,7 @@
  {
   "name": "Openlayer",
   "url": "https://www.openlayer.com",
-  "github": "https://github.com/openlayer-ai",
+  "github": "https://github.com/openlayer-ai/openlayer-python",
   "category": "evals",
   "open_source": false,
   "self_hostable": null,
