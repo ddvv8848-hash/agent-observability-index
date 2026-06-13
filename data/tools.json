@@ -23,7 +23,8 @@
     "gh_stars": 29001,
     "gh_pushed_at": "2026-06-12",
     "gh_open_issues": 663,
-    "gh_license": null
+    "gh_license": null,
+    "otel_native": true
   },
   {
     "name": "LangSmith",
@@ -42,7 +43,8 @@
     ],
     "funding_note": "LangChain raised $125M Series B (2025) at ~$1.25B valuation",
     "one_liner": "Closed-source tracing, evals and monitoring platform from the LangChain team, deepest integration with LangChain/LangGraph but usable via OTel from any stack.",
-    "evidence_url": "https://www.langchain.com/pricing"
+    "evidence_url": "https://www.langchain.com/pricing",
+    "otel_native": true
   },
   {
     "name": "Braintrust",
@@ -86,7 +88,8 @@
     "gh_stars": 10119,
     "gh_pushed_at": "2026-06-13",
     "gh_open_issues": 585,
-    "gh_license": null
+    "gh_license": null,
+    "otel_native": true
   },
   {
     "name": "Arize AX",
@@ -105,7 +108,8 @@
     ],
     "funding_note": "$70M Series C (Adams Street, M12, Datadog; Feb 2025), ~$131M total",
     "one_liner": "Enterprise AI observability and evaluation platform extending Arize's ML-monitoring heritage to LLM and agent workloads at scale.",
-    "evidence_url": "https://arize.com/pricing/"
+    "evidence_url": "https://arize.com/pricing/",
+    "otel_native": true
   },
   {
     "name": "Helicone",
@@ -129,7 +133,8 @@
     "gh_stars": 5809,
     "gh_pushed_at": "2026-06-11",
     "gh_open_issues": 109,
-    "gh_license": "Apache-2.0"
+    "gh_license": "Apache-2.0",
+    "otel_native": false
   },
   {
     "name": "W&B Weave",
@@ -153,7 +158,8 @@
     "gh_stars": 1101,
     "gh_pushed_at": "2026-06-13",
     "gh_open_issues": 426,
-    "gh_license": "Apache-2.0"
+    "gh_license": "Apache-2.0",
+    "otel_native": true
   },
   {
     "name": "Galileo",
@@ -261,7 +267,8 @@
     "gh_stars": 7194,
     "gh_pushed_at": "2026-06-12",
     "gh_open_issues": 542,
-    "gh_license": "Apache-2.0"
+    "gh_license": "Apache-2.0",
+    "otel_native": true
   },
   {
     "name": "Lunary",
@@ -280,7 +287,8 @@
     ],
     "funding_note": "",
     "one_liner": "Lightweight open-source LLM observability with tracing, analytics, prompt templates and PII masking, formerly known as LLMonitor.",
-    "evidence_url": "https://lunary.ai/pricing"
+    "evidence_url": "https://lunary.ai/pricing",
+    "otel_native": true
   },
   {
     "name": "Portkey",
@@ -305,7 +313,8 @@
     "gh_stars": 12050,
     "gh_pushed_at": "2026-05-25",
     "gh_open_issues": 192,
-    "gh_license": "MIT"
+    "gh_license": "MIT",
+    "otel_native": true
   },
   {
     "name": "PromptLayer",
@@ -364,7 +373,8 @@
     "gh_stars": 1205,
     "gh_pushed_at": "2025-11-17",
     "gh_open_issues": 1,
-    "gh_license": "AGPL-3.0"
+    "gh_license": "AGPL-3.0",
+    "otel_native": true
   },
   {
     "name": "Opik (Comet)",
@@ -389,7 +399,8 @@
     "gh_stars": 19594,
     "gh_pushed_at": "2026-06-12",
     "gh_open_issues": 108,
-    "gh_license": "Apache-2.0"
+    "gh_license": "Apache-2.0",
+    "otel_native": false
   },
   {
     "name": "AgentOps",
@@ -413,7 +424,8 @@
     "gh_stars": 5629,
     "gh_pushed_at": "2026-03-19",
     "gh_open_issues": 163,
-    "gh_license": "MIT"
+    "gh_license": "MIT",
+    "otel_native": true
   },
   {
     "name": "LiteLLM",
@@ -456,7 +468,8 @@
     ],
     "funding_note": "Public company (NASDAQ: DDOG)",
     "one_liner": "LLM and agent tracing inside the Datadog APM suite, attractive to teams already standardized on Datadog for infrastructure monitoring.",
-    "evidence_url": "https://docs.datadoghq.com/llm_observability/monitoring/cost/"
+    "evidence_url": "https://docs.datadoghq.com/llm_observability/monitoring/cost/",
+    "otel_native": true
   },
   {
     "name": "New Relic AI Monitoring",
@@ -475,7 +488,8 @@
     ],
     "funding_note": "Owned by Francisco Partners/TPG (take-private 2023)",
     "one_liner": "AI/LLM monitoring layer in the New Relic APM platform tracking model latency, token cost and errors alongside conventional app telemetry.",
-    "evidence_url": "https://newrelic.com/pricing"
+    "evidence_url": "https://newrelic.com/pricing",
+    "otel_native": true
   },
   {
     "name": "OpenLIT",
@@ -500,7 +514,8 @@
     "gh_stars": 2522,
     "gh_pushed_at": "2026-06-12",
     "gh_open_issues": 50,
-    "gh_license": "Apache-2.0"
+    "gh_license": "Apache-2.0",
+    "otel_native": true
   },
   {
     "name": "SigNoz",
@@ -522,7 +537,8 @@
     "gh_stars": 27319,
     "gh_pushed_at": "2026-06-12",
     "gh_open_issues": 1498,
-    "gh_license": null
+    "gh_license": null,
+    "otel_native": true
   },
   {
     "name": "Pydantic Logfire",
@@ -546,7 +562,8 @@
     "gh_stars": 4299,
     "gh_pushed_at": "2026-06-12",
     "gh_open_issues": 232,
-    "gh_license": "MIT"
+    "gh_license": "MIT",
+    "otel_native": true
   },
   {
     "name": "PostHog LLM Analytics",
@@ -569,7 +586,8 @@
     "gh_stars": 35005,
     "gh_pushed_at": "2026-06-13",
     "gh_open_issues": 3878,
-    "gh_license": null
+    "gh_license": null,
+    "otel_native": true
   },
   {
     "name": "HoneyHive",
@@ -588,7 +606,8 @@
     ],
     "funding_note": "$7.4M seed/pre-seed (Insight Partners)",
     "one_liner": "Evaluation and observability platform for production agents with prompt versioning, A/B tests and OTel-based tracing.",
-    "evidence_url": "https://www.honeyhive.ai/pricing"
+    "evidence_url": "https://www.honeyhive.ai/pricing",
+    "otel_native": true
   },
   {
     "name": "Respan (formerly Keywords AI)",
@@ -607,7 +626,8 @@
     ],
     "funding_note": "YC W24",
     "one_liner": "Unified gateway-plus-observability control plane for tracing and evaluating agent behavior, rebranded from Keywords AI.",
-    "evidence_url": "https://www.respan.ai"
+    "evidence_url": "https://www.respan.ai",
+    "otel_native": true
   },
   {
     "name": "Laminar",
@@ -631,7 +651,8 @@
     "gh_stars": 3001,
     "gh_pushed_at": "2026-06-13",
     "gh_open_issues": 108,
-    "gh_license": "Apache-2.0"
+    "gh_license": "Apache-2.0",
+    "otel_native": true
   },
   {
     "name": "Phospho",
@@ -653,7 +674,8 @@
     "gh_stars": 440,
     "gh_pushed_at": "2025-07-17",
     "gh_open_issues": 1,
-    "gh_license": "Apache-2.0"
+    "gh_license": "Apache-2.0",
+    "otel_native": false
   },
   {
     "name": "Fiddler AI",
@@ -671,7 +693,8 @@
     ],
     "funding_note": "~$68M raised (Series B + extensions)",
     "one_liner": "Enterprise AI observability vendor from the ML-monitoring era, now offering LLM scoring, guardrails and bias/fairness auditing.",
-    "evidence_url": "https://www.fiddler.ai/llmops"
+    "evidence_url": "https://www.fiddler.ai/llmops",
+    "otel_native": true
   },
   {
     "name": "WhyLabs (whylogs/LangKit)",
@@ -692,7 +715,8 @@
     "gh_stars": 2822,
     "gh_pushed_at": "2025-01-10",
     "gh_open_issues": 3,
-    "gh_license": "Apache-2.0"
+    "gh_license": "Apache-2.0",
+    "otel_native": false
   },
   {
     "name": "Dynatrace AI Observability",
@@ -711,7 +735,8 @@
     ],
     "funding_note": "Public company (NYSE: DT)",
     "one_liner": "GenAI and LLM monitoring within the Dynatrace APM platform, covering tokens, cost and service health for enterprises already on Dynatrace.",
-    "evidence_url": "https://www.dynatrace.com/pricing/"
+    "evidence_url": "https://www.dynatrace.com/pricing/",
+    "otel_native": true
   },
   {
     "name": "Grafana Cloud AI Observability",
@@ -733,7 +758,8 @@
     "gh_stars": 74395,
     "gh_pushed_at": "2026-06-13",
     "gh_open_issues": 3617,
-    "gh_license": "AGPL-3.0"
+    "gh_license": "AGPL-3.0",
+    "otel_native": true
   },
   {
     "name": "Sentry AI Agent Monitoring",
@@ -758,7 +784,8 @@
     "gh_stars": 44098,
     "gh_pushed_at": "2026-06-13",
     "gh_open_issues": 2096,
-    "gh_license": null
+    "gh_license": null,
+    "otel_native": true
   },
   {
     "name": "MLflow (Tracing & GenAI)",
@@ -783,7 +810,8 @@
     "gh_stars": 26483,
     "gh_pushed_at": "2026-06-13",
     "gh_open_issues": 2089,
-    "gh_license": "Apache-2.0"
+    "gh_license": "Apache-2.0",
+    "otel_native": true
   },
   {
     "name": "TrueFoundry",
@@ -801,7 +829,8 @@
     ],
     "funding_note": "Series A (Intel Capital)",
     "one_liner": "AI gateway and deployment platform with built-in request logging, cost attribution and rate limiting for enterprise Kubernetes environments.",
-    "evidence_url": "https://www.truefoundry.com/pricing"
+    "evidence_url": "https://www.truefoundry.com/pricing",
+    "otel_native": true
   },
   {
     "name": "Patronus AI",
@@ -1370,7 +1399,8 @@
     ],
     "funding_note": "$3.3M seed (MaC Venture Capital, 2024)",
     "one_liner": "Simulation-first testing and replay for voice/chat agents, borrowing evaluation methodology from autonomous-vehicle testing.",
-    "evidence_url": "https://www.coval.dev"
+    "evidence_url": "https://www.coval.dev",
+    "otel_native": true
   },
   {
     "name": "Invariant Labs",
@@ -1393,7 +1423,8 @@
     "gh_stars": 427,
     "gh_pushed_at": "2026-01-12",
     "gh_open_issues": 11,
-    "gh_license": "Apache-2.0"
+    "gh_license": "Apache-2.0",
+    "otel_native": false
   },
   {
     "name": "Guardrails AI",
@@ -1637,7 +1668,8 @@
     "frameworks": null,
     "funding_note": "YC-backed (2025)",
     "one_liner": "Production observability for voice agents that captures real calls and converts failures into test cases.",
-    "evidence_url": "https://roark.ai"
+    "evidence_url": "https://roark.ai",
+    "otel_native": false
   },
   {
     "name": "TestZeus (Hercules)",
@@ -1869,7 +1901,8 @@
     ],
     "funding_note": "AWS first-party product",
     "one_liner": "AWS-managed trace-level observability for agents via CloudWatch generative AI observability and OTEL.",
-    "evidence_url": "https://agentmarketcap.ai/blog/2026/04/09/aws-bedrock-agentcore-vs-azure-ai-agent-service-vs-google-vertex-ai-agents-q2-2026"
+    "evidence_url": "https://agentmarketcap.ai/blog/2026/04/09/aws-bedrock-agentcore-vs-azure-ai-agent-service-vs-google-vertex-ai-agents-q2-2026",
+    "otel_native": true
   },
   {
     "name": "Azure AI Foundry Observability",
@@ -1887,7 +1920,8 @@
     ],
     "funding_note": "Microsoft first-party product",
     "one_liner": "Built-in evaluation, tracing and monitoring for models and agents inside Azure AI Foundry.",
-    "evidence_url": "https://kovil.ai/azure-ai-foundry/compare/vs-aws-bedrock"
+    "evidence_url": "https://kovil.ai/azure-ai-foundry/compare/vs-aws-bedrock",
+    "otel_native": true
   },
   {
     "name": "Vertex AI Gen AI Evaluation Service",
@@ -2044,7 +2078,8 @@
     "frameworks": null,
     "funding_note": "YC X25",
     "one_liner": "Autonomous LLM-Ops engineer that traces, debugs and optimizes LLM pipelines.",
-    "evidence_url": "https://www.aviro.ai/"
+    "evidence_url": "https://www.aviro.ai/",
+    "otel_native": false
   },
   {
     "name": "Judgment Labs (judgeval)",
@@ -2137,7 +2172,8 @@
     "gh_stars": 11461,
     "gh_pushed_at": "2026-06-11",
     "gh_open_issues": 393,
-    "gh_license": "Apache-2.0"
+    "gh_license": "Apache-2.0",
+    "otel_native": true
   },
   {
     "name": "Trubrics",
@@ -2155,7 +2191,8 @@
     "gh_stars": 156,
     "gh_pushed_at": "2025-05-26",
     "gh_open_issues": 4,
-    "gh_license": null
+    "gh_license": null,
+    "otel_native": false
   },
   {
     "name": "Amberflo",

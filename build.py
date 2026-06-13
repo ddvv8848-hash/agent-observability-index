@@ -144,6 +144,7 @@ def card(t, root=""):
     if t.get("self_hostable"): badges.append(badge("self-hostable","violet"))
     pm = t.get("pricing_model")
     if pm: badges.append(badge(pm,"amber"))
+    if t.get("otel_native"): badges.append(badge("OTel-native","teal"))
     ms = maturity(t); ml = maturity_label(ms)
     if t.get("gh_stars") is not None:
         badges.append(badge("★ " + fmt_stars(t.get("gh_stars")), "slate"))
@@ -172,6 +173,8 @@ def tool_page(t):
         ("Framework integrations", ", ".join(t.get("frameworks") or []) or "—"),
         ("Funding / ownership", t.get("funding_note") or "—"),
     ]
+    if "otel_native" in t:
+        rows.insert(1, ("OpenTelemetry-native", "Yes — no proprietary-SDK lock-in" if t["otel_native"] else "No (proprietary SDK/format)"))
     has_gh = bool(t.get("github") and t.get("gh_stars") is not None)
     if has_gh:
         ms = maturity(t); ml = maturity_label(ms)
@@ -216,9 +219,13 @@ def compare_page(a, b):
     def mat(t):
         ms = maturity(t)
         return f"{ms}/100 ({maturity_label(ms)[0]})" if ms is not None else "— (no public repo)"
+    def on(t):
+        v = t.get("otel_native")
+        return "Yes" if v is True else ("No" if v is False else "—")
     rows = "".join([
         vs_row("One-liner", a["one_liner"], b["one_liner"]),
         vs_row("Category", CATS[a["category"]][0], CATS[b["category"]][0]),
+        vs_row("OpenTelemetry-native", on(a), on(b)),
         vs_row("Open source", yn(a.get("open_source")), yn(b.get("open_source"))),
         vs_row("Self-hostable", yn(a.get("self_hostable")), yn(b.get("self_hostable"))),
         vs_row("Pricing model", f(a,"pricing_model"), f(b,"pricing_model")),
@@ -360,7 +367,7 @@ apply();
 <h1 class="text-3xl font-bold text-white">Methodology</h1>
 <p class="mt-4 text-slate-400">This index is editorially independent. Listings are free and sponsorship never changes facts, scores or rankings. Here is exactly how every data point is produced, so you can audit it.</p>
 <h2 class="text-xl font-semibold text-white mt-8">Factual fields</h2>
-<p class="mt-2 text-slate-400">Open-source status, self-hostability, pricing model, pricing notes, framework integrations and funding/ownership are read from each tool's primary sources (official site, pricing page, repository, docs). Every tool page links its source. Spotted something stale? Email <a class="text-emerald-400" href="mailto:hi@panshi.io">hi@panshi.io</a> and it is fixed within 24h.</p>
+<p class="mt-2 text-slate-400">Open-source status, self-hostability, pricing model, pricing notes, framework integrations, OpenTelemetry-native support and funding/ownership are read from each tool's primary sources (official site, pricing page, repository, docs). Every tool page links its source. Spotted something stale? Email <a class="text-emerald-400" href="mailto:hi@panshi.io">hi@panshi.io</a> and it is fixed within 24h.</p>
 <h2 class="text-xl font-semibold text-white mt-8">GitHub signals</h2>
 <p class="mt-2 text-slate-400">For tools with a public repository we read four objective signals directly from the GitHub API: star count, date of the last push, detected license, and open-issue count. These are facts, not opinions.</p>
 <h2 class="text-xl font-semibold text-white mt-8">Maturity signal (0–100)</h2>
