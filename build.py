@@ -26,6 +26,10 @@ COMPARE_PAIRS = [
  ("Braintrust","LangSmith"),("Opik (Comet)","Langfuse"),("Promptfoo","Confident AI (DeepEval)"),
  ("Ragas","Promptfoo"),("AgentOps","Langfuse"),("Datadog LLM Observability","LangSmith"),
  ("Helicone","Portkey"),("Guardrails AI","NVIDIA NeMo Guardrails"),("Lakera Guard","LLM Guard (Protect AI)"),("garak","PyRIT"),("TensorZero","Langfuse"),
+ ("Arize Phoenix","SigNoz"),("Traceloop (OpenLLMetry)","OpenLIT"),("Helicone","LiteLLM"),
+ ("Datadog LLM Observability","Langfuse"),("W&B Weave","Langfuse"),("Opik (Comet)","Arize Phoenix"),
+ ("Galileo","Braintrust"),("Confident AI (DeepEval)","Ragas"),("Pydantic Logfire","Langfuse"),
+ ("Portkey","LiteLLM"),("Braintrust","Langfuse"),("Maxim AI","Langfuse"),
 ]
 
 try:
