@@ -1,0 +1,36 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methodology — how the data and scores are produced | Agent Observability Index</title>
+<meta name="description" content="How the Agent Observability Index produces every factual field and the GitHub-based maturity signal. Fully reproducible, editorially independent.">
+<link rel="canonical" href="https://tools.panshi.io/methodology.html">
+<script src="https://cdn.tailwindcss.com"></script><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1cd7fde310f94d97a9660eedd270b154"}'></script></head>
+<body class="bg-slate-950 text-slate-200 antialiased">
+<nav class="border-b border-slate-800"><div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+<a href="index.html" class="font-bold text-white">Agent<span class="text-emerald-400">Obs</span> Index</a>
+<div class="flex gap-5 text-sm">
+<a href="index.html#tools" class="hover:text-white">Tools</a>
+<a href="index.html#compare" class="hover:text-white">Comparisons</a>
+<a href="advertise.html" class="text-emerald-400 hover:text-emerald-300">Get featured</a>
+</div></div></nav>
+<main class="max-w-3xl mx-auto px-6 py-12">
+<h1 class="text-3xl font-bold text-white">Methodology</h1>
+<p class="mt-4 text-slate-400">This index is editorially independent. Listings are free and sponsorship never changes facts, scores or rankings. Here is exactly how every data point is produced, so you can audit it.</p>
+<h2 class="text-xl font-semibold text-white mt-8">Factual fields</h2>
+<p class="mt-2 text-slate-400">Open-source status, self-hostability, pricing model, pricing notes, framework integrations and funding/ownership are read from each tool's primary sources (official site, pricing page, repository, docs). Every tool page links its source. Spotted something stale? Email <a class="text-emerald-400" href="mailto:hi@panshi.io">hi@panshi.io</a> and it is fixed within 24h.</p>
+<h2 class="text-xl font-semibold text-white mt-8">GitHub signals</h2>
+<p class="mt-2 text-slate-400">For tools with a public repository we read four objective signals directly from the GitHub API: star count, date of the last push, detected license, and open-issue count. These are facts, not opinions.</p>
+<h2 class="text-xl font-semibold text-white mt-8">Maturity signal (0–100)</h2>
+<p class="mt-2 text-slate-400">A reproducible composite of the public GitHub signals above. It measures adoption and upkeep — <em>not</em> product quality, and it is never sold. Tools without a public repo have no score. The formula:</p>
+<pre class="bg-slate-900 border border-slate-800 rounded-lg p-4 text-sm text-slate-300 mt-3 overflow-x-auto">popularity   = min(55, round(13.7 × log10(stars + 1)))     # ~55 at 10k+ stars
+maintenance  = 35 if pushed ≤ 30d, 25 if ≤ 90d, 14 if ≤ 180d,
+                6 if ≤ 365d, else 0
+openness     = 10 if an OSI license is detected, else 0
+maturity     = min(100, popularity + maintenance + openness)</pre>
+<p class="mt-3 text-slate-400">Bands: Mature ≥ 80, Established ≥ 60, Growing ≥ 40, Early below 40.</p>
+<h2 class="text-xl font-semibold text-white mt-8">What we do not do</h2>
+<p class="mt-2 text-slate-400">We do not inject vendor marketing copy, we do not rank by who pays, and we do not publish performance benchmarks we have not actually run. When hands-on test results are added, they will be labelled as tested and dated.</p>
+</main>
+<footer class="border-t border-slate-800 mt-16"><div class="max-w-5xl mx-auto px-6 py-8 text-sm text-slate-500">
+<p>Agent Observability Index — independent directory, no vendor affiliation. Data manually verified; corrections welcome via <a class="text-emerald-400" href="mailto:hi@panshi.io">email</a>.</p>
+<p class="mt-2">© 2026 Panshi · <a class="hover:text-slate-300" href="index.html">Home</a> · <a class="hover:text-slate-300" href="advertise.html">Advertise</a> · <a class="hover:text-slate-300" href="methodology.html">Methodology</a></p>
+</div></footer></body></html>

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Static site generator for the Agent Observability Index (by Panshi)."""
-import json, os, re, shutil, html
+import json, os, re, shutil, html, math
+from datetime import date
 
 BASE = "https://tools.panshi.io"  # custom domain live 2026-06-13
 SITE = "Agent Observability Index"
@@ -29,6 +30,58 @@ def slug(s):
 def esc(s):
     return html.escape(s or "")
 
+def fmt_stars(n):
+    if n is None: return "—"
+    if n >= 1000:
+        v = f"{n/1000:.1f}k"
+        return v.replace(".0k", "k")
+    return str(n)
+
+def recency_points(pushed):
+    if not pushed: return 0
+    try:
+        y, m, d = map(int, pushed.split("-"))
+        days = (date.today() - date(y, m, d)).days
+    except Exception:
+        return 0
+    if days <= 30: return 35
+    if days <= 90: return 25
+    if days <= 180: return 14
+    if days <= 365: return 6
+    return 0
+
+def recency_label(pushed):
+    if not pushed: return "—"
+    try:
+        y, m, d = map(int, pushed.split("-"))
+        days = (date.today() - date(y, m, d)).days
+    except Exception:
+        return pushed
+    if days <= 30: return f"active (commit {pushed})"
+    if days <= 90: return f"maintained (commit {pushed})"
+    if days <= 365: return f"slow ({pushed})"
+    return f"stale ({pushed})"
+
+def maturity(t):
+    """Maturity score 0-100 from PUBLIC GitHub signals only — popularity (log
+    stars) + maintenance recency + a permissive-license bonus. This is a
+    reproducible computed signal, NOT an editorial quality judgment.
+    Tools without a public repo return None. Full formula: /methodology.html"""
+    if not t.get("github") or t.get("gh_stars") is None:
+        return None
+    stars = t.get("gh_stars") or 0
+    pop = min(55, round(13.7 * math.log10(stars + 1)))
+    rec = recency_points(t.get("gh_pushed_at"))
+    openness = 10 if t.get("gh_license") else 0
+    return min(100, pop + rec + openness)
+
+def maturity_label(score):
+    if score is None: return ("—", "slate")
+    if score >= 80: return ("Mature", "emerald")
+    if score >= 60: return ("Established", "sky")
+    if score >= 40: return ("Growing", "violet")
+    return ("Early", "slate")
+
 def page(title, desc, body, path, root=""):
     h = f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,7 +100,7 @@ def page(title, desc, body, path, root=""):
 {body}
 <footer class="border-t border-slate-800 mt-16"><div class="max-w-5xl mx-auto px-6 py-8 text-sm text-slate-500">
 <p>{SITE} — independent directory, no vendor affiliation. Data manually verified; corrections welcome via <a class="text-emerald-400" href="mailto:hi@panshi.io">email</a>.</p>
-<p class="mt-2">© 2026 Panshi · <a class="hover:text-slate-300" href="{root}index.html">Home</a> · <a class="hover:text-slate-300" href="{root}advertise.html">Advertise</a></p>
+<p class="mt-2">© 2026 Panshi · <a class="hover:text-slate-300" href="{root}index.html">Home</a> · <a class="hover:text-slate-300" href="{root}advertise.html">Advertise</a> · <a class="hover:text-slate-300" href="{root}methodology.html">Methodology</a></p>
 </div></footer></body></html>"""
     fp = os.path.join(OUT, path)
     os.makedirs(os.path.dirname(fp), exist_ok=True)
@@ -63,6 +116,8 @@ def card(t, root=""):
     if t.get("self_hostable"): badges.append(badge("self-hostable","violet"))
     pm = t.get("pricing_model")
     if pm: badges.append(badge(pm,"amber"))
+    if t.get("gh_stars") is not None:
+        badges.append(badge("★ " + fmt_stars(t.get("gh_stars")), "slate"))
     note = t.get("funding_note") or ""
     status = ""
     low = (note + (t.get("pricing_note") or "")).lower()
@@ -87,6 +142,15 @@ def tool_page(t):
         ("Framework integrations", ", ".join(t.get("frameworks") or []) or "—"),
         ("Funding / ownership", t.get("funding_note") or "—"),
     ]
+    if t.get("github") and t.get("gh_stars") is not None:
+        ms = maturity(t); ml = maturity_label(ms)
+        rows += [
+            ("GitHub stars", f"{t['gh_stars']:,}"),
+            ("Maintenance", recency_label(t.get("gh_pushed_at"))),
+            ("License (GitHub)", t.get("gh_license") or "not detected"),
+            ("Open issues", str(t.get("gh_open_issues")) if t.get("gh_open_issues") is not None else "—"),
+            ("Maturity signal", f"{ms}/100 ({ml[0]})  — computed from public GitHub signals, see methodology"),
+        ]
     tr = "".join(f'<tr class="border-b border-slate-800"><td class="py-2 pr-6 text-slate-400 align-top whitespace-nowrap">{esc(k)}</td><td class="py-2">{esc(v)}</td></tr>' for k,v in rows)
     links = f'<a href="{esc(t["url"])}" rel="nofollow" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold px-5 py-2.5 rounded-lg">Website ↗</a>'
     if t.get("github"):
@@ -98,7 +162,7 @@ def tool_page(t):
 <h1 class="text-3xl font-bold text-white">{esc(t['name'])}</h1>
 <p class="mt-3 text-lg text-slate-400">{esc(t['one_liner'])}</p>
 <div class="mt-6">{links}</div>
-<table class="w-full text-sm mt-8">{tr}</table>{evp}</main>"""
+<table class="w-full text-sm mt-8">{tr}</table>{evp}<p class="text-xs text-slate-600 mt-2">Maturity signal is computed from public GitHub data only. <a class="underline" href="../methodology.html">How it is calculated</a>.</p></main>"""
     return page(f"{t['name']} — pricing, self-hosting & alternatives | {SITE}",
         f"{t['name']}: {t['one_liner'][:140]}", body, f"tools/{slug(t['name'])}.html", root="../")
 
@@ -209,6 +273,28 @@ document.querySelectorAll('.fbtn').forEach(b=>b.onclick=()=>{{
 </main>"""
     paths.append(page(f"Advertise — featured listings & category sponsorship | {SITE}",
         "Reach engineers choosing their LLM observability and evals stack. Featured listings from $99/year.", body, "advertise.html"))
+
+    meth_body = """<main class="max-w-3xl mx-auto px-6 py-12">
+<h1 class="text-3xl font-bold text-white">Methodology</h1>
+<p class="mt-4 text-slate-400">This index is editorially independent. Listings are free and sponsorship never changes facts, scores or rankings. Here is exactly how every data point is produced, so you can audit it.</p>
+<h2 class="text-xl font-semibold text-white mt-8">Factual fields</h2>
+<p class="mt-2 text-slate-400">Open-source status, self-hostability, pricing model, pricing notes, framework integrations and funding/ownership are read from each tool's primary sources (official site, pricing page, repository, docs). Every tool page links its source. Spotted something stale? Email <a class="text-emerald-400" href="mailto:hi@panshi.io">hi@panshi.io</a> and it is fixed within 24h.</p>
+<h2 class="text-xl font-semibold text-white mt-8">GitHub signals</h2>
+<p class="mt-2 text-slate-400">For tools with a public repository we read four objective signals directly from the GitHub API: star count, date of the last push, detected license, and open-issue count. These are facts, not opinions.</p>
+<h2 class="text-xl font-semibold text-white mt-8">Maturity signal (0–100)</h2>
+<p class="mt-2 text-slate-400">A reproducible composite of the public GitHub signals above. It measures adoption and upkeep — <em>not</em> product quality, and it is never sold. Tools without a public repo have no score. The formula:</p>
+<pre class="bg-slate-900 border border-slate-800 rounded-lg p-4 text-sm text-slate-300 mt-3 overflow-x-auto">popularity   = min(55, round(13.7 × log10(stars + 1)))     # ~55 at 10k+ stars
+maintenance  = 35 if pushed ≤ 30d, 25 if ≤ 90d, 14 if ≤ 180d,
+                6 if ≤ 365d, else 0
+openness     = 10 if an OSI license is detected, else 0
+maturity     = min(100, popularity + maintenance + openness)</pre>
+<p class="mt-3 text-slate-400">Bands: Mature ≥ 80, Established ≥ 60, Growing ≥ 40, Early below 40.</p>
+<h2 class="text-xl font-semibold text-white mt-8">What we do not do</h2>
+<p class="mt-2 text-slate-400">We do not inject vendor marketing copy, we do not rank by who pays, and we do not publish performance benchmarks we have not actually run. When hands-on test results are added, they will be labelled as tested and dated.</p>
+</main>"""
+    paths.append(page(f"Methodology — how the data and scores are produced | {SITE}",
+        "How the Agent Observability Index produces every factual field and the GitHub-based maturity signal. Fully reproducible, editorially independent.",
+        meth_body, "methodology.html"))
 
     sm = "".join(f"<url><loc>{BASE}/{p}</loc></url>" for p in sorted(set(paths)))
     open(os.path.join(OUT,"sitemap.xml"),"w").write(f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sm}</urlset>')
