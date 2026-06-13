@@ -1599,8 +1599,8 @@
     "github": null,
     "category": "evals",
     "open_source": false,
-    "self_hostable": null,
-    "pricing_model": null,
+    "self_hostable": true,
+    "pricing_model": "freemium",
     "pricing_note": null,
     "frameworks": [
       "Vapi",
@@ -1609,7 +1609,7 @@
     ],
     "funding_note": "YC F24 (formerly Vocera AI)",
     "one_liner": "Automated simulation testing and production monitoring for voice and chat AI agents.",
-    "evidence_url": "https://www.cekura.ai/"
+    "evidence_url": "https://www.cekura.ai/pricing"
   },
   {
     "name": "Bluejay",
@@ -1617,13 +1617,13 @@
     "github": null,
     "category": "evals",
     "open_source": false,
-    "self_hostable": null,
-    "pricing_model": null,
+    "self_hostable": false,
+    "pricing_model": "enterprise",
     "pricing_note": null,
     "frameworks": null,
     "funding_note": "YC X25",
     "one_liner": "End-to-end testing and monitoring platform for voice and chat AI agents with multilingual simulation.",
-    "evidence_url": "https://getbluejay.ai/resources/voice-agent-testing-guide"
+    "evidence_url": "https://getbluejay.ai"
   },
   {
     "name": "Roark",
@@ -1631,13 +1631,13 @@
     "github": null,
     "category": "observability",
     "open_source": false,
-    "self_hostable": null,
-    "pricing_model": null,
+    "self_hostable": false,
+    "pricing_model": "enterprise",
     "pricing_note": null,
     "frameworks": null,
     "funding_note": "YC-backed (2025)",
     "one_liner": "Production observability for voice agents that captures real calls and converts failures into test cases.",
-    "evidence_url": "https://www.speechmatics.com/company/articles-and-news/de-risk-your-voice-agent-11-best-voice-agent-testing-platforms"
+    "evidence_url": "https://roark.ai"
   },
   {
     "name": "TestZeus (Hercules)",
@@ -1663,13 +1663,13 @@
     "github": null,
     "category": "evals",
     "open_source": false,
-    "self_hostable": null,
-    "pricing_model": null,
+    "self_hostable": true,
+    "pricing_model": "freemium",
     "pricing_note": null,
     "frameworks": null,
     "funding_note": null,
     "one_liner": "Automated testing and monitoring for IVR, voice assistants and conversational AI systems.",
-    "evidence_url": "https://bespoken.io"
+    "evidence_url": "https://bespoken.ai/pricing/"
   },
   {
     "name": "Mindgard",
@@ -1677,7 +1677,7 @@
     "github": null,
     "category": "guardrails",
     "open_source": false,
-    "self_hostable": null,
+    "self_hostable": false,
     "pricing_model": "enterprise",
     "pricing_note": null,
     "frameworks": null,
@@ -1691,7 +1691,7 @@
     "github": null,
     "category": "guardrails",
     "open_source": false,
-    "self_hostable": null,
+    "self_hostable": true,
     "pricing_model": "enterprise",
     "pricing_note": null,
     "frameworks": null,
@@ -1705,13 +1705,13 @@
     "github": null,
     "category": "guardrails",
     "open_source": false,
-    "self_hostable": null,
-    "pricing_model": null,
+    "self_hostable": false,
+    "pricing_model": "enterprise",
     "pricing_note": null,
     "frameworks": null,
     "funding_note": null,
     "one_liner": "AI red teaming platform whose ARTEMIS engine automates adversarial testing of LLM apps and agents.",
-    "evidence_url": "https://repello.ai/blog/ai-red-teaming-tools"
+    "evidence_url": "https://repello.ai"
   },
   {
     "name": "Vijil",
@@ -1719,13 +1719,13 @@
     "github": null,
     "category": "guardrails",
     "open_source": false,
-    "self_hostable": null,
-    "pricing_model": null,
+    "self_hostable": true,
+    "pricing_model": "freemium",
     "pricing_note": null,
     "frameworks": null,
     "funding_note": null,
     "one_liner": "Agent trust platform combining automated evaluation, red teaming and runtime defenses for AI agents.",
-    "evidence_url": "https://aisecurityandsafety.org/en/organizations/mindgard/"
+    "evidence_url": "https://vijil.ai/pricing"
   },
   {
     "name": "Straiker",
@@ -1733,7 +1733,7 @@
     "github": null,
     "category": "guardrails",
     "open_source": false,
-    "self_hostable": null,
+    "self_hostable": false,
     "pricing_model": "enterprise",
     "pricing_note": null,
     "frameworks": null,
@@ -1747,7 +1747,7 @@
     "github": null,
     "category": "guardrails",
     "open_source": false,
-    "self_hostable": null,
+    "self_hostable": true,
     "pricing_model": "enterprise",
     "pricing_note": null,
     "frameworks": null,
@@ -1761,13 +1761,13 @@
     "github": null,
     "category": "guardrails",
     "open_source": false,
-    "self_hostable": null,
-    "pricing_model": null,
+    "self_hostable": true,
+    "pricing_model": "enterprise",
     "pricing_note": null,
     "frameworks": null,
     "funding_note": null,
     "one_liner": "AI red teaming and safety testing platform producing adversarial test suites for LLM applications.",
-    "evidence_url": "https://generalanalysis.com/guides/best-ai-red-teaming-tools"
+    "evidence_url": "https://generalanalysis.com"
   },
   {
     "name": "garak",
@@ -1841,7 +1841,7 @@
     "github": null,
     "category": "guardrails",
     "open_source": false,
-    "self_hostable": null,
+    "self_hostable": false,
     "pricing_model": "enterprise",
     "pricing_note": null,
     "frameworks": [
@@ -1926,13 +1926,13 @@
     "github": null,
     "category": "evals",
     "open_source": false,
-    "self_hostable": null,
-    "pricing_model": null,
+    "self_hostable": false,
+    "pricing_model": "paid",
     "pricing_note": null,
     "frameworks": null,
     "funding_note": "Y Combinator-backed; founder ex-Datadog LLM Observability",
     "one_liner": "Auto-optimizer for AI agents using calibrated LLM judges and automatic evaluations.",
-    "evidence_url": "https://www.ycombinator.com/companies/zeroeval"
+    "evidence_url": "https://zeroeval.com"
   },
   {
     "name": "Scorecard",
@@ -1940,13 +1940,13 @@
     "github": null,
     "category": "evals",
     "open_source": false,
-    "self_hostable": null,
-    "pricing_model": null,
+    "self_hostable": false,
+    "pricing_model": "freemium",
     "pricing_note": null,
     "frameworks": null,
     "funding_note": null,
     "one_liner": "Continuous evaluation platform providing fast feedback loops for testing and improving AI agents.",
-    "evidence_url": "https://www.scorecard.io/"
+    "evidence_url": "https://www.scorecard.io/pricing"
   },
   {
     "name": "Vals AI",
@@ -1954,13 +1954,13 @@
     "github": null,
     "category": "evals",
     "open_source": false,
-    "self_hostable": null,
-    "pricing_model": null,
+    "self_hostable": false,
+    "pricing_model": "enterprise",
     "pricing_note": null,
     "frameworks": null,
     "funding_note": null,
     "one_liner": "Industry-specific LLM benchmarks and enterprise evaluation for legal, tax and finance tasks.",
-    "evidence_url": "https://www.vals.ai/about"
+    "evidence_url": "https://www.vals.ai"
   },
   {
     "name": "Composo",
@@ -1968,13 +1968,13 @@
     "github": null,
     "category": "evals",
     "open_source": false,
-    "self_hostable": null,
-    "pricing_model": null,
+    "self_hostable": true,
+    "pricing_model": "enterprise",
     "pricing_note": null,
     "frameworks": null,
     "funding_note": "$2M pre-seed (Twin Path Ventures, 2025); customers incl. Accenture, Palantir",
     "one_liner": "Custom evaluation models that score accuracy and quality of enterprise LLM applications in production.",
-    "evidence_url": "https://techcrunch.com/2025/02/07/composo-helps-enterprises-monitor-how-well-ai-apps-work/"
+    "evidence_url": "https://www.composo.ai"
   },
   {
     "name": "Quotient AI",
@@ -1982,13 +1982,13 @@
     "github": null,
     "category": "evals",
     "open_source": false,
-    "self_hostable": null,
-    "pricing_model": null,
+    "self_hostable": true,
+    "pricing_model": "freemium",
     "pricing_note": null,
     "frameworks": null,
     "funding_note": null,
     "one_liner": "Evaluation and monitoring platform for detecting hallucinations and failures in AI agents.",
-    "evidence_url": "https://www.quotientai.co"
+    "evidence_url": "https://docs.quotientai.co/introduction"
   },
   {
     "name": "Autoblocks",
@@ -1996,13 +1996,13 @@
     "github": null,
     "category": "evals",
     "open_source": false,
-    "self_hostable": null,
-    "pricing_model": null,
+    "self_hostable": true,
+    "pricing_model": "freemium",
     "pricing_note": null,
     "frameworks": null,
     "funding_note": null,
     "one_liner": "Testing and evaluation platform for LLM applications with human-in-the-loop review workflows.",
-    "evidence_url": "https://www.autoblocks.ai"
+    "evidence_url": "https://www.autoblocks.ai/pricing"
   },
   {
     "name": "The LLM Data Company (doteval)",
@@ -2010,13 +2010,13 @@
     "github": null,
     "category": "evals",
     "open_source": false,
-    "self_hostable": null,
-    "pricing_model": null,
+    "self_hostable": false,
+    "pricing_model": "enterprise",
     "pricing_note": null,
     "frameworks": null,
     "funding_note": "YC X25",
     "one_liner": "AI-assisted workspace (doteval) for writing and managing LLM evaluations.",
-    "evidence_url": "https://www.extruct.ai/data-room/ycombinator-companies-x25/"
+    "evidence_url": "https://www.doteval.com/"
   },
   {
     "name": "Kashikoi",
@@ -2024,13 +2024,13 @@
     "github": null,
     "category": "evals",
     "open_source": false,
-    "self_hostable": null,
-    "pricing_model": null,
+    "self_hostable": false,
+    "pricing_model": "enterprise",
     "pricing_note": null,
     "frameworks": null,
     "funding_note": "YC X25",
     "one_liner": "Simulates multi-turn conversation flows to benchmark AI agents before deployment.",
-    "evidence_url": "https://www.extruct.ai/data-room/ycombinator-companies-x25/"
+    "evidence_url": "https://www.ycombinator.com/companies/kashikoi"
   },
   {
     "name": "Tropir",
@@ -2038,13 +2038,13 @@
     "github": null,
     "category": "debugging",
     "open_source": false,
-    "self_hostable": null,
-    "pricing_model": null,
+    "self_hostable": false,
+    "pricing_model": "enterprise",
     "pricing_note": null,
     "frameworks": null,
     "funding_note": "YC X25",
     "one_liner": "Autonomous LLM-Ops engineer that traces, debugs and optimizes LLM pipelines.",
-    "evidence_url": "https://www.extruct.ai/data-room/ycombinator-companies-x25/"
+    "evidence_url": "https://www.aviro.ai/"
   },
   {
     "name": "Judgment Labs (judgeval)",
@@ -2070,13 +2070,13 @@
     "github": "https://github.com/openlayer-ai/openlayer-python",
     "category": "evals",
     "open_source": false,
-    "self_hostable": null,
-    "pricing_model": null,
+    "self_hostable": true,
+    "pricing_model": "freemium",
     "pricing_note": null,
     "frameworks": null,
     "funding_note": null,
     "one_liner": "AI evaluation and observability platform spanning development tests and production monitoring.",
-    "evidence_url": "https://www.openlayer.com",
+    "evidence_url": "https://www.openlayer.com/pricing",
     "gh_stars": 16,
     "gh_pushed_at": "2026-06-05",
     "gh_open_issues": 1,
@@ -2109,13 +2109,13 @@
     "github": null,
     "category": "evals",
     "open_source": false,
-    "self_hostable": null,
-    "pricing_model": null,
+    "self_hostable": false,
+    "pricing_model": "free",
     "pricing_note": null,
     "frameworks": null,
     "funding_note": "Y Combinator-backed",
     "one_liner": "Independent AI evaluations lab publishing model benchmarks and comparison data.",
-    "evidence_url": "https://www.ycombinator.com/companies/llm-stats"
+    "evidence_url": "https://llm-stats.com"
   },
   {
     "name": "TensorZero",
@@ -2145,8 +2145,8 @@
     "github": "https://github.com/trubrics/trubrics-sdk",
     "category": "observability",
     "open_source": true,
-    "self_hostable": null,
-    "pricing_model": null,
+    "self_hostable": false,
+    "pricing_model": "enterprise",
     "pricing_note": null,
     "frameworks": null,
     "funding_note": null,
@@ -2164,7 +2164,7 @@
     "category": "cost",
     "open_source": false,
     "self_hostable": false,
-    "pricing_model": null,
+    "pricing_model": "freemium",
     "pricing_note": null,
     "frameworks": [
       "OpenAI",
@@ -2172,7 +2172,7 @@
     ],
     "funding_note": null,
     "one_liner": "AI monetization platform metering token usage across providers with native credit-based billing.",
-    "evidence_url": "https://www.amberflo.io/"
+    "evidence_url": "https://www.amberflo.io/pricing"
   },
   {
     "name": "Orb",
@@ -2181,12 +2181,12 @@
     "category": "cost",
     "open_source": false,
     "self_hostable": false,
-    "pricing_model": null,
+    "pricing_model": "enterprise",
     "pricing_note": null,
     "frameworks": null,
     "funding_note": null,
     "one_liner": "Usage-based billing engine handling high-volume metering for AI and token-priced products.",
-    "evidence_url": "https://www.solvimon.com/blog/token-billing-for-ai-7-platforms-compared-2026"
+    "evidence_url": "https://www.withorb.com/pricing"
   },
   {
     "name": "Metronome",
