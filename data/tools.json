@@ -657,7 +657,7 @@
   {
     "name": "Phospho",
     "url": "https://phospho.ai",
-    "github": "https://github.com/phospho-app/phospho",
+    "github": null,
     "category": "observability",
     "open_source": true,
     "self_hostable": true,
