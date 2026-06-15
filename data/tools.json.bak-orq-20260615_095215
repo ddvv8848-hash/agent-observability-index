@@ -1359,17 +1359,11 @@
     "frameworks": [
       "openai-sdk",
       "anthropic",
-      "langchain",
-      "opentelemetry"
+      "langchain"
     ],
     "funding_note": "Amsterdam-based; seed stage",
     "one_liner": "Generative AI collaboration platform bundling prompt management, deployments, evals and observability for SaaS teams.",
-    "evidence_url": "https://orq.ai/pricing",
-    "otel_native": true,
-    "tags": [
-      "Observability",
-      "Tracing"
-    ]
+    "evidence_url": "https://orq.ai/pricing"
   },
   {
     "name": "Langtail",

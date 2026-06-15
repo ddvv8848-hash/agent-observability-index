@@ -353,7 +353,7 @@
   },
   {
     "name": "Langtrace",
-    "url": "https://docs.langtrace.ai",
+    "url": "https://www.langtrace.ai",
     "github": "https://github.com/Scale3-Labs/langtrace",
     "category": "observability",
     "open_source": true,
@@ -369,7 +369,7 @@
     ],
     "funding_note": "Built by Scale3 Labs",
     "one_liner": "OpenTelemetry-native open-source tracing and metrics for LLM apps and agent frameworks, with a managed cloud option.",
-    "evidence_url": "https://docs.langtrace.ai",
+    "evidence_url": "https://www.langtrace.ai",
     "gh_stars": 1205,
     "gh_pushed_at": "2025-11-17",
     "gh_open_issues": 1,
@@ -1359,17 +1359,11 @@
     "frameworks": [
       "openai-sdk",
       "anthropic",
-      "langchain",
-      "opentelemetry"
+      "langchain"
     ],
     "funding_note": "Amsterdam-based; seed stage",
     "one_liner": "Generative AI collaboration platform bundling prompt management, deployments, evals and observability for SaaS teams.",
-    "evidence_url": "https://orq.ai/pricing",
-    "otel_native": true,
-    "tags": [
-      "Observability",
-      "Tracing"
-    ]
+    "evidence_url": "https://orq.ai/pricing"
   },
   {
     "name": "Langtail",

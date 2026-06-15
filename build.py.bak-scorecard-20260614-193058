@@ -174,60 +174,10 @@ def maturity_label(score):
     if score >= 40: return ("Growing", "neutral")
     return ("Early", "neutral")
 
-def lang_chrome(lang, root, alt_url):
-    """Build the language-aware <html lang>, header nav, EN/中 switcher and footer
-    for a directory page. The switcher NEVER 404s: the inactive side points to a
-    real same-section page in the other language (alt_url) when one exists, else
-    falls back to that language's home — so a visitor is never stranded."""
-    html_lang = "zh-CN" if lang == "zh" else "en"
-    if lang == "zh":
-        nav_links = (
-            '<a href="https://panshi.io/zh/services" class="transition-colors hover:text-white">工具</a>'
-            '<a href="https://panshi.io/zh/pricing" class="transition-colors hover:text-white">定价</a>'
-            '<a href="/tools/blog/zh/" class="transition-colors hover:text-white">博客</a>'
-            '<a href="mailto:hi@panshi.io" class="transition-colors hover:text-white">联系</a>')
-        en_target = alt_url or "https://panshi.io/tools/"
-        switcher = (
-            f'<a href="{en_target}" class="transition-colors hover:text-white" style="color:#62666D;">EN</a>'
-            '<span style="color:#36383d;">/</span>'
-            '<span style="color:#F7F8F8;font-weight:600;">中</span>')
-        footer_tagline = ("由一名在生产环境运行多 agent 自动化的工程师打造。本目录独立于任何厂商,"
-                          "数据均对照一手来源核实,欢迎指正。")
-        footer_links = (
-            '<a class="transition-colors hover:text-white" href="https://panshi.io/zh/services">工具</a>'
-            '<a class="transition-colors hover:text-white" href="https://panshi.io/zh/pricing">定价</a>'
-            '<a class="transition-colors hover:text-white" href="/tools/blog/zh/">博客</a>'
-            f'<a class="transition-colors hover:text-white" href="{root}methodology.html">方法论</a>'
-            '<a class="ps-link" href="mailto:hi@panshi.io">hi@panshi.io</a>')
-    else:
-        nav_links = (
-            '<a href="/tools/" class="transition-colors hover:text-white">Tools</a>'
-            '<a href="/services" class="transition-colors hover:text-white">Services</a>'
-            '<a href="/tools/blog/" class="transition-colors hover:text-white">Blog</a>'
-            '<a href="mailto:hi@panshi.io" class="transition-colors hover:text-white">Contact</a>')
-        zh_target = alt_url or "https://panshi.io/zh/"
-        switcher = (
-            '<span style="color:#F7F8F8;font-weight:600;">EN</span>'
-            '<span style="color:#36383d;">/</span>'
-            f'<a href="{zh_target}" class="transition-colors hover:text-white" style="color:#62666D;">中</a>')
-        footer_tagline = (f"Built by an engineer running multi-agent automation in production. {SITE} is an "
-                          "independent directory with no vendor affiliation — data verified against primary "
-                          "sources, corrections welcome.")
-        footer_links = (
-            '<a class="transition-colors hover:text-white" href="/tools/">Tools</a>'
-            '<a class="transition-colors hover:text-white" href="/services">Services</a>'
-            '<a class="transition-colors hover:text-white" href="/tools/blog/">Blog</a>'
-            f'<a class="transition-colors hover:text-white" href="{root}methodology.html">Methodology</a>'
-            f'<a class="transition-colors hover:text-white" href="{root}advertise.html">Advertise</a>'
-            '<a class="ps-link" href="mailto:hi@panshi.io">hi@panshi.io</a>')
-    return html_lang, nav_links, switcher, footer_tagline, footer_links
-
-
-def page(title, desc, body, path, root="", jsonld=None, og_type="website", lang="en", alt_url=None):
+def page(title, desc, body, path, root="", jsonld=None, og_type="website"):
     url = f"{BASE}/{path}"
     ld = ('<script type="application/ld+json">' + json.dumps(jsonld, ensure_ascii=False) + "</script>") if jsonld else ""
-    html_lang, nav_links, switcher, footer_tagline, footer_links = lang_chrome(lang, root, alt_url)
-    h = f"""<!doctype html><html lang="{html_lang}" class="antialiased"><head><meta charset="utf-8">
+    h = f"""<!doctype html><html lang="en" class="antialiased"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
@@ -256,10 +206,15 @@ def page(title, desc, body, path, root="", jsonld=None, og_type="website", lang=
 <span class="text-[15px]">Panshi</span>
 </a>
 <nav class="hidden sm:flex items-center gap-8 text-sm font-medium" style="color:#9CA0A8;">
-{nav_links}
+<a href="/tools/" class="transition-colors hover:text-white">Tools</a>
+<a href="/services" class="transition-colors hover:text-white">Services</a>
+<a href="/tools/blog/" class="transition-colors hover:text-white">Blog</a>
+<a href="mailto:hi@panshi.io" class="transition-colors hover:text-white">Contact</a>
 </nav>
 <div class="flex items-center gap-2.5 text-sm">
-{switcher}
+<span style="color:#F7F8F8;font-weight:600;">EN</span>
+<span style="color:#36383d;">/</span>
+<a href="https://panshi.io/zh/" class="transition-colors hover:text-white" style="color:#62666D;">中</a>
 </div>
 </div>
 </header>
@@ -272,9 +227,14 @@ def page(title, desc, body, path, root="", jsonld=None, og_type="website", lang=
 <span class="inline-block w-2.5 h-2.5 rounded-sm" style="background:#5E6AD2;"></span>
 <span>Panshi</span>
 </div>
-<p class="mt-4 max-w-md leading-relaxed">{footer_tagline}</p>
+<p class="mt-4 max-w-md leading-relaxed">Built by an engineer running multi-agent automation in production. {SITE} is an independent directory with no vendor affiliation — data verified against primary sources, corrections welcome.</p>
 <p class="mt-6 flex flex-wrap gap-x-6 gap-y-2 font-medium">
-{footer_links}
+<a class="transition-colors hover:text-white" href="/tools/">Tools</a>
+<a class="transition-colors hover:text-white" href="/services">Services</a>
+<a class="transition-colors hover:text-white" href="/tools/blog/">Blog</a>
+<a class="transition-colors hover:text-white" href="{root}methodology.html">Methodology</a>
+<a class="transition-colors hover:text-white" href="{root}advertise.html">Advertise</a>
+<a class="ps-link" href="mailto:hi@panshi.io">hi@panshi.io</a>
 </p>
 <p class="mt-8 text-xs font-mono" style="color:#3f4248;">© 2026 panshi.io</p>
 </div>
@@ -370,7 +330,6 @@ def card(t, root=""):
     pm = t.get("pricing_model")
     if pm: badges.append(badge(pm,"amber"))
     if t.get("otel_native"): badges.append(badge("OTel-native","indigo"))
-    for tg in (t.get("tags") or []): badges.append(badge(tg,"indigo"))
     ms = maturity(t); ml = maturity_label(ms)
     if t.get("gh_stars") is not None:
         badges.append(badge("★ " + fmt_stars(t.get("gh_stars")), "neutral"))
@@ -380,7 +339,7 @@ def card(t, root=""):
     low = (note + (t.get("pricing_note") or "")).lower()
     if "shut down" in low or "maintenance mode" in low: status = badge("⚠ sunset/maintenance","red")
     elif "acquired" in low: status = badge("acquired","rose")
-    return f"""<article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="{t['category']}" data-tags="{esc(','.join(t.get('tags') or []).lower())}" data-name="{esc(t['name'].lower())}" data-stars="{t.get('gh_stars') or 0}" data-maturity="{ms or 0}">
+    return f"""<article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="{t['category']}" data-name="{esc(t['name'].lower())}" data-stars="{t.get('gh_stars') or 0}" data-maturity="{ms or 0}">
 <div class="flex items-start justify-between gap-2">
 <h3 class="font-semibold" style="color:#F7F8F8;"><a href="{root}tools/{slug(t['name'])}.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">{esc(t['name'])}</a></h3>
 <div class="flex flex-wrap gap-1 justify-end">{status}</div></div>
@@ -401,8 +360,6 @@ def tool_page(t):
     ]
     if "otel_native" in t:
         rows.insert(1, ("OpenTelemetry-native", "Yes — no proprietary-SDK lock-in" if t["otel_native"] else "No (proprietary SDK/format)"))
-    if t.get("tags"):
-        rows.append(("Tags", ", ".join(t["tags"])))
     has_gh = bool(t.get("github") and t.get("gh_stars") is not None)
     if has_gh:
         ms = maturity(t); ml = maturity_label(ms)
@@ -595,12 +552,6 @@ def main():
 
     cat_chips = '<button data-f="all" class="fbtn fbtn-on px-3 py-1.5 rounded-lg text-sm font-semibold">All</button>' + "".join(
         f'<button data-f="{k}" class="fbtn px-3 py-1.5 rounded-lg text-sm">{esc(v[0])} ({len(by.get(k,[]))})</button>' for k,v in CATS.items())
-    _all_tags = {}
-    for _t in tools:
-        for _tg in (_t.get("tags") or []):
-            _all_tags[_tg] = _all_tags.get(_tg, 0) + 1
-    for _tg in sorted(_all_tags):
-        cat_chips += f'<button data-ftag="{esc(_tg.lower())}" class="fbtn px-3 py-1.5 rounded-lg text-sm">{esc(_tg)} ({_all_tags[_tg]})</button>' 
     best_chips = "".join(f'<a href="best/{esc(sp["slug"])}.html" class="transition-all rounded-lg px-4 py-3 text-sm" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);color:#C8CCD2;" onmouseover="this.style.borderColor=\'rgba(255,255,255,0.14)\'" onmouseout="this.style.borderColor=\'rgba(255,255,255,0.08)\'">{esc(sp["h1"])}</a>' for sp in BEST_PAGES)
     cards = "".join(card(t) for t in tools)
     body = f"""<section class="max-w-5xl mx-auto px-6 pt-16 pb-10">
@@ -625,11 +576,11 @@ def main():
 <p id="empty" class="hidden py-8 text-center" style="color:#62666D;">No tools match your search.</p></section>
 <script>
 const grid=document.getElementById('grid'),q=document.getElementById('q'),countEl=document.getElementById('count'),emptyEl=document.getElementById('empty');
-let curCat='all',curTag='';
+let curCat='all';
 function apply(){{
  const term=(q.value||'').trim().toLowerCase();let shown=0;
  grid.querySelectorAll('[data-cat]').forEach(c=>{{
-  const okCat=(curCat==='all'||c.dataset.cat===curCat)&&(!curTag||((c.dataset.tags||'').split(',').includes(curTag)));
+  const okCat=curCat==='all'||c.dataset.cat===curCat;
   const okTerm=!term||c.dataset.name.includes(term)||c.textContent.toLowerCase().includes(term);
   const vis=okCat&&okTerm;c.style.display=vis?'':'none';if(vis)shown++;}});
  countEl.textContent=shown+' tool'+(shown===1?'':'s')+' shown';
@@ -638,7 +589,7 @@ q.addEventListener('input',apply);
 document.querySelectorAll('.fbtn').forEach(b=>b.onclick=()=>{{
  document.querySelectorAll('.fbtn').forEach(x=>{{x.classList.remove('fbtn-on','font-semibold');}});
  b.classList.add('fbtn-on','font-semibold');
- if(b.dataset.ftag!==undefined){{curTag=b.dataset.ftag;curCat='all';}}else{{curCat=b.dataset.f;curTag='';}}apply();}});
+ curCat=b.dataset.f;apply();}});
 document.querySelectorAll('.sbtn').forEach(b=>b.onclick=()=>{{
  document.querySelectorAll('.sbtn').forEach(x=>x.classList.remove('sbtn-on'));
  b.classList.add('sbtn-on');
@@ -715,67 +666,39 @@ maturity     = min(100, popularity + maintenance + openness)</pre>
         for fn in os.listdir("static"):
             shutil.copy(os.path.join("static", fn), os.path.join(OUT, fn))
 
-    # blog — generated in BOTH languages so a zh visitor lands on Chinese content
-    # and the per-page EN/中 toggle always resolves to a real counterpart (no 404).
-    #   EN: /tools/blog/  +  /tools/blog/<slug>.html      (root "../")
-    #   ZH: /tools/blog/zh/  +  /tools/blog/zh/<slug>.html (root "../../")
-    BLOG_T = {
-        "en": {"home": "Home", "blog": "Blog", "h1": "Blog",
-               "lead": "Field notes on AI agent observability, GEO and choosing a neutral tooling stack.",
-               "meta": "Field notes on AI agent observability, GEO and neutral tooling selection.",
-               "title": lambda p: p["title"], "desc": lambda p: p["description"],
-               "body": lambda p: p["body"], "faqs": lambda p: p.get("faq", [])},
-        "zh": {"home": "首页", "blog": "博客", "h1": "博客",
-               "lead": "关于 AI agent 可观测性、GEO 以及如何选择中立工具栈的实践笔记。",
-               "meta": "关于 AI agent 可观测性、GEO 与中立工具选型的实践笔记。",
-               "title": lambda p: p.get("title_zh") or p["title"], "desc": lambda p: p.get("description_zh") or p["description"],
-               "body": lambda p: p.get("body_zh") or p["body"], "faqs": lambda p: p.get("faq_zh") or p.get("faq", [])},
-    }
-    for blang in ("en", "zh"):
-        T = BLOG_T[blang]
-        prefix = "blog/" if blang == "en" else "blog/zh/"
-        proot = "../" if blang == "en" else "../../"
-        home_href = ("../index.html" if blang == "en" else "../../index.html")
-        for post in POSTS:
-            ptitle, pdesc, pbodytext = T["title"](post), T["desc"](post), T["body"](post)
-            fhtml, fsch = faq(T["faqs"](post))
-            # cross-language counterpart for the switcher
-            alt = (f"{BASE}/blog/zh/{post['slug']}.html" if blang == "en" else f"{BASE}/blog/{post['slug']}.html")
-            pbody = f"""<div class="max-w-3xl mx-auto px-6 py-12">
-<p class="text-sm mb-2" style="color:#62666D;"><a href="{home_href}" class="hover:text-white" style="color:#62666D;">{T['home']}</a> / <a href="index.html" class="hover:text-white" style="color:#62666D;">{T['blog']}</a></p>
-<h1 class="text-3xl font-bold leading-tight" style="color:#F7F8F8;">{esc(ptitle)}</h1>
+    # blog
+    for post in POSTS:
+        fhtml, fsch = faq(post.get("faq", []))
+        pbody = f"""<div class="max-w-3xl mx-auto px-6 py-12">
+<p class="text-sm mb-2" style="color:#62666D;"><a href="../index.html" class="hover:text-white" style="color:#62666D;">Home</a> / <a href="index.html" class="hover:text-white" style="color:#62666D;">Blog</a></p>
+<h1 class="text-3xl font-bold leading-tight" style="color:#F7F8F8;">{esc(post['title'])}</h1>
 <p class="text-sm mt-3" style="color:#62666D;">{esc(post['date'])} · {esc(', '.join(post.get('tags', [])))}</p>
-<div class="mt-8 prose-dark">{pbodytext}</div>
+<div class="mt-8 prose-dark">{post['body']}</div>
 {fhtml}</div>"""
-            art = {"@type": "Article", "headline": ptitle, "description": pdesc,
-                   "datePublished": post["date"], "inLanguage": ("zh-CN" if blang == "zh" else "en"),
-                   "author": {"@type": "Organization", "name": SITE},
-                   "publisher": {"@type": "Organization", "name": "Panshi"},
-                   "url": f"{BASE}/{prefix}{post['slug']}.html"}
-            pld = {"@context": "https://schema.org", "@graph": [art, fsch,
-                   crumbs([(T['home'], "index.html"), (T['blog'], f"{prefix}index.html"), (ptitle, f"{prefix}{post['slug']}.html")])]}
-            paths.append(page(f"{ptitle} | {SITE}", pdesc, pbody,
-                              f"{prefix}{post['slug']}.html", root=proot, jsonld=pld,
-                              og_type="article", lang=blang, alt_url=alt))
-        if POSTS:
-            items = "".join(
-                f'<article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor=\'rgba(255,255,255,0.14)\'" onmouseout="this.style.borderColor=\'rgba(255,255,255,0.08)\'">'
-                f'<h2 class="font-semibold" style="color:#F7F8F8;"><a class="transition-colors" style="color:#F7F8F8;" href="{esc(po["slug"])}.html" onmouseover="this.style.color=\'#6E79E0\'" onmouseout="this.style.color=\'#F7F8F8\'">{esc(T["title"](po))}</a></h2>'
-                f'<p class="text-xs mt-1" style="color:#62666D;">{esc(po["date"])}</p>'
-                f'<p class="text-sm mt-2" style="color:#9CA0A8;">{esc(T["desc"](po))}</p></article>'
-                for po in POSTS)
-            bbody = f"""<div class="max-w-3xl mx-auto px-6 py-12">
-<h1 class="text-3xl font-bold" style="color:#F7F8F8;">{T['h1']}</h1>
-<p class="mt-2" style="color:#9CA0A8;">{T['lead']}</p>
+        art = {"@type": "Article", "headline": post["title"], "description": post["description"],
+               "datePublished": post["date"], "author": {"@type": "Organization", "name": SITE},
+               "publisher": {"@type": "Organization", "name": "Panshi"},
+               "url": f"{BASE}/blog/{post['slug']}.html"}
+        pld = {"@context": "https://schema.org", "@graph": [art, fsch,
+               crumbs([("Home", "index.html"), ("Blog", "blog/index.html"), (post["title"], f"blog/{post['slug']}.html")])]}
+        paths.append(page(f"{post['title']} | {SITE}", post["description"], pbody,
+                          f"blog/{post['slug']}.html", root="../", jsonld=pld, og_type="article"))
+    if POSTS:
+        items = "".join(
+            f'<article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor=\'rgba(255,255,255,0.14)\'" onmouseout="this.style.borderColor=\'rgba(255,255,255,0.08)\'">'
+            f'<h2 class="font-semibold" style="color:#F7F8F8;"><a class="transition-colors" style="color:#F7F8F8;" href="{esc(po["slug"])}.html" onmouseover="this.style.color=\'#6E79E0\'" onmouseout="this.style.color=\'#F7F8F8\'">{esc(po["title"])}</a></h2>'
+            f'<p class="text-xs mt-1" style="color:#62666D;">{esc(po["date"])}</p>'
+            f'<p class="text-sm mt-2" style="color:#9CA0A8;">{esc(po["description"])}</p></article>'
+            for po in POSTS)
+        bbody = f"""<div class="max-w-3xl mx-auto px-6 py-12">
+<h1 class="text-3xl font-bold" style="color:#F7F8F8;">Blog</h1>
+<p class="mt-2" style="color:#9CA0A8;">Field notes on AI agent observability, GEO and choosing a neutral tooling stack.</p>
 <div class="grid gap-4 mt-8">{items}</div></div>"""
-            balt = (f"{BASE}/blog/zh/" if blang == "en" else f"{BASE}/blog/")
-            bld = {"@context": "https://schema.org", "@graph": [
-                {"@type": "Blog", "name": f"{SITE} Blog", "url": f"{BASE}/{prefix}index.html",
-                 "inLanguage": ("zh-CN" if blang == "zh" else "en")},
-                crumbs([(T['home'], "index.html"), (T['blog'], f"{prefix}index.html")])]}
-            paths.append(page(f"{T['h1']} | {SITE}", T["meta"],
-                              bbody, f"{prefix}index.html", root=proot, jsonld=bld,
-                              lang=blang, alt_url=balt))
+        bld = {"@context": "https://schema.org", "@graph": [
+            {"@type": "Blog", "name": f"{SITE} Blog", "url": f"{BASE}/blog/index.html"},
+            crumbs([("Home", "index.html"), ("Blog", "blog/index.html")])]}
+        paths.append(page(f"Blog | {SITE}", "Field notes on AI agent observability, GEO and neutral tooling selection.",
+                          bbody, "blog/index.html", root="../", jsonld=bld))
 
     sm = "".join(f"<url><loc>{BASE}/{p}</loc><lastmod>{BUILD_DATE}</lastmod></url>" for p in sorted(set(paths)))
     open(os.path.join(OUT,"sitemap.xml"),"w").write(f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sm}</urlset>')
