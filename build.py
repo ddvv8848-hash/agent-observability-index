@@ -46,6 +46,17 @@ h1,h2,h3{letter-spacing:-0.02em;}
 .sbtn{background:transparent;border:1px solid var(--hairline-strong);color:var(--t2);transition:all .15s;}
 .sbtn:hover{border-color:rgba(255,255,255,.28);color:var(--t1);}
 .sbtn-on{border-color:var(--accent);color:#aab2ee;}
+/* account dropdown (#ps-acct) — replicated from Brand.astro so the header account
+   menu behaves identically on directory/blog pages */
+.nav-dd{position:relative;}
+.nav-dd__btn{cursor:pointer;padding:0;margin:0;background:none;border:0;color:inherit;font:inherit;line-height:1;}
+.nav-dd__chev{opacity:.65;transition:transform .18s ease;}
+.nav-dd:hover .nav-dd__chev,.nav-dd[data-open="true"] .nav-dd__chev{transform:rotate(180deg);}
+.nav-dd__panel{position:absolute;top:100%;left:0;margin-top:12px;width:280px;background:#16171A;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:6px;box-shadow:0 16px 48px rgba(0,0,0,.55);opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .16s ease,transform .16s ease,visibility .16s;z-index:50;}
+.nav-dd__panel::before{content:'';position:absolute;top:-12px;left:0;right:0;height:12px;}
+.nav-dd:hover .nav-dd__panel,.nav-dd:focus-within .nav-dd__panel,.nav-dd[data-open="true"] .nav-dd__panel{opacity:1;visibility:visible;transform:translateY(0);}
+.ps-acct__item{transition:background .12s ease,color .12s ease;}
+.ps-acct__item:hover{background:rgba(255,255,255,.05);color:#F7F8F8;}
 </style>"""
 
 CATS = {
@@ -175,17 +186,50 @@ def maturity_label(score):
     return ("Early", "neutral")
 
 def lang_chrome(lang, root, alt_url):
-    """Build the language-aware <html lang>, header nav, EN/中 switcher and footer
-    for a directory page. The switcher NEVER 404s: the inactive side points to a
-    real same-section page in the other language (alt_url) when one exists, else
-    falls back to that language's home — so a visitor is never stranded."""
+    """Build the language-aware chrome (logo link, header nav, account widget,
+    EN/中 switcher, footer) for a directory/blog page.
+
+    🔴 This nav is an EXACT replica of src/layouts/Brand.astro's nav so that
+    navigating between the main Astro site and the /tools directory/blog is
+    seamless — same items, same links, same language logic. The page's language
+    determines `sp` (zh → "/zh", en → ""), so EVERY link stays in the page's
+    language: a zh page's logo → /zh/, 服务 → /zh/services, etc. No English leak.
+
+    The switcher NEVER 404s: the inactive side points to a real same-section page
+    in the other language (alt_url) when one exists, else that language's home."""
     html_lang = "zh-CN" if lang == "zh" else "en"
+    sp = "/zh" if lang == "zh" else ""          # language path prefix (Brand: sp)
+    logo_href = f"{sp}/"                          # Brand: a href={`${sp}/`}
+    blog_url = "/tools/blog/zh/" if lang == "zh" else "/tools/blog/"  # Brand: blogUrl
+
+    L = {
+        "zh": {"tools": "工具", "services": "服务", "pricing": "定价", "history": "我的记录",
+               "blog": "博客", "contact": "联系", "login": "登录", "account": "我的账户",
+               "logout": "退出登录", "points": "点", "methodology": "方法论"},
+        "en": {"tools": "Tools", "services": "Services", "pricing": "Pricing", "history": "History",
+               "blog": "Blog", "contact": "Contact", "login": "Login", "account": "Account",
+               "logout": "Log out", "points": "pts", "methodology": "Methodology"},
+    }[lang]
+
+    # Header nav — identical item set + order + classes to Brand.astro.
+    # (Tools is a plain link to the directory, mirroring Brand's footer Tools link;
+    #  the catalog dropdown lives on the Astro /services page.)
+    nav_links = (
+        f'<a href="/tools/" class="transition-colors hover:text-white">{L["tools"]}</a>'
+        f'<a href="{sp}/services" class="transition-colors hover:text-white">{L["services"]}</a>'
+        f'<a href="{sp}/pricing" class="transition-colors hover:text-white">{L["pricing"]}</a>'
+        f'<a href="{sp}/history" class="transition-colors hover:text-white">{L["history"]}</a>'
+        f'<a href="{blog_url}" class="transition-colors hover:text-white">{L["blog"]}</a>'
+        f'<a href="{sp}/about" class="transition-colors hover:text-white">{L["contact"]}</a>')
+
+    # Account affordance — server-rendered 登录/Login link (same markup as Brand);
+    # the acct_script below replaces it with the points menu when /u/me has a session.
+    acct_html = (
+        f'<div id="ps-acct" class="text-sm" style="min-width:1px;">'
+        f'<a href="{sp}/signin" class="transition-colors hover:text-white" style="color:#9CA0A8;">{L["login"]}</a>'
+        f'</div>')
+
     if lang == "zh":
-        nav_links = (
-            '<a href="https://panshi.io/zh/services" class="transition-colors hover:text-white">工具</a>'
-            '<a href="https://panshi.io/zh/pricing" class="transition-colors hover:text-white">定价</a>'
-            '<a href="/tools/blog/zh/" class="transition-colors hover:text-white">博客</a>'
-            '<a href="mailto:hi@panshi.io" class="transition-colors hover:text-white">联系</a>')
         en_target = alt_url or "https://panshi.io/tools/"
         switcher = (
             f'<a href="{en_target}" class="transition-colors hover:text-white" style="color:#62666D;">EN</a>'
@@ -193,18 +237,7 @@ def lang_chrome(lang, root, alt_url):
             '<span style="color:#F7F8F8;font-weight:600;">中</span>')
         footer_tagline = ("由一名在生产环境运行多 agent 自动化的工程师打造。本目录独立于任何厂商,"
                           "数据均对照一手来源核实,欢迎指正。")
-        footer_links = (
-            '<a class="transition-colors hover:text-white" href="https://panshi.io/zh/services">工具</a>'
-            '<a class="transition-colors hover:text-white" href="https://panshi.io/zh/pricing">定价</a>'
-            '<a class="transition-colors hover:text-white" href="/tools/blog/zh/">博客</a>'
-            f'<a class="transition-colors hover:text-white" href="{root}methodology.html">方法论</a>'
-            '<a class="ps-link" href="mailto:hi@panshi.io">hi@panshi.io</a>')
     else:
-        nav_links = (
-            '<a href="/tools/" class="transition-colors hover:text-white">Tools</a>'
-            '<a href="/services" class="transition-colors hover:text-white">Services</a>'
-            '<a href="/tools/blog/" class="transition-colors hover:text-white">Blog</a>'
-            '<a href="mailto:hi@panshi.io" class="transition-colors hover:text-white">Contact</a>')
         zh_target = alt_url or "https://panshi.io/zh/"
         switcher = (
             '<span style="color:#F7F8F8;font-weight:600;">EN</span>'
@@ -213,20 +246,89 @@ def lang_chrome(lang, root, alt_url):
         footer_tagline = (f"Built by an engineer running multi-agent automation in production. {SITE} is an "
                           "independent directory with no vendor affiliation — data verified against primary "
                           "sources, corrections welcome.")
-        footer_links = (
-            '<a class="transition-colors hover:text-white" href="/tools/">Tools</a>'
-            '<a class="transition-colors hover:text-white" href="/services">Services</a>'
-            '<a class="transition-colors hover:text-white" href="/tools/blog/">Blog</a>'
-            f'<a class="transition-colors hover:text-white" href="{root}methodology.html">Methodology</a>'
-            f'<a class="transition-colors hover:text-white" href="{root}advertise.html">Advertise</a>'
-            '<a class="ps-link" href="mailto:hi@panshi.io">hi@panshi.io</a>')
-    return html_lang, nav_links, switcher, footer_tagline, footer_links
+
+    # Footer links — same item set as Brand's footer (+ directory-specific methodology).
+    footer_links = (
+        f'<a class="transition-colors hover:text-white" href="/tools/">{L["tools"]}</a>'
+        f'<a class="transition-colors hover:text-white" href="{sp}/services">{L["services"]}</a>'
+        f'<a class="transition-colors hover:text-white" href="{sp}/pricing">{L["pricing"]}</a>'
+        f'<a class="transition-colors hover:text-white" href="{sp}/history">{L["history"]}</a>'
+        f'<a class="transition-colors hover:text-white" href="{blog_url}">{L["blog"]}</a>'
+        f'<a class="transition-colors hover:text-white" href="{root}methodology.html">{L["methodology"]}</a>'
+        '<a class="ps-link" href="mailto:hi@panshi.io">hi@panshi.io</a>')
+
+    # Account script — ported from Brand.astro's #ps-acct inline script. Renders
+    # the points menu from cache + /u/me, with logout. sp/labels injected per-lang.
+    acct_script = f"""<script>
+(function () {{
+  var box = document.getElementById('ps-acct');
+  if (!box) return;
+  var sp = {json.dumps(sp)};
+  var nav = {{ points: {json.dumps(L["points"])}, account: {json.dumps(L["account"])}, history: {json.dumps(L["history"])}, logout: {json.dumps(L["logout"])}, login: {json.dumps(L["login"])} }};
+  var CACHE_KEY = 'ps_acct';
+  function esc(s){{return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}}
+  function renderAccount(d) {{
+    window.__PS_USER = true;
+    box.innerHTML =
+      '<div class="nav-dd">' +
+        '<button type="button" class="nav-dd__btn flex items-center gap-1.5 transition-colors hover:text-white" aria-haspopup="true" aria-expanded="false" style="color:#F7F8F8;">' +
+          '<span style="display:inline-block;width:7px;height:7px;border-radius:999px;background:#5E6AD2;"></span>' +
+          '<span style="font-weight:600;">' + esc(d.points) + ' ' + esc(nav.points) + '</span>' +
+          '<svg class="nav-dd__chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>' +
+        '</button>' +
+        '<div class="nav-dd__panel" role="menu" style="left:auto;right:0;width:220px;">' +
+          '<div style="padding:8px 10px 6px;font-size:12px;color:#62666D;border-bottom:1px solid rgba(255,255,255,0.06);margin-bottom:4px;word-break:break-all;">' + esc(d.email) + '</div>' +
+          '<a href="' + sp + '/account" class="ps-acct__item" role="menuitem" style="display:block;padding:9px 10px;border-radius:9px;font-size:14px;color:#9CA0A8;text-decoration:none;">' + esc(nav.account) + '</a>' +
+          '<a href="' + sp + '/history" class="ps-acct__item" role="menuitem" style="display:block;padding:9px 10px;border-radius:9px;font-size:14px;color:#9CA0A8;text-decoration:none;">' + esc(nav.history) + '</a>' +
+          '<button type="button" id="ps-logout" class="ps-acct__item" role="menuitem" style="display:block;width:100%;padding:9px 10px;border-radius:9px;font-size:14px;color:#9CA0A8;background:none;border:0;text-align:left;cursor:pointer;">' + esc(nav.logout) + '</button>' +
+        '</div>' +
+      '</div>';
+    var dd = box.querySelector('.nav-dd');
+    var btn = dd && dd.querySelector('.nav-dd__btn');
+    if (btn) {{
+      btn.addEventListener('click', function (e) {{
+        e.preventDefault();
+        var open = dd.getAttribute('data-open') === 'true';
+        dd.setAttribute('data-open', open ? 'false' : 'true');
+        btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+      }});
+      document.addEventListener('click', function (e) {{ if (!dd.contains(e.target)) dd.setAttribute('data-open','false'); }});
+    }}
+    var lo = box.querySelector('#ps-logout');
+    if (lo) lo.addEventListener('click', function () {{
+      try {{ localStorage.removeItem(CACHE_KEY); }} catch (e) {{}}
+      window.__PS_USER = false;
+      fetch('/u/logout', {{ method: 'POST' }}).then(function () {{ location.reload(); }});
+    }});
+  }}
+  function renderLogin() {{
+    window.__PS_USER = false;
+    box.innerHTML = '<a href="' + sp + '/signin" class="transition-colors hover:text-white" style="color:#9CA0A8;">' + esc(nav.login) + '</a>';
+  }}
+  var renderedFromCache = false;
+  try {{
+    var raw = localStorage.getItem(CACHE_KEY);
+    if (raw) {{ var cached = JSON.parse(raw); if (cached && cached.email != null) {{ renderAccount(cached); renderedFromCache = true; }} }}
+  }} catch (e) {{}}
+  fetch('/u/me').then(function(r){{return r.json();}}).then(function(d){{
+    if (d && d.ok) {{
+      try {{ localStorage.setItem(CACHE_KEY, JSON.stringify({{ email: d.email, points: d.points }})); }} catch (e) {{}}
+      renderAccount(d);
+    }} else {{
+      try {{ localStorage.removeItem(CACHE_KEY); }} catch (e) {{}}
+      if (renderedFromCache) renderLogin();
+    }}
+  }}).catch(function(){{}});
+}})();
+</script>"""
+
+    return html_lang, logo_href, nav_links, acct_html, switcher, footer_tagline, footer_links, acct_script
 
 
 def page(title, desc, body, path, root="", jsonld=None, og_type="website", lang="en", alt_url=None):
     url = f"{BASE}/{path}"
     ld = ('<script type="application/ld+json">' + json.dumps(jsonld, ensure_ascii=False) + "</script>") if jsonld else ""
-    html_lang, nav_links, switcher, footer_tagline, footer_links = lang_chrome(lang, root, alt_url)
+    html_lang, logo_href, nav_links, acct_html, switcher, footer_tagline, footer_links, acct_script = lang_chrome(lang, root, alt_url)
     h = f"""<!doctype html><html lang="{html_lang}" class="antialiased"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>
@@ -251,15 +353,18 @@ def page(title, desc, body, path, root="", jsonld=None, og_type="website", lang=
 <body class="font-sans antialiased min-h-screen flex flex-col" style="background:#08090A;color:#9CA0A8;">
 <header class="sticky top-0 z-40 backdrop-blur-xl" style="background:rgba(8,9,10,0.72);border-bottom:1px solid rgba(255,255,255,0.08);">
 <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-<a href="https://panshi.io/" class="flex items-center gap-2.5 font-semibold tracking-tight" style="color:#F7F8F8;">
+<a href="{logo_href}" class="flex items-center gap-2.5 font-semibold tracking-tight" style="color:#F7F8F8;">
 <span class="inline-block w-2.5 h-2.5 rounded-sm" style="background:#5E6AD2;"></span>
 <span class="text-[15px]">Panshi</span>
 </a>
 <nav class="hidden sm:flex items-center gap-8 text-sm font-medium" style="color:#9CA0A8;">
 {nav_links}
 </nav>
-<div class="flex items-center gap-2.5 text-sm">
+<div class="flex items-center gap-4">
+{acct_html}
+<div class="flex items-center gap-2.5 text-sm" data-lang-switch>
 {switcher}
+</div>
 </div>
 </div>
 </header>
@@ -278,7 +383,9 @@ def page(title, desc, body, path, root="", jsonld=None, og_type="website", lang=
 </p>
 <p class="mt-8 text-xs font-mono" style="color:#3f4248;">© 2026 panshi.io</p>
 </div>
-</footer></body></html>"""
+</footer>
+{acct_script}
+</body></html>"""
     fp = os.path.join(OUT, path)
     os.makedirs(os.path.dirname(fp), exist_ok=True)
     open(fp, "w", encoding="utf-8").write(h)
