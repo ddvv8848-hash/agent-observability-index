@@ -1,0 +1,196 @@
+<!doctype html><html lang="zh-CN" class="antialiased"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>我们如何让一个 116 个工具的目录被 AI 答案引擎引用 | Agent Observability Index</title>
+<meta name="description" content="一个具体的 GEO(生成式引擎优化)案例:我们对 panshi.io/tools 做的五项改动,让 ChatGPT、Perplexity 和 Google AI Overviews 能够引用它 —— 并附上每项背后的研究依据。">
+<link rel="canonical" href="https://panshi.io/tools/blog/zh/geo-case-study-ai-tools-directory.html">
+<meta name="theme-color" content="#08090A">
+<link rel="icon" href="/tools/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Agent Observability Index">
+<meta property="og:title" content="我们如何让一个 116 个工具的目录被 AI 答案引擎引用 | Agent Observability Index">
+<meta property="og:description" content="一个具体的 GEO(生成式引擎优化)案例:我们对 panshi.io/tools 做的五项改动,让 ChatGPT、Perplexity 和 Google AI Overviews 能够引用它 —— 并附上每项背后的研究依据。">
+<meta property="og:url" content="https://panshi.io/tools/blog/zh/geo-case-study-ai-tools-directory.html">
+<meta property="og:image" content="https://panshi.io/tools/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="我们如何让一个 116 个工具的目录被 AI 答案引擎引用 | Agent Observability Index">
+<meta name="twitter:description" content="一个具体的 GEO(生成式引擎优化)案例:我们对 panshi.io/tools 做的五项改动,让 ChatGPT、Perplexity 和 Google AI Overviews 能够引用它 —— 并附上每项背后的研究依据。">
+<meta name="twitter:image" content="https://panshi.io/tools/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/tools/styles.css"><style>
+:root{--accent:#5E6AD2;--accent-hover:#6E79E0;--bg:#08090A;--surface1:#0F1011;--surface2:#16171A;--hairline:rgba(255,255,255,.08);--hairline-strong:rgba(255,255,255,.14);--t1:#F7F8F8;--t2:#9CA0A8;--t3:#62666D;}
+html{background:#08090A;color-scheme:dark;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;scroll-behavior:smooth;}
+body{font-feature-settings:'cv11','ss01';letter-spacing:-0.011em;}
+h1,h2,h3{letter-spacing:-0.02em;}
+::selection{background:rgba(94,106,210,.32);color:#fff;}
+.ps-link{color:var(--accent);font-weight:500;transition:color .15s;}
+.ps-link:hover{color:var(--accent-hover);}
+/* dark recolor of long-form article body (blog posts) */
+.prose-dark{color:var(--t2);}
+.prose-dark p{color:var(--t2);}
+.prose-dark h2,.prose-dark h3,.prose-dark strong{color:var(--t1);}
+.prose-dark a{color:var(--accent);}
+.prose-dark a:hover{color:var(--accent-hover);}
+.prose-dark code{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.85em;background:rgba(255,255,255,.06);border:1px solid var(--hairline);border-radius:4px;padding:.05em .35em;color:var(--t1);}
+.prose-dark pre{background:#0a0b0c;border:1px solid var(--hairline);border-radius:10px;}
+.prose-dark table th{color:var(--t1);border-color:var(--hairline-strong)!important;}
+.prose-dark td,.prose-dark th{border-color:var(--hairline)!important;}
+/* search input */
+.ps-search{background:#0F1011;border:1px solid var(--hairline-strong);color:var(--t1);}
+.ps-search::placeholder{color:var(--t3);}
+.ps-search:focus{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent);}
+/* filter + sort chips (states toggled by inline JS) */
+.fbtn{background:transparent;border:1px solid var(--hairline-strong);color:var(--t2);transition:all .15s;}
+.fbtn:hover{border-color:rgba(255,255,255,.28);color:var(--t1);}
+.fbtn-on{background:var(--accent);border:1px solid var(--accent);color:#fff;}
+.fbtn-on:hover{background:var(--accent-hover);border-color:var(--accent-hover);color:#fff;}
+.sbtn{background:transparent;border:1px solid var(--hairline-strong);color:var(--t2);transition:all .15s;}
+.sbtn:hover{border-color:rgba(255,255,255,.28);color:var(--t1);}
+.sbtn-on{border-color:var(--accent);color:#aab2ee;}
+/* account dropdown (#ps-acct) — replicated from Brand.astro so the header account
+   menu behaves identically on directory/blog pages */
+.nav-dd{position:relative;}
+.nav-dd__btn{cursor:pointer;padding:0;margin:0;background:none;border:0;color:inherit;font:inherit;line-height:1;}
+.nav-dd__chev{opacity:.65;transition:transform .18s ease;}
+.nav-dd:hover .nav-dd__chev,.nav-dd[data-open="true"] .nav-dd__chev{transform:rotate(180deg);}
+.nav-dd__panel{position:absolute;top:100%;left:0;margin-top:12px;width:280px;background:#16171A;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:6px;box-shadow:0 16px 48px rgba(0,0,0,.55);opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .16s ease,transform .16s ease,visibility .16s;z-index:50;}
+.nav-dd__panel::before{content:'';position:absolute;top:-12px;left:0;right:0;height:12px;}
+.nav-dd:hover .nav-dd__panel,.nav-dd:focus-within .nav-dd__panel,.nav-dd[data-open="true"] .nav-dd__panel{opacity:1;visibility:visible;transform:translateY(0);}
+.ps-acct__item{transition:background .12s ease,color .12s ease;}
+.ps-acct__item:hover{background:rgba(255,255,255,.05);color:#F7F8F8;}
+</style><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "47f87bd8826546019d26f62a05a61859"}'></script><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "我们如何让一个 116 个工具的目录被 AI 答案引擎引用", "description": "一个具体的 GEO(生成式引擎优化)案例:我们对 panshi.io/tools 做的五项改动,让 ChatGPT、Perplexity 和 Google AI Overviews 能够引用它 —— 并附上每项背后的研究依据。", "datePublished": "2026-06-13", "inLanguage": "zh-CN", "author": {"@type": "Organization", "name": "Agent Observability Index"}, "publisher": {"@type": "Organization", "name": "Panshi"}, "url": "https://panshi.io/tools/blog/zh/geo-case-study-ai-tools-directory.html"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "什么是 GEO(生成式引擎优化)?", "acceptedAnswer": {"@type": "Answer", "text": "GEO 是指优化内容,使 ChatGPT、Perplexity、Google AI Overviews 等 AI 答案引擎在其生成的答案中引用或呈现你的内容,而不是把它排成一个供人点击的链接。"}}, {"@type": "Question", "name": "llms.txt 对 GEO 有帮助吗?", "acceptedAnswer": {"@type": "Answer", "text": "没有。主流搜索/答案引擎并不消费 llms.txt;Google 把它比作早已作废的 keywords meta 标签。它只对给编程助手喂文档有用。"}}, {"@type": "Question", "name": "AI 搜索实际能带来多少流量?", "acceptedAnswer": {"@type": "Answer", "text": "目前还很小 —— 按最可信的独立基准(Conductor,1215 个域名)约占引荐流量的 1% —— 但其转化率远高于流量占比,所以是高意图而非高流量。"}}, {"@type": "Question", "name": "投入产出比最高的单项 GEO 动作是什么?", "acceptedAnswer": {"@type": "Answer", "text": "发布并持续更新有观点、有基准数据的最佳/对比页面,配上硬统计数字、具名来源和表格,并把结论前置到第一段。"}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首页", "item": "https://panshi.io/tools/index.html"}, {"@type": "ListItem", "position": 2, "name": "博客", "item": "https://panshi.io/tools/blog/zh/index.html"}, {"@type": "ListItem", "position": 3, "name": "我们如何让一个 116 个工具的目录被 AI 答案引擎引用", "item": "https://panshi.io/tools/blog/zh/geo-case-study-ai-tools-directory.html"}]}]}</script></head>
+<body class="font-sans antialiased min-h-screen flex flex-col" style="background:#08090A;color:#9CA0A8;">
+<header class="sticky top-0 z-40 backdrop-blur-xl" style="background:rgba(8,9,10,0.72);border-bottom:1px solid rgba(255,255,255,0.08);">
+<div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+<a href="/zh/" class="flex items-center gap-2.5 font-semibold tracking-tight" style="color:#F7F8F8;">
+<span class="inline-block w-2.5 h-2.5 rounded-sm" style="background:#5E6AD2;"></span>
+<span class="text-[15px]">Panshi</span>
+</a>
+<nav class="hidden sm:flex items-center gap-8 text-sm font-medium" style="color:#9CA0A8;">
+<a href="/tools/" class="transition-colors hover:text-white">工具</a><a href="/zh/services" class="transition-colors hover:text-white">服务</a><a href="/zh/pricing" class="transition-colors hover:text-white">定价</a><a href="/tools/blog/zh/" class="transition-colors hover:text-white">博客</a><a href="/zh/about" class="transition-colors hover:text-white">联系</a>
+</nav>
+<div class="flex items-center gap-4">
+<div id="ps-acct" class="text-sm" style="min-width:1px;"><a href="/zh/signin" class="transition-colors hover:text-white" style="color:#9CA0A8;">登录</a></div>
+<div class="flex items-center gap-2.5 text-sm" data-lang-switch>
+<a href="https://panshi.io/tools/blog/geo-case-study-ai-tools-directory.html" class="transition-colors hover:text-white" style="color:#62666D;">EN</a><span style="color:#36383d;">/</span><span style="color:#F7F8F8;font-weight:600;">中</span>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<div class="max-w-3xl mx-auto px-6 py-12">
+<p class="text-sm mb-2" style="color:#62666D;"><a href="../../index.html" class="hover:text-white" style="color:#62666D;">首页</a> / <a href="index.html" class="hover:text-white" style="color:#62666D;">博客</a></p>
+<h1 class="text-3xl font-bold leading-tight" style="color:#F7F8F8;">我们如何让一个 116 个工具的目录被 AI 答案引擎引用</h1>
+<p class="text-sm mt-3" style="color:#62666D;">2026-06-13 · GEO, case study, AI search</p>
+<div class="mt-8 prose-dark">
+<div class="rounded-r-lg px-5 py-4 mb-8" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);border-left:3px solid #5E6AD2;">
+<p class="text-sm font-semibold" style="color:#aab2ee;">一句话总结</p>
+<p class="mt-1" style="color:#C8CCD2;">我们对这个目录应用了五项有证据支撑的 GEO 手法:把结论前置、130 个页面的 FAQ 结构化数据、结构化对比数据、基于 GitHub 的客观成熟度评分,以及公开的方法论。这些都不是关键词花招 —— 而是把事实做成答案引擎可以直接引用的形式。下面是我们具体改了什么,以及每一项背后的研究依据。</p>
+</div>
+
+<p class="text-slate-600">传统 SEO 优化的目标,是在搜索结果里排到一个供人点击的蓝色链接。<strong class="text-slate-900">GEO(生成式引擎优化)</strong>优化的目标,是让 AI 答案引擎 —— ChatGPT、Perplexity、Google AI Overviews、Claude —— 在它生成的答案里引用你的内容。很多时候根本没有点击:被引用本身就是胜利。两者机制的差异大到值得专门去做,而大部分能赢的动作,其实就是把内容做得扎实、结构清晰、来源可靠。</p>
+
+<p class="text-slate-600 mt-4">我们带着 GEO 思路重建了<a class="text-blue-600 hover:text-blue-700" href="/index.html">这个目录</a>。五项具体改动:</p>
+
+<h2 class="text-xl font-semibold text-slate-900 mt-10">1. 把结论前置</h2>
+<p class="text-slate-600 mt-2">普林斯顿的 <em>GEO</em> 论文(KDD 2024)发现,加入明确的论断、统计数字和引用,能显著提升生成式引擎收录页面的频率;另有引用研究发现,约 44% 的 LLM 引用取自页面前 30% 的内容。所以现在每个对比页都以一句基于已核实数据生成的"快速结论"开头 —— 也就是引擎可以直接引用的那句答案 —— 再展开细节表格。</p>
+
+<h2 class="text-xl font-semibold text-slate-900 mt-10">2. 带 FAQPage 结构化数据的 FAQ 区块</h2>
+<p class="text-slate-600 mt-2">答案引擎高度依赖问答形态的内容。现在每个工具页和对比页都带一段简短 FAQ("X 是开源的吗?""X 能自托管吗?""X 是 OpenTelemetry 原生的吗?"),既渲染给人看,也以 <code>FAQPage</code> JSON-LD 形式输出 —— 共 130 个页面。每个答案都由一手来源核实过的字段生成,绝不杜撰。</p>
+
+<h2 class="text-xl font-semibold text-slate-900 mt-10">3. 结构化、可对比的事实 —— 而非营销文案</h2>
+<p class="text-slate-600 mt-2">对全部 116 个工具,我们追踪其开源状态、可自托管性、定价模式、框架集成与授权协议 —— 每一项都对照该工具自己的一手来源核实。表格和"最佳/对比"类内容被 AI 引擎引用的频率远高于散文,因为事实清晰无歧义、可被直接摘取。</p>
+
+<h2 class="text-xl font-semibold text-slate-900 mt-10">4. 客观、可复现的评分</h2>
+<p class="text-slate-600 mt-2">我们加了一个仅由公开 GitHub 数据计算的成熟度信号(star 数的对数 + 最近提交时间 + 授权协议),公式完全公开。我们还标注了哪些工具是真正 OpenTelemetry 原生的 —— 37 个追踪/可观测性工具里有 29 个原生支持 OTLP(无私有 SDK 锁定),8 个不支持。这一个事实对买家迁移成本的影响,胜过任何功能清单,而厂商榜单不会告诉你。</p>
+
+<h2 class="text-xl font-semibold text-slate-900 mt-10">5. 公开的方法论</h2>
+<p class="text-slate-600 mt-2">对一个中立目录来说,信任就是产品的全部,所以<a class="text-blue-600 hover:text-blue-700" href="/methodology.html">方法论页面</a>把每个字段和评分的产生方式都讲清楚。引擎(和人)都奖励可审计的来源。</p>
+
+<h2 class="text-xl font-semibold text-slate-900 mt-10">实话部分</h2>
+<p class="text-slate-600 mt-2">GEO 是真实存在的,但在边缘地带被过度炒作。最可信的独立基准(Conductor,1215 个企业域名)显示,如今 AI 引荐流量约占总量的 1% —— 体量小,但意图强(Ahrefs 观察到 AI 流量转化为注册的比例远高于其流量占比)。也别追风口:<code>llms.txt</code> 并不被搜索引擎消费(Google 把它比作早已作废的 keywords meta 标签),关键词堆砌经测试是负面效果。能长久见效的 GEO,无非是权威性,加上结构清晰、来源可靠、对比形态的内容。</p>
+
+<div class="rounded-xl p-6 mt-10" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);">
+<p class="font-semibold" style="color:#F7F8F8;">我们也把这件事做成一项服务。</p>
+<p class="text-slate-600 mt-2">我们先把它用在自己的目录上 —— 它既是试验场,也是参考案例。如果你希望自己的内容被 AI 答案引擎引用,并带<em>可测量</em>的引用追踪(而不是含糊的"AI 可见度"),请邮件联系 <a class="text-blue-600 hover:text-blue-700" href="mailto:hi@panshi.io">hi@panshi.io</a>。</p>
+</div>
+</div>
+<section class="mt-12"><h2 class="text-xl font-semibold" style="color:#F7F8F8;">Frequently asked questions</h2><div class="mt-4"><p class="font-medium" style="color:#F7F8F8;">什么是 GEO(生成式引擎优化)?</p><p class="mt-1" style="color:#9CA0A8;">GEO 是指优化内容,使 ChatGPT、Perplexity、Google AI Overviews 等 AI 答案引擎在其生成的答案中引用或呈现你的内容,而不是把它排成一个供人点击的链接。</p></div><div class="mt-4"><p class="font-medium" style="color:#F7F8F8;">llms.txt 对 GEO 有帮助吗?</p><p class="mt-1" style="color:#9CA0A8;">没有。主流搜索/答案引擎并不消费 llms.txt;Google 把它比作早已作废的 keywords meta 标签。它只对给编程助手喂文档有用。</p></div><div class="mt-4"><p class="font-medium" style="color:#F7F8F8;">AI 搜索实际能带来多少流量?</p><p class="mt-1" style="color:#9CA0A8;">目前还很小 —— 按最可信的独立基准(Conductor,1215 个域名)约占引荐流量的 1% —— 但其转化率远高于流量占比,所以是高意图而非高流量。</p></div><div class="mt-4"><p class="font-medium" style="color:#F7F8F8;">投入产出比最高的单项 GEO 动作是什么?</p><p class="mt-1" style="color:#9CA0A8;">发布并持续更新有观点、有基准数据的最佳/对比页面,配上硬统计数字、具名来源和表格,并把结论前置到第一段。</p></div></section></div>
+</main>
+<footer class="mt-24" style="border-top:1px solid rgba(255,255,255,0.08);background:#0B0C0D;">
+<div class="max-w-6xl mx-auto px-6 py-14 text-sm" style="color:#62666D;">
+<div class="flex items-center gap-2.5 font-semibold tracking-tight" style="color:#F7F8F8;">
+<span class="inline-block w-2.5 h-2.5 rounded-sm" style="background:#5E6AD2;"></span>
+<span>Panshi</span>
+</div>
+<p class="mt-4 max-w-md leading-relaxed">由一名在生产环境运行多 agent 自动化的工程师打造。本目录独立于任何厂商,数据均对照一手来源核实,欢迎指正。</p>
+<p class="mt-6 flex flex-wrap gap-x-6 gap-y-2 font-medium">
+<a class="transition-colors hover:text-white" href="/tools/">工具</a><a class="transition-colors hover:text-white" href="/zh/services">服务</a><a class="transition-colors hover:text-white" href="/zh/pricing">定价</a><a class="transition-colors hover:text-white" href="/tools/blog/zh/">博客</a><a class="transition-colors hover:text-white" href="../../methodology.html">方法论</a><a class="ps-link" href="mailto:hi@panshi.io">hi@panshi.io</a>
+</p>
+<p class="mt-8 text-xs font-mono" style="color:#3f4248;">© 2026 panshi.io</p>
+</div>
+</footer>
+<script>
+(function () {
+  var box = document.getElementById('ps-acct');
+  if (!box) return;
+  var sp = "/zh";
+  var nav = { points: "\u70b9", account: "\u6211\u7684\u8d26\u6237", history: "\u6211\u7684\u8bb0\u5f55", logout: "\u9000\u51fa\u767b\u5f55", login: "\u767b\u5f55" };
+  var CACHE_KEY = 'ps_acct';
+  function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+  function renderAccount(d) {
+    window.__PS_USER = true;
+    box.innerHTML =
+      '<div class="nav-dd">' +
+        '<button type="button" class="nav-dd__btn flex items-center gap-1.5 transition-colors hover:text-white" aria-haspopup="true" aria-expanded="false" style="color:#F7F8F8;">' +
+          '<span style="display:inline-block;width:7px;height:7px;border-radius:999px;background:#5E6AD2;"></span>' +
+          '<span style="font-weight:600;">' + esc(d.points) + ' ' + esc(nav.points) + '</span>' +
+          '<svg class="nav-dd__chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>' +
+        '</button>' +
+        '<div class="nav-dd__panel" role="menu" style="left:auto;right:0;width:220px;">' +
+          '<div style="padding:8px 10px 6px;font-size:12px;color:#62666D;border-bottom:1px solid rgba(255,255,255,0.06);margin-bottom:4px;word-break:break-all;">' + esc(d.email) + '</div>' +
+          '<a href="' + sp + '/account" class="ps-acct__item" role="menuitem" style="display:block;padding:9px 10px;border-radius:9px;font-size:14px;color:#9CA0A8;text-decoration:none;">' + esc(nav.account) + '</a>' +
+          '<a href="' + sp + '/history" class="ps-acct__item" role="menuitem" style="display:block;padding:9px 10px;border-radius:9px;font-size:14px;color:#9CA0A8;text-decoration:none;">' + esc(nav.history) + '</a>' +
+          '<button type="button" id="ps-logout" class="ps-acct__item" role="menuitem" style="display:block;width:100%;padding:9px 10px;border-radius:9px;font-size:14px;color:#9CA0A8;background:none;border:0;text-align:left;cursor:pointer;">' + esc(nav.logout) + '</button>' +
+        '</div>' +
+      '</div>';
+    var dd = box.querySelector('.nav-dd');
+    var btn = dd && dd.querySelector('.nav-dd__btn');
+    if (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        var open = dd.getAttribute('data-open') === 'true';
+        dd.setAttribute('data-open', open ? 'false' : 'true');
+        btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+      });
+      document.addEventListener('click', function (e) { if (!dd.contains(e.target)) dd.setAttribute('data-open','false'); });
+    }
+    var lo = box.querySelector('#ps-logout');
+    if (lo) lo.addEventListener('click', function () {
+      try { localStorage.removeItem(CACHE_KEY); } catch (e) {}
+      window.__PS_USER = false;
+      fetch('/u/logout', { method: 'POST' }).then(function () { location.reload(); });
+    });
+  }
+  function renderLogin() {
+    window.__PS_USER = false;
+    box.innerHTML = '<a href="' + sp + '/signin" class="transition-colors hover:text-white" style="color:#9CA0A8;">' + esc(nav.login) + '</a>';
+  }
+  var renderedFromCache = false;
+  try {
+    var raw = localStorage.getItem(CACHE_KEY);
+    if (raw) { var cached = JSON.parse(raw); if (cached && cached.email != null) { renderAccount(cached); renderedFromCache = true; } }
+  } catch (e) {}
+  fetch('/u/me').then(function(r){return r.json();}).then(function(d){
+    if (d && d.ok) {
+      try { localStorage.setItem(CACHE_KEY, JSON.stringify({ email: d.email, points: d.points })); } catch (e) {}
+      renderAccount(d);
+    } else {
+      try { localStorage.removeItem(CACHE_KEY); } catch (e) {}
+      if (renderedFromCache) renderLogin();
+    }
+  }).catch(function(){});
+})();
+</script>
+</body></html>

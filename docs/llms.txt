@@ -3,161 +3,172 @@
 > A neutral, no-vendor-affiliation directory of AI agent observability, evals and guardrails tools — 116 tools, facts checked against primary sources.
 
 ## Best-of lists
-- [Best self-hostable LLM observability tools](https://tools.panshi.io/best/best-self-hostable-llm-observability-tools.html)
-- [Best OpenTelemetry-native LLM observability tools](https://tools.panshi.io/best/best-opentelemetry-native-llm-observability-tools.html)
-- [Best open-source LLM evals & testing tools](https://tools.panshi.io/best/best-open-source-llm-evals-tools.html)
-- [Best free LLM observability tools](https://tools.panshi.io/best/best-free-llm-observability-tools.html)
-- [Best LLM guardrails & safety tools](https://tools.panshi.io/best/best-llm-guardrails-tools.html)
-- [Best LLM cost tracking & FinOps tools](https://tools.panshi.io/best/best-llm-cost-tracking-tools.html)
+- [Best self-hostable LLM observability tools](https://panshi.io/tools/best/best-self-hostable-llm-observability-tools.html)
+- [Best OpenTelemetry-native LLM observability tools](https://panshi.io/tools/best/best-opentelemetry-native-llm-observability-tools.html)
+- [Best open-source LLM evals & testing tools](https://panshi.io/tools/best/best-open-source-llm-evals-tools.html)
+- [Best free LLM observability tools](https://panshi.io/tools/best/best-free-llm-observability-tools.html)
+- [Best LLM guardrails & safety tools](https://panshi.io/tools/best/best-llm-guardrails-tools.html)
+- [Best LLM cost tracking & FinOps tools](https://panshi.io/tools/best/best-llm-cost-tracking-tools.html)
 
 ## Comparisons
-- [Langfuse vs LangSmith](https://tools.panshi.io/compare/langfuse-vs-langsmith.html)
-- [Langfuse vs Helicone](https://tools.panshi.io/compare/langfuse-vs-helicone.html)
-- [Langfuse vs Arize Phoenix](https://tools.panshi.io/compare/langfuse-vs-arize-phoenix.html)
-- [Braintrust vs LangSmith](https://tools.panshi.io/compare/braintrust-vs-langsmith.html)
-- [Opik (Comet) vs Langfuse](https://tools.panshi.io/compare/opik-comet-vs-langfuse.html)
-- [Promptfoo vs Confident AI (DeepEval)](https://tools.panshi.io/compare/promptfoo-vs-confident-ai-deepeval.html)
-- [Ragas vs Promptfoo](https://tools.panshi.io/compare/ragas-vs-promptfoo.html)
-- [AgentOps vs Langfuse](https://tools.panshi.io/compare/agentops-vs-langfuse.html)
-- [Datadog LLM Observability vs LangSmith](https://tools.panshi.io/compare/datadog-llm-observability-vs-langsmith.html)
-- [Helicone vs Portkey](https://tools.panshi.io/compare/helicone-vs-portkey.html)
-- [Guardrails AI vs NVIDIA NeMo Guardrails](https://tools.panshi.io/compare/guardrails-ai-vs-nvidia-nemo-guardrails.html)
-- [Lakera Guard vs LLM Guard (Protect AI)](https://tools.panshi.io/compare/lakera-guard-vs-llm-guard-protect-ai.html)
-- [garak vs PyRIT](https://tools.panshi.io/compare/garak-vs-pyrit.html)
-- [TensorZero vs Langfuse](https://tools.panshi.io/compare/tensorzero-vs-langfuse.html)
-- [Arize Phoenix vs SigNoz](https://tools.panshi.io/compare/arize-phoenix-vs-signoz.html)
-- [Traceloop (OpenLLMetry) vs OpenLIT](https://tools.panshi.io/compare/traceloop-openllmetry-vs-openlit.html)
-- [Helicone vs LiteLLM](https://tools.panshi.io/compare/helicone-vs-litellm.html)
-- [Datadog LLM Observability vs Langfuse](https://tools.panshi.io/compare/datadog-llm-observability-vs-langfuse.html)
-- [W&B Weave vs Langfuse](https://tools.panshi.io/compare/w-b-weave-vs-langfuse.html)
-- [Opik (Comet) vs Arize Phoenix](https://tools.panshi.io/compare/opik-comet-vs-arize-phoenix.html)
-- [Galileo vs Braintrust](https://tools.panshi.io/compare/galileo-vs-braintrust.html)
-- [Confident AI (DeepEval) vs Ragas](https://tools.panshi.io/compare/confident-ai-deepeval-vs-ragas.html)
-- [Pydantic Logfire vs Langfuse](https://tools.panshi.io/compare/pydantic-logfire-vs-langfuse.html)
-- [Portkey vs LiteLLM](https://tools.panshi.io/compare/portkey-vs-litellm.html)
-- [Braintrust vs Langfuse](https://tools.panshi.io/compare/braintrust-vs-langfuse.html)
-- [Maxim AI vs Langfuse](https://tools.panshi.io/compare/maxim-ai-vs-langfuse.html)
+- [Langfuse vs LangSmith](https://panshi.io/tools/compare/langfuse-vs-langsmith.html)
+- [Langfuse vs Helicone](https://panshi.io/tools/compare/langfuse-vs-helicone.html)
+- [Langfuse vs Arize Phoenix](https://panshi.io/tools/compare/langfuse-vs-arize-phoenix.html)
+- [Braintrust vs LangSmith](https://panshi.io/tools/compare/braintrust-vs-langsmith.html)
+- [Opik (Comet) vs Langfuse](https://panshi.io/tools/compare/opik-comet-vs-langfuse.html)
+- [Promptfoo vs Confident AI (DeepEval)](https://panshi.io/tools/compare/promptfoo-vs-confident-ai-deepeval.html)
+- [Ragas vs Promptfoo](https://panshi.io/tools/compare/ragas-vs-promptfoo.html)
+- [AgentOps vs Langfuse](https://panshi.io/tools/compare/agentops-vs-langfuse.html)
+- [Datadog LLM Observability vs LangSmith](https://panshi.io/tools/compare/datadog-llm-observability-vs-langsmith.html)
+- [Helicone vs Portkey](https://panshi.io/tools/compare/helicone-vs-portkey.html)
+- [Guardrails AI vs NVIDIA NeMo Guardrails](https://panshi.io/tools/compare/guardrails-ai-vs-nvidia-nemo-guardrails.html)
+- [Lakera Guard vs LLM Guard (Protect AI)](https://panshi.io/tools/compare/lakera-guard-vs-llm-guard-protect-ai.html)
+- [garak vs PyRIT](https://panshi.io/tools/compare/garak-vs-pyrit.html)
+- [TensorZero vs Langfuse](https://panshi.io/tools/compare/tensorzero-vs-langfuse.html)
+- [Arize Phoenix vs SigNoz](https://panshi.io/tools/compare/arize-phoenix-vs-signoz.html)
+- [Traceloop (OpenLLMetry) vs OpenLIT](https://panshi.io/tools/compare/traceloop-openllmetry-vs-openlit.html)
+- [Helicone vs LiteLLM](https://panshi.io/tools/compare/helicone-vs-litellm.html)
+- [Datadog LLM Observability vs Langfuse](https://panshi.io/tools/compare/datadog-llm-observability-vs-langfuse.html)
+- [W&B Weave vs Langfuse](https://panshi.io/tools/compare/w-b-weave-vs-langfuse.html)
+- [Opik (Comet) vs Arize Phoenix](https://panshi.io/tools/compare/opik-comet-vs-arize-phoenix.html)
+- [Galileo vs Braintrust](https://panshi.io/tools/compare/galileo-vs-braintrust.html)
+- [Confident AI (DeepEval) vs Ragas](https://panshi.io/tools/compare/confident-ai-deepeval-vs-ragas.html)
+- [Pydantic Logfire vs Langfuse](https://panshi.io/tools/compare/pydantic-logfire-vs-langfuse.html)
+- [Portkey vs LiteLLM](https://panshi.io/tools/compare/portkey-vs-litellm.html)
+- [Braintrust vs Langfuse](https://panshi.io/tools/compare/braintrust-vs-langfuse.html)
+- [Maxim AI vs Langfuse](https://panshi.io/tools/compare/maxim-ai-vs-langfuse.html)
+- [LangSmith vs Helicone](https://panshi.io/tools/compare/langsmith-vs-helicone.html)
+- [Datadog LLM Observability vs New Relic AI Monitoring](https://panshi.io/tools/compare/datadog-llm-observability-vs-new-relic-ai-monitoring.html)
+- [Braintrust vs Confident AI (DeepEval)](https://panshi.io/tools/compare/braintrust-vs-confident-ai-deepeval.html)
+- [Galileo vs Arize Phoenix](https://panshi.io/tools/compare/galileo-vs-arize-phoenix.html)
+- [Langfuse vs SigNoz](https://panshi.io/tools/compare/langfuse-vs-signoz.html)
+- [Arize Phoenix vs OpenLIT](https://panshi.io/tools/compare/arize-phoenix-vs-openlit.html)
+- [Maxim AI vs Braintrust](https://panshi.io/tools/compare/maxim-ai-vs-braintrust.html)
+- [Helicone vs OpenLIT](https://panshi.io/tools/compare/helicone-vs-openlit.html)
+- [Promptfoo vs OpenAI Evals](https://panshi.io/tools/compare/promptfoo-vs-openai-evals.html)
+- [Langfuse vs MLflow (Tracing & GenAI)](https://panshi.io/tools/compare/langfuse-vs-mlflow-tracing-genai.html)
 
 ## Tools
-- [Agenta](https://tools.panshi.io/tools/agenta.html): Open-source prompt playground, registry and evaluation platform covering the prompt lifecycle from experimentation to deployment.
-- [AgentOps](https://tools.panshi.io/tools/agentops.html): Session-replay style observability for AI agents with time-travel debugging, cost tracking and first-class integrations into agent frameworks like CrewAI and AutoGen.
-- [Amazon Bedrock AgentCore Observability](https://tools.panshi.io/tools/amazon-bedrock-agentcore-observability.html): AWS-managed trace-level observability for agents via CloudWatch generative AI observability and OTEL.
-- [Amberflo](https://tools.panshi.io/tools/amberflo.html): AI monetization platform metering token usage across providers with native credit-based billing.
-- [Arize AX](https://tools.panshi.io/tools/arize-ax.html): Enterprise AI observability and evaluation platform extending Arize's ML-monitoring heritage to LLM and agent workloads at scale.
-- [Arize Phoenix](https://tools.panshi.io/tools/arize-phoenix.html): Open-source, OpenTelemetry-based tracing and evaluation library that runs locally or self-hosted, serving as the OSS on-ramp to Arize's enterprise platform.
-- [Arthur](https://tools.panshi.io/tools/arthur.html): Model monitoring and firewall (Arthur Shield) for enterprise AI, focused on risk, bias and policy enforcement.
-- [Athina AI](https://tools.panshi.io/tools/athina-ai.html): IDE-style platform for prompt experimentation, evals and monitoring aimed at mixed technical/non-technical AI teams.
-- [Atla](https://tools.panshi.io/tools/atla.html): Builds dedicated evaluator/judge models (Selene) and agent error-analysis tooling rather than a full observability suite.
-- [Autoblocks](https://tools.panshi.io/tools/autoblocks.html): Testing and evaluation platform for LLM applications with human-in-the-loop review workflows.
-- [Azure AI Foundry Observability](https://tools.panshi.io/tools/azure-ai-foundry-observability.html): Built-in evaluation, tracing and monitoring for models and agents inside Azure AI Foundry.
-- [Bespoken](https://tools.panshi.io/tools/bespoken.html): Automated testing and monitoring for IVR, voice assistants and conversational AI systems.
-- [Bluejay](https://tools.panshi.io/tools/bluejay.html): End-to-end testing and monitoring platform for voice and chat AI agents with multilingual simulation.
-- [Braintrust](https://tools.panshi.io/tools/braintrust.html): Eval-first AI engineering platform with logging, datasets, an LLM proxy and a purpose-built trace database (Brainstore), aimed at production regression-catching.
-- [CalypsoAI](https://tools.panshi.io/tools/calypsoai.html): Inference-perimeter security platform with scanners and red-team agents guarding enterprise model traffic.
-- [Cekura](https://tools.panshi.io/tools/cekura.html): Automated simulation testing and production monitoring for voice and chat AI agents.
-- [Cisco AI Defense (Robust Intelligence)](https://tools.panshi.io/tools/cisco-ai-defense-robust-intelligence.html): AI model validation and runtime guardrails productized from Robust Intelligence inside Cisco's security stack.
-- [CloudZero](https://tools.panshi.io/tools/cloudzero.html): AI unit-economics platform mapping LLM and GPU spend to cost per feature, per customer and per deployment.
-- [Composo](https://tools.panshi.io/tools/composo.html): Custom evaluation models that score accuracy and quality of enterprise LLM applications in production.
-- [Confident AI (DeepEval)](https://tools.panshi.io/tools/confident-ai-deepeval.html): Pytest-style open-source LLM evaluation framework (DeepEval) with a hosted platform for benchmarking, regression testing and red-teaming (DeepTeam).
-- [Coralogix AI (Aporia)](https://tools.panshi.io/tools/coralogix-ai-aporia.html): Aporia's drift detection and AI guardrails folded into the Coralogix observability platform as its AI research arm.
-- [Coval](https://tools.panshi.io/tools/coval.html): Simulation-first testing and replay for voice/chat agents, borrowing evaluation methodology from autonomous-vehicle testing.
-- [Datadog LLM Observability](https://tools.panshi.io/tools/datadog-llm-observability.html): LLM and agent tracing inside the Datadog APM suite, attractive to teams already standardized on Datadog for infrastructure monitoring.
-- [Deepchecks](https://tools.panshi.io/tools/deepchecks.html): Continuous validation suite from the ML-testing world extended to LLM apps, scoring outputs across versions from dev to production.
-- [Dynatrace AI Observability](https://tools.panshi.io/tools/dynatrace-ai-observability.html): GenAI and LLM monitoring within the Dynatrace APM platform, covering tokens, cost and service health for enterprises already on Dynatrace.
-- [Evidently AI](https://tools.panshi.io/tools/evidently-ai.html): Open-source evaluation and monitoring library (100+ metrics) spanning tabular ML drift and LLM judge-based checks, with a managed cloud.
-- [Fiddler AI](https://tools.panshi.io/tools/fiddler-ai.html): Enterprise AI observability vendor from the ML-monitoring era, now offering LLM scoring, guardrails and bias/fairness auditing.
-- [Finout](https://tools.panshi.io/tools/finout.html): FinOps platform whose MegaBill model folds LLM/API spend into the same cost-allocation views as cloud infrastructure.
-- [Freeplay](https://tools.panshi.io/tools/freeplay.html): Prompt management, testing and human-review workflows aimed at cross-functional product teams shipping LLM features.
-- [Future AGI](https://tools.panshi.io/tools/future-agi.html): Evaluation and observability platform with a focus on voice-agent simulation and programmatic re-scoring of historical scenarios.
-- [Galileo](https://tools.panshi.io/tools/galileo.html): Evaluation and guardrails platform whose in-house Luna-2 small judge models target low-cost, low-latency scoring of agentic workloads.
-- [garak](https://tools.panshi.io/tools/garak.html): Open-source LLM vulnerability scanner that runs pre-built probes for jailbreaks, leakage and injection.
-- [General Analysis](https://tools.panshi.io/tools/general-analysis.html): AI red teaming and safety testing platform producing adversarial test suites for LLM applications.
-- [Gentrace](https://tools.panshi.io/tools/gentrace.html): Collaborative LLM testing and eval platform emphasizing UI-driven experiments shared between engineers and subject-matter experts.
-- [Giskard](https://tools.panshi.io/tools/giskard.html): Open-source testing framework that scans LLM apps for hallucination, injection and bias vulnerabilities, with a commercial evaluation hub.
-- [Google Stax](https://tools.panshi.io/tools/google-stax.html): Experimental developer tool from Google Labs for LLM evaluation with human labeling and LLM-as-judge autoraters.
-- [Grafana Cloud AI Observability](https://tools.panshi.io/tools/grafana-cloud-ai-observability.html): OTel-based GenAI observability solution on Grafana Cloud, built on open-source instrumentation rather than a proprietary SDK.
-- [Guardrails AI](https://tools.panshi.io/tools/guardrails-ai.html): Open-source output-validation framework where composable validators enforce schemas, policies and safety constraints on LLM I/O.
-- [Haize Labs](https://tools.panshi.io/tools/haize-labs.html): Automated red-teaming ('haizing') that stress-tests LLM systems to find jailbreaks and failure modes before deployment.
-- [Hamming AI](https://tools.panshi.io/tools/hamming-ai.html): Automated testing for voice agents that places thousands of simulated phone calls and scores transcripts against rubrics.
-- [Helicone](https://tools.panshi.io/tools/helicone.html): Proxy/gateway-based LLM logging with one-line setup, unified cost and latency visibility across providers; now under Mintlify ownership.
-- [HoneyHive](https://tools.panshi.io/tools/honeyhive.html): Evaluation and observability platform for production agents with prompt versioning, A/B tests and OTel-based tracing.
-- [Humanloop](https://tools.panshi.io/tools/humanloop.html): Former prompt management and evaluation platform; shut down September 2025 with official migration paths to W&B, PromptLayer and Agenta.
-- [Inspect AI](https://tools.panshi.io/tools/inspect-ai.html): Government-built open-source framework for rigorous LLM and agent evaluations, popular for safety benchmarks and sandboxed agentic tasks.
-- [Invariant Labs](https://tools.panshi.io/tools/invariant-labs.html): Agent trace analysis and security scanning (incl. MCP tool-poisoning research), with an Explorer UI for debugging agent runs.
-- [Judgment Labs (judgeval)](https://tools.panshi.io/tools/judgment-labs-judgeval.html): Open-source agent behavior monitoring and evaluation library feeding agent post-training (RL/SFT).
-- [Kashikoi](https://tools.panshi.io/tools/kashikoi.html): Simulates multi-turn conversation flows to benchmark AI agents before deployment.
-- [Lago](https://tools.panshi.io/tools/lago.html): Open-source usage-based metering and billing engine used for AI token and credit pricing.
-- [Lakera Guard](https://tools.panshi.io/tools/lakera-guard.html): Low-latency API guarding against prompt injection, data leakage and toxic content, backed by the Gandalf attack dataset.
-- [Laminar](https://tools.panshi.io/tools/laminar.html): Open-source observability for long-running AI agents that captures LLM calls, tool use and browser actions for step-level debugging and replay.
-- [Langfuse](https://tools.panshi.io/tools/langfuse.html): Open-source (MIT) LLM engineering platform combining tracing, prompt management, evals and datasets, widely used as the default self-hosted observability stack.
-- [LangSmith](https://tools.panshi.io/tools/langsmith.html): Closed-source tracing, evals and monitoring platform from the LangChain team, deepest integration with LangChain/LangGraph but usable via OTel from any stack.
-- [Langtail](https://tools.panshi.io/tools/langtail.html): Spreadsheet-like prompt testing and deployment studio with assertions and security guardrails for smaller teams.
-- [Langtrace](https://tools.panshi.io/tools/langtrace.html): OpenTelemetry-native open-source tracing and metrics for LLM apps and agent frameworks, with a managed cloud option.
-- [LangWatch](https://tools.panshi.io/tools/langwatch.html): Open-source agent testing and observability built around the Scenario simulation framework, covering text, voice and adversarial tests.
-- [Latitude](https://tools.panshi.io/tools/latitude.html): Open-source prompt engineering platform with versioning, evals and agent-running infrastructure (PromptL).
-- [LiteLLM](https://tools.panshi.io/tools/litellm.html): Open-source LLM proxy/SDK that normalizes 100+ providers behind the OpenAI format with per-key budgets, spend tracking and rate limits.
-- [LLM Guard (Protect AI)](https://tools.panshi.io/tools/llm-guard-protect-ai.html): Open-source input/output scanner toolkit (35+ scanners) for PII, injection and toxicity checks on LLM traffic.
-- [LLM Stats](https://tools.panshi.io/tools/llm-stats.html): Independent AI evaluations lab publishing model benchmarks and comparison data.
-- [Lunary](https://tools.panshi.io/tools/lunary.html): Lightweight open-source LLM observability with tracing, analytics, prompt templates and PII masking, formerly known as LLMonitor.
-- [Maxim AI](https://tools.panshi.io/tools/maxim-ai.html): End-to-end agent simulation, evaluation and observability platform pitched at cross-functional product and engineering teams.
-- [Metronome](https://tools.panshi.io/tools/metronome.html): Enterprise usage metering and billing platform powering token-based pricing for major AI companies.
-- [Mindgard](https://tools.panshi.io/tools/mindgard.html): Automated AI red teaming platform testing LLMs, agents and multimodal models against MITRE ATLAS / OWASP-aligned attacks.
-- [MLflow (Tracing & GenAI)](https://tools.panshi.io/tools/mlflow-tracing-genai.html): The MLOps standard's GenAI extension: trace logging, LLM evaluation and prompt registry inside open-source MLflow 3.
-- [New Relic AI Monitoring](https://tools.panshi.io/tools/new-relic-ai-monitoring.html): AI/LLM monitoring layer in the New Relic APM platform tracking model latency, token cost and errors alongside conventional app telemetry.
-- [NVIDIA NeMo Guardrails](https://tools.panshi.io/tools/nvidia-nemo-guardrails.html): Programmable conversational guardrails toolkit using the Colang DSL, covering input, dialog, retrieval, execution and output rails.
-- [Okareo](https://tools.panshi.io/tools/okareo.html): Synthetic-user simulation that runs on every commit to catch regressions in agent tone, policy compliance, tool use and routing.
-- [OpenAI Evals](https://tools.panshi.io/tools/openai-evals.html): OpenAI's original open-source eval framework and registry; largely superseded by the hosted Evals API but still a reference implementation.
-- [Openlayer](https://tools.panshi.io/tools/openlayer.html): AI evaluation and observability platform spanning development tests and production monitoring.
-- [OpenLIT](https://tools.panshi.io/tools/openlit.html): OpenTelemetry-native open-source platform covering LLM tracing, GPU monitoring, guardrails and a prompt vault with one-line auto-instrumentation of 50+ providers.
-- [OpenMeter](https://tools.panshi.io/tools/openmeter.html): Open-source usage metering for AI/API products, commonly used to meter tokens for billing and internal chargeback.
-- [Opik (Comet)](https://tools.panshi.io/tools/opik-comet.html): Open-source LLM evaluation and tracing platform from Comet, combining trace logging, eval metrics and CI-friendly test suites.
-- [Orb](https://tools.panshi.io/tools/orb.html): Usage-based billing engine handling high-volume metering for AI and token-priced products.
-- [Orq.ai](https://tools.panshi.io/tools/orq-ai.html): Generative AI collaboration platform bundling prompt management, deployments, evals and observability for SaaS teams.
-- [Patronus AI](https://tools.panshi.io/tools/patronus-ai.html): Evaluation API and research-driven judge models (e.g. Lynx, Glider) for hallucination detection plus domain benchmarks like FinanceBench.
-- [Pay-i](https://tools.panshi.io/tools/pay-i.html): GenAI-specific FinOps tracking cost per request, per feature and per customer to give product teams real unit economics.
-- [Petri](https://tools.panshi.io/tools/petri.html): Open-source automated alignment auditing tool that probes target models with multi-turn simulated scenarios.
-- [Phospho](https://tools.panshi.io/tools/phospho.html): Open-source text analytics on LLM app messages, clustering and scoring conversations to surface what users actually do.
-- [Pillar Security](https://tools.panshi.io/tools/pillar-security.html): AI security platform covering discovery, red teaming and runtime protection across the AI lifecycle.
-- [Portkey](https://tools.panshi.io/tools/portkey.html): AI gateway routing 1,600+ models with built-in logging, cost tracking, caching and guardrails; observability comes as a side effect of the proxy layer.
-- [PostHog LLM Analytics](https://tools.panshi.io/tools/posthog-llm-analytics.html): LLM cost, latency and trace analytics bolted onto PostHog's product-analytics platform, letting teams join AI telemetry with user behavior data.
-- [Prompt Security](https://tools.panshi.io/tools/prompt-security.html): Enterprise GenAI security platform monitoring employee and application LLM usage for injection, leakage and shadow AI.
-- [Promptfoo](https://tools.panshi.io/tools/promptfoo.html): Config-file-driven open-source CLI for prompt evals, regression testing and LLM red-teaming that runs in CI.
-- [PromptHub](https://tools.panshi.io/tools/prompthub.html): Git-style prompt version control with branch/commit/merge semantics, runtime REST retrieval and CI/CD quality gates.
-- [PromptLayer](https://tools.panshi.io/tools/promptlayer.html): Prompt CMS with visual versioning, release labels and A/B testing, positioned so non-engineers can edit and deploy prompts independently.
-- [Pydantic Logfire](https://tools.panshi.io/tools/pydantic-logfire.html): OpenTelemetry-based observability service from the Pydantic team with first-class PydanticAI and Python ecosystem integration.
-- [PyRIT](https://tools.panshi.io/tools/pyrit.html): Python Risk Identification Toolkit automating single- and multi-turn adversarial probing of GenAI systems.
-- [Quotient AI](https://tools.panshi.io/tools/quotient-ai.html): Evaluation and monitoring platform for detecting hallucinations and failures in AI agents.
-- [RagaAI (Catalyst)](https://tools.panshi.io/tools/ragaai-catalyst.html): Agent testing, evaluation and tracing platform with the open-source Catalyst SDK.
-- [Ragas](https://tools.panshi.io/tools/ragas.html): The de-facto open-source metric library for RAG evaluation (faithfulness, context precision/recall), used standalone or inside other platforms.
-- [Repello AI](https://tools.panshi.io/tools/repello-ai.html): AI red teaming platform whose ARTEMIS engine automates adversarial testing of LLM apps and agents.
-- [Respan (formerly Keywords AI)](https://tools.panshi.io/tools/respan-formerly-keywords-ai.html): Unified gateway-plus-observability control plane for tracing and evaluating agent behavior, rebranded from Keywords AI.
-- [Roark](https://tools.panshi.io/tools/roark.html): Production observability for voice agents that captures real calls and converts failures into test cases.
-- [Scorecard](https://tools.panshi.io/tools/scorecard.html): Continuous evaluation platform providing fast feedback loops for testing and improving AI agents.
-- [Sentry AI Agent Monitoring](https://tools.panshi.io/tools/sentry-ai-agent-monitoring.html): Agent-call tracing and error monitoring inside Sentry, giving app developers LLM visibility in the tool they already use for crash reporting.
-- [SigNoz](https://tools.panshi.io/tools/signoz.html): Open-source OpenTelemetry APM that handles LLM observability via standard OTel instrumentation rather than an LLM-specific SDK.
-- [SPLX (SplxAI)](https://tools.panshi.io/tools/splx-splxai.html): Automated AI security testing and red teaming for AI assistants and agents from build to runtime.
-- [Straiker](https://tools.panshi.io/tools/straiker.html): AI-native security platform with red teaming and runtime guardrails for agentic applications.
-- [TensorZero](https://tools.panshi.io/tools/tensorzero.html): Open-source LLMOps stack unifying gateway, observability, evaluations, optimization and experimentation.
-- [TestZeus (Hercules)](https://tools.panshi.io/tools/testzeus-hercules.html): Open-source agentic end-to-end testing framework covering web, API and voice agent testing.
-- [The LLM Data Company (doteval)](https://tools.panshi.io/tools/the-llm-data-company-doteval.html): AI-assisted workspace (doteval) for writing and managing LLM evaluations.
-- [Tokencost](https://tools.panshi.io/tools/tokencost.html): Lightweight open-source library maintaining an up-to-date price table for estimating prompt/completion costs across 400+ models.
-- [Traceloop (OpenLLMetry)](https://tools.panshi.io/tools/traceloop-openllmetry.html): Vendor-neutral OpenTelemetry instrumentation for LLM apps (OpenLLMetry) that ships traces to any OTel backend, plus a hosted monitoring platform.
-- [Tropir](https://tools.panshi.io/tools/tropir.html): Autonomous LLM-Ops engineer that traces, debugs and optimizes LLM pipelines.
-- [Trubrics](https://tools.panshi.io/tools/trubrics.html): User analytics and feedback tracking for LLM applications to surface real usage patterns.
-- [TrueFoundry](https://tools.panshi.io/tools/truefoundry.html): AI gateway and deployment platform with built-in request logging, cost attribution and rate limiting for enterprise Kubernetes environments.
-- [TruLens](https://tools.panshi.io/tools/trulens.html): Open-source library for feedback-function-based evaluation and tracing of RAG and agent apps, now stewarded by Snowflake.
-- [Vals AI](https://tools.panshi.io/tools/vals-ai.html): Industry-specific LLM benchmarks and enterprise evaluation for legal, tax and finance tasks.
-- [Vantage](https://tools.panshi.io/tools/vantage.html): Cloud cost platform with native token-level ingest for OpenAI/Anthropic and an MCP server for querying AI spend from coding assistants.
-- [Vellum](https://tools.panshi.io/tools/vellum.html): Low-code platform for prompts, workflows, evaluations and deployments with environment management for product teams.
-- [Vertex AI Gen AI Evaluation Service](https://tools.panshi.io/tools/vertex-ai-gen-ai-evaluation-service.html): Managed evaluation service on Vertex AI for scoring models and agents with autoraters and custom metrics.
-- [Vijil](https://tools.panshi.io/tools/vijil.html): Agent trust platform combining automated evaluation, red teaming and runtime defenses for AI agents.
-- [W&B Weave](https://tools.panshi.io/tools/w-b-weave.html): LLM tracing and evaluation toolkit from Weights & Biases, integrated with the broader W&B experiment-tracking ecosystem.
-- [WhyLabs (whylogs/LangKit)](https://tools.panshi.io/tools/whylabs-whylogs-langkit.html): Profile-based monitoring (whylogs) plus LangKit LLM metrics that summarize data locally so raw prompts never leave your infrastructure.
-- [Zenity](https://tools.panshi.io/tools/zenity.html): Security and governance platform for enterprise AI agents and low-code copilots, including agent observability.
-- [ZeroEval](https://tools.panshi.io/tools/zeroeval.html): Auto-optimizer for AI agents using calibrated LLM judges and automatic evaluations.
+- [Agenta](https://panshi.io/tools/tools/agenta.html): Open-source prompt playground, registry and evaluation platform covering the prompt lifecycle from experimentation to deployment.
+- [AgentOps](https://panshi.io/tools/tools/agentops.html): Session-replay style observability for AI agents with time-travel debugging, cost tracking and first-class integrations into agent frameworks like CrewAI and AutoGen.
+- [Amazon Bedrock AgentCore Observability](https://panshi.io/tools/tools/amazon-bedrock-agentcore-observability.html): AWS-managed trace-level observability for agents via CloudWatch generative AI observability and OTEL.
+- [Amberflo](https://panshi.io/tools/tools/amberflo.html): AI monetization platform metering token usage across providers with native credit-based billing.
+- [Arize AX](https://panshi.io/tools/tools/arize-ax.html): Enterprise AI observability and evaluation platform extending Arize's ML-monitoring heritage to LLM and agent workloads at scale.
+- [Arize Phoenix](https://panshi.io/tools/tools/arize-phoenix.html): Open-source, OpenTelemetry-based tracing and evaluation library that runs locally or self-hosted, serving as the OSS on-ramp to Arize's enterprise platform.
+- [Arthur](https://panshi.io/tools/tools/arthur.html): Model monitoring and firewall (Arthur Shield) for enterprise AI, focused on risk, bias and policy enforcement.
+- [Athina AI](https://panshi.io/tools/tools/athina-ai.html): IDE-style platform for prompt experimentation, evals and monitoring aimed at mixed technical/non-technical AI teams.
+- [Atla](https://panshi.io/tools/tools/atla.html): Builds dedicated evaluator/judge models (Selene) and agent error-analysis tooling rather than a full observability suite.
+- [Autoblocks](https://panshi.io/tools/tools/autoblocks.html): Testing and evaluation platform for LLM applications with human-in-the-loop review workflows.
+- [Azure AI Foundry Observability](https://panshi.io/tools/tools/azure-ai-foundry-observability.html): Built-in evaluation, tracing and monitoring for models and agents inside Azure AI Foundry.
+- [Bespoken](https://panshi.io/tools/tools/bespoken.html): Automated testing and monitoring for IVR, voice assistants and conversational AI systems.
+- [Bluejay](https://panshi.io/tools/tools/bluejay.html): End-to-end testing and monitoring platform for voice and chat AI agents with multilingual simulation.
+- [Braintrust](https://panshi.io/tools/tools/braintrust.html): Eval-first AI engineering platform with logging, datasets, an LLM proxy and a purpose-built trace database (Brainstore), aimed at production regression-catching.
+- [CalypsoAI](https://panshi.io/tools/tools/calypsoai.html): Inference-perimeter security platform with scanners and red-team agents guarding enterprise model traffic.
+- [Cekura](https://panshi.io/tools/tools/cekura.html): Automated simulation testing and production monitoring for voice and chat AI agents.
+- [Cisco AI Defense (Robust Intelligence)](https://panshi.io/tools/tools/cisco-ai-defense-robust-intelligence.html): AI model validation and runtime guardrails productized from Robust Intelligence inside Cisco's security stack.
+- [CloudZero](https://panshi.io/tools/tools/cloudzero.html): AI unit-economics platform mapping LLM and GPU spend to cost per feature, per customer and per deployment.
+- [Composo](https://panshi.io/tools/tools/composo.html): Custom evaluation models that score accuracy and quality of enterprise LLM applications in production.
+- [Confident AI (DeepEval)](https://panshi.io/tools/tools/confident-ai-deepeval.html): Pytest-style open-source LLM evaluation framework (DeepEval) with a hosted platform for benchmarking, regression testing and red-teaming (DeepTeam).
+- [Coralogix AI (Aporia)](https://panshi.io/tools/tools/coralogix-ai-aporia.html): Aporia's drift detection and AI guardrails folded into the Coralogix observability platform as its AI research arm.
+- [Coval](https://panshi.io/tools/tools/coval.html): Simulation-first testing and replay for voice/chat agents, borrowing evaluation methodology from autonomous-vehicle testing.
+- [Datadog LLM Observability](https://panshi.io/tools/tools/datadog-llm-observability.html): LLM and agent tracing inside the Datadog APM suite, attractive to teams already standardized on Datadog for infrastructure monitoring.
+- [Deepchecks](https://panshi.io/tools/tools/deepchecks.html): Continuous validation suite from the ML-testing world extended to LLM apps, scoring outputs across versions from dev to production.
+- [Dynatrace AI Observability](https://panshi.io/tools/tools/dynatrace-ai-observability.html): GenAI and LLM monitoring within the Dynatrace APM platform, covering tokens, cost and service health for enterprises already on Dynatrace.
+- [Evidently AI](https://panshi.io/tools/tools/evidently-ai.html): Open-source evaluation and monitoring library (100+ metrics) spanning tabular ML drift and LLM judge-based checks, with a managed cloud.
+- [Fiddler AI](https://panshi.io/tools/tools/fiddler-ai.html): Enterprise AI observability vendor from the ML-monitoring era, now offering LLM scoring, guardrails and bias/fairness auditing.
+- [Finout](https://panshi.io/tools/tools/finout.html): FinOps platform whose MegaBill model folds LLM/API spend into the same cost-allocation views as cloud infrastructure.
+- [Freeplay](https://panshi.io/tools/tools/freeplay.html): Prompt management, testing and human-review workflows aimed at cross-functional product teams shipping LLM features.
+- [Future AGI](https://panshi.io/tools/tools/future-agi.html): Evaluation and observability platform with a focus on voice-agent simulation and programmatic re-scoring of historical scenarios.
+- [Galileo](https://panshi.io/tools/tools/galileo.html): Evaluation and guardrails platform whose in-house Luna-2 small judge models target low-cost, low-latency scoring of agentic workloads.
+- [garak](https://panshi.io/tools/tools/garak.html): Open-source LLM vulnerability scanner that runs pre-built probes for jailbreaks, leakage and injection.
+- [General Analysis](https://panshi.io/tools/tools/general-analysis.html): AI red teaming and safety testing platform producing adversarial test suites for LLM applications.
+- [Gentrace](https://panshi.io/tools/tools/gentrace.html): Collaborative LLM testing and eval platform emphasizing UI-driven experiments shared between engineers and subject-matter experts.
+- [Giskard](https://panshi.io/tools/tools/giskard.html): Open-source testing framework that scans LLM apps for hallucination, injection and bias vulnerabilities, with a commercial evaluation hub.
+- [Google Stax](https://panshi.io/tools/tools/google-stax.html): Experimental developer tool from Google Labs for LLM evaluation with human labeling and LLM-as-judge autoraters.
+- [Grafana Cloud AI Observability](https://panshi.io/tools/tools/grafana-cloud-ai-observability.html): OTel-based GenAI observability solution on Grafana Cloud, built on open-source instrumentation rather than a proprietary SDK.
+- [Guardrails AI](https://panshi.io/tools/tools/guardrails-ai.html): Open-source output-validation framework where composable validators enforce schemas, policies and safety constraints on LLM I/O.
+- [Haize Labs](https://panshi.io/tools/tools/haize-labs.html): Automated red-teaming ('haizing') that stress-tests LLM systems to find jailbreaks and failure modes before deployment.
+- [Hamming AI](https://panshi.io/tools/tools/hamming-ai.html): Automated testing for voice agents that places thousands of simulated phone calls and scores transcripts against rubrics.
+- [Helicone](https://panshi.io/tools/tools/helicone.html): Proxy/gateway-based LLM logging with one-line setup, unified cost and latency visibility across providers; now under Mintlify ownership.
+- [HoneyHive](https://panshi.io/tools/tools/honeyhive.html): Evaluation and observability platform for production agents with prompt versioning, A/B tests and OTel-based tracing.
+- [Humanloop](https://panshi.io/tools/tools/humanloop.html): Former prompt management and evaluation platform; shut down September 2025 with official migration paths to W&B, PromptLayer and Agenta.
+- [Inspect AI](https://panshi.io/tools/tools/inspect-ai.html): Government-built open-source framework for rigorous LLM and agent evaluations, popular for safety benchmarks and sandboxed agentic tasks.
+- [Invariant Labs](https://panshi.io/tools/tools/invariant-labs.html): Agent trace analysis and security scanning (incl. MCP tool-poisoning research), with an Explorer UI for debugging agent runs.
+- [Judgment Labs (judgeval)](https://panshi.io/tools/tools/judgment-labs-judgeval.html): Open-source agent behavior monitoring and evaluation library feeding agent post-training (RL/SFT).
+- [Kashikoi](https://panshi.io/tools/tools/kashikoi.html): Simulates multi-turn conversation flows to benchmark AI agents before deployment.
+- [Lago](https://panshi.io/tools/tools/lago.html): Open-source usage-based metering and billing engine used for AI token and credit pricing.
+- [Lakera Guard](https://panshi.io/tools/tools/lakera-guard.html): Low-latency API guarding against prompt injection, data leakage and toxic content, backed by the Gandalf attack dataset.
+- [Laminar](https://panshi.io/tools/tools/laminar.html): Open-source observability for long-running AI agents that captures LLM calls, tool use and browser actions for step-level debugging and replay.
+- [Langfuse](https://panshi.io/tools/tools/langfuse.html): Open-source (MIT) LLM engineering platform combining tracing, prompt management, evals and datasets, widely used as the default self-hosted observability stack.
+- [LangSmith](https://panshi.io/tools/tools/langsmith.html): Closed-source tracing, evals and monitoring platform from the LangChain team, deepest integration with LangChain/LangGraph but usable via OTel from any stack.
+- [Langtail](https://panshi.io/tools/tools/langtail.html): Spreadsheet-like prompt testing and deployment studio with assertions and security guardrails for smaller teams.
+- [Langtrace](https://panshi.io/tools/tools/langtrace.html): OpenTelemetry-native open-source tracing and metrics for LLM apps and agent frameworks, with a managed cloud option.
+- [LangWatch](https://panshi.io/tools/tools/langwatch.html): Open-source agent testing and observability built around the Scenario simulation framework, covering text, voice and adversarial tests.
+- [Latitude](https://panshi.io/tools/tools/latitude.html): Open-source prompt engineering platform with versioning, evals and agent-running infrastructure (PromptL).
+- [LiteLLM](https://panshi.io/tools/tools/litellm.html): Open-source LLM proxy/SDK that normalizes 100+ providers behind the OpenAI format with per-key budgets, spend tracking and rate limits.
+- [LLM Guard (Protect AI)](https://panshi.io/tools/tools/llm-guard-protect-ai.html): Open-source input/output scanner toolkit (35+ scanners) for PII, injection and toxicity checks on LLM traffic.
+- [LLM Stats](https://panshi.io/tools/tools/llm-stats.html): Independent AI evaluations lab publishing model benchmarks and comparison data.
+- [Lunary](https://panshi.io/tools/tools/lunary.html): Lightweight open-source LLM observability with tracing, analytics, prompt templates and PII masking, formerly known as LLMonitor.
+- [Maxim AI](https://panshi.io/tools/tools/maxim-ai.html): End-to-end agent simulation, evaluation and observability platform pitched at cross-functional product and engineering teams.
+- [Metronome](https://panshi.io/tools/tools/metronome.html): Enterprise usage metering and billing platform powering token-based pricing for major AI companies.
+- [Mindgard](https://panshi.io/tools/tools/mindgard.html): Automated AI red teaming platform testing LLMs, agents and multimodal models against MITRE ATLAS / OWASP-aligned attacks.
+- [MLflow (Tracing & GenAI)](https://panshi.io/tools/tools/mlflow-tracing-genai.html): The MLOps standard's GenAI extension: trace logging, LLM evaluation and prompt registry inside open-source MLflow 3.
+- [New Relic AI Monitoring](https://panshi.io/tools/tools/new-relic-ai-monitoring.html): AI/LLM monitoring layer in the New Relic APM platform tracking model latency, token cost and errors alongside conventional app telemetry.
+- [NVIDIA NeMo Guardrails](https://panshi.io/tools/tools/nvidia-nemo-guardrails.html): Programmable conversational guardrails toolkit using the Colang DSL, covering input, dialog, retrieval, execution and output rails.
+- [Okareo](https://panshi.io/tools/tools/okareo.html): Synthetic-user simulation that runs on every commit to catch regressions in agent tone, policy compliance, tool use and routing.
+- [OpenAI Evals](https://panshi.io/tools/tools/openai-evals.html): OpenAI's original open-source eval framework and registry; largely superseded by the hosted Evals API but still a reference implementation.
+- [Openlayer](https://panshi.io/tools/tools/openlayer.html): AI evaluation and observability platform spanning development tests and production monitoring.
+- [OpenLIT](https://panshi.io/tools/tools/openlit.html): OpenTelemetry-native open-source platform covering LLM tracing, GPU monitoring, guardrails and a prompt vault with one-line auto-instrumentation of 50+ providers.
+- [OpenMeter](https://panshi.io/tools/tools/openmeter.html): Open-source usage metering for AI/API products, commonly used to meter tokens for billing and internal chargeback.
+- [Opik (Comet)](https://panshi.io/tools/tools/opik-comet.html): Open-source LLM evaluation and tracing platform from Comet, combining trace logging, eval metrics and CI-friendly test suites.
+- [Orb](https://panshi.io/tools/tools/orb.html): Usage-based billing engine handling high-volume metering for AI and token-priced products.
+- [Orq.ai](https://panshi.io/tools/tools/orq-ai.html): Generative AI collaboration platform bundling prompt management, deployments, evals and observability for SaaS teams.
+- [Patronus AI](https://panshi.io/tools/tools/patronus-ai.html): Evaluation API and research-driven judge models (e.g. Lynx, Glider) for hallucination detection plus domain benchmarks like FinanceBench.
+- [Pay-i](https://panshi.io/tools/tools/pay-i.html): GenAI-specific FinOps tracking cost per request, per feature and per customer to give product teams real unit economics.
+- [Petri](https://panshi.io/tools/tools/petri.html): Open-source automated alignment auditing tool that probes target models with multi-turn simulated scenarios.
+- [Phospho](https://panshi.io/tools/tools/phospho.html): Open-source text analytics on LLM app messages, clustering and scoring conversations to surface what users actually do.
+- [Pillar Security](https://panshi.io/tools/tools/pillar-security.html): AI security platform covering discovery, red teaming and runtime protection across the AI lifecycle.
+- [Portkey](https://panshi.io/tools/tools/portkey.html): AI gateway routing 1,600+ models with built-in logging, cost tracking, caching and guardrails; observability comes as a side effect of the proxy layer.
+- [PostHog LLM Analytics](https://panshi.io/tools/tools/posthog-llm-analytics.html): LLM cost, latency and trace analytics bolted onto PostHog's product-analytics platform, letting teams join AI telemetry with user behavior data.
+- [Prompt Security](https://panshi.io/tools/tools/prompt-security.html): Enterprise GenAI security platform monitoring employee and application LLM usage for injection, leakage and shadow AI.
+- [Promptfoo](https://panshi.io/tools/tools/promptfoo.html): Config-file-driven open-source CLI for prompt evals, regression testing and LLM red-teaming that runs in CI.
+- [PromptHub](https://panshi.io/tools/tools/prompthub.html): Git-style prompt version control with branch/commit/merge semantics, runtime REST retrieval and CI/CD quality gates.
+- [PromptLayer](https://panshi.io/tools/tools/promptlayer.html): Prompt CMS with visual versioning, release labels and A/B testing, positioned so non-engineers can edit and deploy prompts independently.
+- [Pydantic Logfire](https://panshi.io/tools/tools/pydantic-logfire.html): OpenTelemetry-based observability service from the Pydantic team with first-class PydanticAI and Python ecosystem integration.
+- [PyRIT](https://panshi.io/tools/tools/pyrit.html): Python Risk Identification Toolkit automating single- and multi-turn adversarial probing of GenAI systems.
+- [Quotient AI](https://panshi.io/tools/tools/quotient-ai.html): Evaluation and monitoring platform for detecting hallucinations and failures in AI agents.
+- [RagaAI (Catalyst)](https://panshi.io/tools/tools/ragaai-catalyst.html): Agent testing, evaluation and tracing platform with the open-source Catalyst SDK.
+- [Ragas](https://panshi.io/tools/tools/ragas.html): The de-facto open-source metric library for RAG evaluation (faithfulness, context precision/recall), used standalone or inside other platforms.
+- [Repello AI](https://panshi.io/tools/tools/repello-ai.html): AI red teaming platform whose ARTEMIS engine automates adversarial testing of LLM apps and agents.
+- [Respan (formerly Keywords AI)](https://panshi.io/tools/tools/respan-formerly-keywords-ai.html): Unified gateway-plus-observability control plane for tracing and evaluating agent behavior, rebranded from Keywords AI.
+- [Roark](https://panshi.io/tools/tools/roark.html): Production observability for voice agents that captures real calls and converts failures into test cases.
+- [Scorecard](https://panshi.io/tools/tools/scorecard.html): Continuous evaluation platform providing fast feedback loops for testing and improving AI agents.
+- [Sentry AI Agent Monitoring](https://panshi.io/tools/tools/sentry-ai-agent-monitoring.html): Agent-call tracing and error monitoring inside Sentry, giving app developers LLM visibility in the tool they already use for crash reporting.
+- [SigNoz](https://panshi.io/tools/tools/signoz.html): Open-source OpenTelemetry APM that handles LLM observability via standard OTel instrumentation rather than an LLM-specific SDK.
+- [SPLX (SplxAI)](https://panshi.io/tools/tools/splx-splxai.html): Automated AI security testing and red teaming for AI assistants and agents from build to runtime.
+- [Straiker](https://panshi.io/tools/tools/straiker.html): AI-native security platform with red teaming and runtime guardrails for agentic applications.
+- [TensorZero](https://panshi.io/tools/tools/tensorzero.html): Open-source LLMOps stack unifying gateway, observability, evaluations, optimization and experimentation.
+- [TestZeus (Hercules)](https://panshi.io/tools/tools/testzeus-hercules.html): Open-source agentic end-to-end testing framework covering web, API and voice agent testing.
+- [The LLM Data Company (doteval)](https://panshi.io/tools/tools/the-llm-data-company-doteval.html): AI-assisted workspace (doteval) for writing and managing LLM evaluations.
+- [Tokencost](https://panshi.io/tools/tools/tokencost.html): Lightweight open-source library maintaining an up-to-date price table for estimating prompt/completion costs across 400+ models.
+- [Traceloop (OpenLLMetry)](https://panshi.io/tools/tools/traceloop-openllmetry.html): Vendor-neutral OpenTelemetry instrumentation for LLM apps (OpenLLMetry) that ships traces to any OTel backend, plus a hosted monitoring platform.
+- [Tropir](https://panshi.io/tools/tools/tropir.html): Autonomous LLM-Ops engineer that traces, debugs and optimizes LLM pipelines.
+- [Trubrics](https://panshi.io/tools/tools/trubrics.html): User analytics and feedback tracking for LLM applications to surface real usage patterns.
+- [TrueFoundry](https://panshi.io/tools/tools/truefoundry.html): AI gateway and deployment platform with built-in request logging, cost attribution and rate limiting for enterprise Kubernetes environments.
+- [TruLens](https://panshi.io/tools/tools/trulens.html): Open-source library for feedback-function-based evaluation and tracing of RAG and agent apps, now stewarded by Snowflake.
+- [Vals AI](https://panshi.io/tools/tools/vals-ai.html): Industry-specific LLM benchmarks and enterprise evaluation for legal, tax and finance tasks.
+- [Vantage](https://panshi.io/tools/tools/vantage.html): Cloud cost platform with native token-level ingest for OpenAI/Anthropic and an MCP server for querying AI spend from coding assistants.
+- [Vellum](https://panshi.io/tools/tools/vellum.html): Low-code platform for prompts, workflows, evaluations and deployments with environment management for product teams.
+- [Vertex AI Gen AI Evaluation Service](https://panshi.io/tools/tools/vertex-ai-gen-ai-evaluation-service.html): Managed evaluation service on Vertex AI for scoring models and agents with autoraters and custom metrics.
+- [Vijil](https://panshi.io/tools/tools/vijil.html): Agent trust platform combining automated evaluation, red teaming and runtime defenses for AI agents.
+- [W&B Weave](https://panshi.io/tools/tools/w-b-weave.html): LLM tracing and evaluation toolkit from Weights & Biases, integrated with the broader W&B experiment-tracking ecosystem.
+- [WhyLabs (whylogs/LangKit)](https://panshi.io/tools/tools/whylabs-whylogs-langkit.html): Profile-based monitoring (whylogs) plus LangKit LLM metrics that summarize data locally so raw prompts never leave your infrastructure.
+- [Zenity](https://panshi.io/tools/tools/zenity.html): Security and governance platform for enterprise AI agents and low-code copilots, including agent observability.
+- [ZeroEval](https://panshi.io/tools/tools/zeroeval.html): Auto-optimizer for AI agents using calibrated LLM judges and automatic evaluations.
 
 ## Articles
-- [How we made a 116-tool directory citable by AI answer engines](https://tools.panshi.io/blog/geo-case-study-ai-tools-directory.html): A concrete GEO (Generative Engine Optimization) case study: the exact five changes we made to tools.panshi.io so ChatGPT, Perplexity and Google AI Overviews can cite it — with the research behind each.
-- [OpenTelemetry-native or not: the lock-in question in LLM observability](https://tools.panshi.io/blog/opentelemetry-native-llm-observability-lock-in.html): Of the 37 LLM tracing/observability tools we track, 29 are OpenTelemetry-native and 8 are not. Here is why that single fact decides your migration cost — and how to tell the difference.
-- [Self-hosting LLM observability: what we actually measured](https://tools.panshi.io/blog/self-hosting-llm-observability-what-we-measured.html): We self-hosted open-source LLM observability tools and measured the two things that matter: how much instrumentation overhead they add, and how heavy they are to run. Real numbers, honest caveats.
-- [Methodology](https://tools.panshi.io/methodology.html)
+- [Is your API relay watering down your models? A detection methodology](https://panshi.io/tools/blog/relay-upstream-model-fraud-detection.html): API relays often swap the Claude/GPT you pay for with cheaper models, even prompting them to claim they are still Claude. How behavioral-fingerprint detection works, why asking the model is useless, and the real accuracy.
+- [How we made a 116-tool directory citable by AI answer engines](https://panshi.io/tools/blog/geo-case-study-ai-tools-directory.html): A concrete GEO (Generative Engine Optimization) case study: the exact five changes we made to panshi.io/tools so ChatGPT, Perplexity and Google AI Overviews can cite it — with the research behind each.
+- [OpenTelemetry-native or not: the lock-in question in LLM observability](https://panshi.io/tools/blog/opentelemetry-native-llm-observability-lock-in.html): Of the 37 LLM tracing/observability tools we track, 29 are OpenTelemetry-native and 8 are not. Here is why that single fact decides your migration cost — and how to tell the difference.
+- [Self-hosting LLM observability: what we actually measured](https://panshi.io/tools/blog/self-hosting-llm-observability-what-we-measured.html): We self-hosted open-source LLM observability tools and measured the two things that matter: how much instrumentation overhead they add, and how heavy they are to run. Real numbers, honest caveats.
+- [Methodology](https://panshi.io/tools/methodology.html)

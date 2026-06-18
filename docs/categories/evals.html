@@ -1,270 +1,396 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8">
+<!doctype html><html lang="en" class="antialiased"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Evals &amp; Testing tools (2026) — 39 compared | Agent Observability Index</title>
 <meta name="description" content="Score outputs, run regression suites and red-team agent behavior.">
-<link rel="canonical" href="https://tools.panshi.io/categories/evals.html">
-<meta name="theme-color" content="#020617">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://panshi.io/tools/categories/evals.html">
+<meta name="theme-color" content="#08090A">
+<link rel="icon" href="/tools/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Agent Observability Index">
 <meta property="og:title" content="Evals &amp; Testing tools (2026) — 39 compared | Agent Observability Index">
 <meta property="og:description" content="Score outputs, run regression suites and red-team agent behavior.">
-<meta property="og:url" content="https://tools.panshi.io/categories/evals.html">
-<meta property="og:image" content="https://tools.panshi.io/og.png">
+<meta property="og:url" content="https://panshi.io/tools/categories/evals.html">
+<meta property="og:image" content="https://panshi.io/tools/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Evals &amp; Testing tools (2026) — 39 compared | Agent Observability Index">
 <meta name="twitter:description" content="Score outputs, run regression suites and red-team agent behavior.">
-<meta name="twitter:image" content="https://tools.panshi.io/og.png">
-<link rel="stylesheet" href="/styles.css"><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1cd7fde310f94d97a9660eedd270b154"}'></script><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "CollectionPage", "name": "Evals & Testing", "description": "Score outputs, run regression suites and red-team agent behavior.", "url": "https://tools.panshi.io/categories/evals.html"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tools.panshi.io/index.html"}, {"@type": "ListItem", "position": 2, "name": "Evals & Testing", "item": "https://tools.panshi.io/categories/evals.html"}]}]}</script></head>
-<body class="bg-slate-950 text-slate-200 antialiased">
-<nav class="border-b border-slate-800"><div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-<a href="../index.html" class="font-bold text-white">Agent<span class="text-emerald-400">Obs</span> Index</a>
-<div class="flex gap-5 text-sm">
-<a href="../index.html#tools" class="hover:text-white">Tools</a>
-<a href="../index.html#compare" class="hover:text-white">Comparisons</a>
-<a href="../blog/index.html" class="hover:text-white">Blog</a>
-<a href="../methodology.html" class="hover:text-white">Methodology</a>
-<a href="../advertise.html" class="text-emerald-400 hover:text-emerald-300">Get featured</a>
-</div></div></nav>
-<main class="max-w-5xl mx-auto px-6 py-12">
-<p class="text-sm text-slate-500 mb-2"><a href="../index.html" class="hover:text-slate-300">Home</a> / Evals &amp; Testing</p>
-<h1 class="text-3xl font-bold text-white">Evals &amp; Testing</h1><p class="mt-2 text-slate-400">Score outputs, run regression suites and red-team agent behavior. 39 tools tracked.</p>
-<div class="grid md:grid-cols-2 gap-4 mt-8"><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="athina ai" data-stars="300" data-maturity="34">
+<meta name="twitter:image" content="https://panshi.io/tools/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/tools/styles.css"><style>
+:root{--accent:#5E6AD2;--accent-hover:#6E79E0;--bg:#08090A;--surface1:#0F1011;--surface2:#16171A;--hairline:rgba(255,255,255,.08);--hairline-strong:rgba(255,255,255,.14);--t1:#F7F8F8;--t2:#9CA0A8;--t3:#62666D;}
+html{background:#08090A;color-scheme:dark;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;scroll-behavior:smooth;}
+body{font-feature-settings:'cv11','ss01';letter-spacing:-0.011em;}
+h1,h2,h3{letter-spacing:-0.02em;}
+::selection{background:rgba(94,106,210,.32);color:#fff;}
+.ps-link{color:var(--accent);font-weight:500;transition:color .15s;}
+.ps-link:hover{color:var(--accent-hover);}
+/* dark recolor of long-form article body (blog posts) */
+.prose-dark{color:var(--t2);}
+.prose-dark p{color:var(--t2);}
+.prose-dark h2,.prose-dark h3,.prose-dark strong{color:var(--t1);}
+.prose-dark a{color:var(--accent);}
+.prose-dark a:hover{color:var(--accent-hover);}
+.prose-dark code{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.85em;background:rgba(255,255,255,.06);border:1px solid var(--hairline);border-radius:4px;padding:.05em .35em;color:var(--t1);}
+.prose-dark pre{background:#0a0b0c;border:1px solid var(--hairline);border-radius:10px;}
+.prose-dark table th{color:var(--t1);border-color:var(--hairline-strong)!important;}
+.prose-dark td,.prose-dark th{border-color:var(--hairline)!important;}
+/* search input */
+.ps-search{background:#0F1011;border:1px solid var(--hairline-strong);color:var(--t1);}
+.ps-search::placeholder{color:var(--t3);}
+.ps-search:focus{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent);}
+/* filter + sort chips (states toggled by inline JS) */
+.fbtn{background:transparent;border:1px solid var(--hairline-strong);color:var(--t2);transition:all .15s;}
+.fbtn:hover{border-color:rgba(255,255,255,.28);color:var(--t1);}
+.fbtn-on{background:var(--accent);border:1px solid var(--accent);color:#fff;}
+.fbtn-on:hover{background:var(--accent-hover);border-color:var(--accent-hover);color:#fff;}
+.sbtn{background:transparent;border:1px solid var(--hairline-strong);color:var(--t2);transition:all .15s;}
+.sbtn:hover{border-color:rgba(255,255,255,.28);color:var(--t1);}
+.sbtn-on{border-color:var(--accent);color:#aab2ee;}
+/* account dropdown (#ps-acct) — replicated from Brand.astro so the header account
+   menu behaves identically on directory/blog pages */
+.nav-dd{position:relative;}
+.nav-dd__btn{cursor:pointer;padding:0;margin:0;background:none;border:0;color:inherit;font:inherit;line-height:1;}
+.nav-dd__chev{opacity:.65;transition:transform .18s ease;}
+.nav-dd:hover .nav-dd__chev,.nav-dd[data-open="true"] .nav-dd__chev{transform:rotate(180deg);}
+.nav-dd__panel{position:absolute;top:100%;left:0;margin-top:12px;width:280px;background:#16171A;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:6px;box-shadow:0 16px 48px rgba(0,0,0,.55);opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .16s ease,transform .16s ease,visibility .16s;z-index:50;}
+.nav-dd__panel::before{content:'';position:absolute;top:-12px;left:0;right:0;height:12px;}
+.nav-dd:hover .nav-dd__panel,.nav-dd:focus-within .nav-dd__panel,.nav-dd[data-open="true"] .nav-dd__panel{opacity:1;visibility:visible;transform:translateY(0);}
+.ps-acct__item{transition:background .12s ease,color .12s ease;}
+.ps-acct__item:hover{background:rgba(255,255,255,.05);color:#F7F8F8;}
+</style><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "47f87bd8826546019d26f62a05a61859"}'></script><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "CollectionPage", "name": "Evals & Testing", "description": "Score outputs, run regression suites and red-team agent behavior.", "url": "https://panshi.io/tools/categories/evals.html"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://panshi.io/tools/index.html"}, {"@type": "ListItem", "position": 2, "name": "Evals & Testing", "item": "https://panshi.io/tools/categories/evals.html"}]}]}</script></head>
+<body class="font-sans antialiased min-h-screen flex flex-col" style="background:#08090A;color:#9CA0A8;">
+<header class="sticky top-0 z-40 backdrop-blur-xl" style="background:rgba(8,9,10,0.72);border-bottom:1px solid rgba(255,255,255,0.08);">
+<div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+<a href="/" class="flex items-center gap-2.5 font-semibold tracking-tight" style="color:#F7F8F8;">
+<span class="inline-block w-2.5 h-2.5 rounded-sm" style="background:#5E6AD2;"></span>
+<span class="text-[15px]">Panshi</span>
+</a>
+<nav class="hidden sm:flex items-center gap-8 text-sm font-medium" style="color:#9CA0A8;">
+<a href="/tools/" class="transition-colors hover:text-white">Tools</a><a href="/services" class="transition-colors hover:text-white">Services</a><a href="/pricing" class="transition-colors hover:text-white">Pricing</a><a href="/tools/blog/" class="transition-colors hover:text-white">Blog</a><a href="/about" class="transition-colors hover:text-white">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<div id="ps-acct" class="text-sm" style="min-width:1px;"><a href="/signin" class="transition-colors hover:text-white" style="color:#9CA0A8;">Login</a></div>
+<div class="flex items-center gap-2.5 text-sm" data-lang-switch>
+<span style="color:#F7F8F8;font-weight:600;">EN</span><span style="color:#36383d;">/</span><a href="https://panshi.io/zh/" class="transition-colors hover:text-white" style="color:#62666D;">中</a>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<div class="max-w-5xl mx-auto px-6 py-12">
+<p class="text-sm mb-2" style="color:#62666D;"><a href="../index.html" class="hover:text-white" style="color:#62666D;">Home</a> / Evals &amp; Testing</p>
+<h1 class="text-3xl font-bold" style="color:#F7F8F8;">Evals &amp; Testing</h1><p class="mt-2" style="color:#9CA0A8;">Score outputs, run regression suites and red-team agent behavior. 39 tools tracked.</p>
+<div class="grid md:grid-cols-2 gap-4 mt-8"><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="athina ai" data-stars="300" data-maturity="34">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/athina-ai.html" class="hover:text-emerald-400">Athina AI</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/athina-ai.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Athina AI</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">IDE-style platform for prompt experimentation, evals and monitoring aimed at mixed technical/non-technical AI teams.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span><span class="text-xs px-2 py-0.5 rounded bg-slate-800/60 border border-slate-700 text-slate-200">★ 300</span><span class="text-xs px-2 py-0.5 rounded bg-slate-800/60 border border-slate-700 text-slate-200">Early</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="atla" data-stars="0" data-maturity="0">
+<p class="text-sm mt-2" style="color:#9CA0A8;">IDE-style platform for prompt experimentation, evals and monitoring aimed at mixed technical/non-technical AI teams.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">freemium</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">★ 300</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">Early</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="atla" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/atla.html" class="hover:text-emerald-400">Atla</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/atla.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Atla</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Builds dedicated evaluator/judge models (Selene) and agent error-analysis tooling rather than a full observability suite.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="autoblocks" data-stars="0" data-maturity="0">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Builds dedicated evaluator/judge models (Selene) and agent error-analysis tooling rather than a full observability suite.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">freemium</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="autoblocks" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/autoblocks.html" class="hover:text-emerald-400">Autoblocks</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/autoblocks.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Autoblocks</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Testing and evaluation platform for LLM applications with human-in-the-loop review workflows.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="bespoken" data-stars="0" data-maturity="0">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Testing and evaluation platform for LLM applications with human-in-the-loop review workflows.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">freemium</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="bespoken" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/bespoken.html" class="hover:text-emerald-400">Bespoken</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/bespoken.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Bespoken</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Automated testing and monitoring for IVR, voice assistants and conversational AI systems.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="bluejay" data-stars="0" data-maturity="0">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Automated testing and monitoring for IVR, voice assistants and conversational AI systems.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">freemium</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="bluejay" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/bluejay.html" class="hover:text-emerald-400">Bluejay</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/bluejay.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Bluejay</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">End-to-end testing and monitoring platform for voice and chat AI agents with multilingual simulation.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">enterprise</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="braintrust" data-stars="0" data-maturity="0">
+<p class="text-sm mt-2" style="color:#9CA0A8;">End-to-end testing and monitoring platform for voice and chat AI agents with multilingual simulation.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">enterprise</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="braintrust" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/braintrust.html" class="hover:text-emerald-400">Braintrust</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/braintrust.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Braintrust</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Eval-first AI engineering platform with logging, datasets, an LLM proxy and a purpose-built trace database (Brainstore), aimed at production regression-catching.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="cekura" data-stars="0" data-maturity="0">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Eval-first AI engineering platform with logging, datasets, an LLM proxy and a purpose-built trace database (Brainstore), aimed at production regression-catching.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">freemium</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="cekura" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/cekura.html" class="hover:text-emerald-400">Cekura</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/cekura.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Cekura</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Automated simulation testing and production monitoring for voice and chat AI agents.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="composo" data-stars="0" data-maturity="0">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Automated simulation testing and production monitoring for voice and chat AI agents.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">freemium</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="composo" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/composo.html" class="hover:text-emerald-400">Composo</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/composo.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Composo</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Custom evaluation models that score accuracy and quality of enterprise LLM applications in production.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">enterprise</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="confident ai (deepeval)" data-stars="16132" data-maturity="100">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Custom evaluation models that score accuracy and quality of enterprise LLM applications in production.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">enterprise</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="confident ai (deepeval)" data-stars="16132" data-maturity="100">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/confident-ai-deepeval.html" class="hover:text-emerald-400">Confident AI (DeepEval)</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/confident-ai-deepeval.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Confident AI (DeepEval)</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Pytest-style open-source LLM evaluation framework (DeepEval) with a hosted platform for benchmarking, regression testing and red-teaming (DeepTeam).</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span><span class="text-xs px-2 py-0.5 rounded bg-slate-800/60 border border-slate-700 text-slate-200">★ 16.1k</span><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Mature</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="deepchecks" data-stars="4023" data-maturity="63">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Pytest-style open-source LLM evaluation framework (DeepEval) with a hosted platform for benchmarking, regression testing and red-teaming (DeepTeam).</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">open source</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">freemium</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">★ 16.1k</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Mature</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="deepchecks" data-stars="4023" data-maturity="63">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/deepchecks.html" class="hover:text-emerald-400">Deepchecks</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/deepchecks.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Deepchecks</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Continuous validation suite from the ML-testing world extended to LLM apps, scoring outputs across versions from dev to production.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span><span class="text-xs px-2 py-0.5 rounded bg-slate-800/60 border border-slate-700 text-slate-200">★ 4k</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">Established</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="evidently ai" data-stars="7595" data-maturity="88">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Continuous validation suite from the ML-testing world extended to LLM apps, scoring outputs across versions from dev to production.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">open source</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">freemium</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">★ 4k</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Established</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="evidently ai" data-stars="7595" data-maturity="88">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/evidently-ai.html" class="hover:text-emerald-400">Evidently AI</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/evidently-ai.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Evidently AI</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Open-source evaluation and monitoring library (100+ metrics) spanning tabular ML drift and LLM judge-based checks, with a managed cloud.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span><span class="text-xs px-2 py-0.5 rounded bg-slate-800/60 border border-slate-700 text-slate-200">★ 7.6k</span><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Mature</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="future agi" data-stars="0" data-maturity="0">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Open-source evaluation and monitoring library (100+ metrics) spanning tabular ML drift and LLM judge-based checks, with a managed cloud.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">open source</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">freemium</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">★ 7.6k</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Mature</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="future agi" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/future-agi.html" class="hover:text-emerald-400">Future AGI</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/future-agi.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Future AGI</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Evaluation and observability platform with a focus on voice-agent simulation and programmatic re-scoring of historical scenarios.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="galileo" data-stars="0" data-maturity="0">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Evaluation and observability platform with a focus on voice-agent simulation and programmatic re-scoring of historical scenarios.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">freemium</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="galileo" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/galileo.html" class="hover:text-emerald-400">Galileo</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/galileo.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Galileo</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Evaluation and guardrails platform whose in-house Luna-2 small judge models target low-cost, low-latency scoring of agentic workloads.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="gentrace" data-stars="0" data-maturity="0">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Evaluation and guardrails platform whose in-house Luna-2 small judge models target low-cost, low-latency scoring of agentic workloads.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">freemium</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="gentrace" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/gentrace.html" class="hover:text-emerald-400">Gentrace</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/gentrace.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Gentrace</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Collaborative LLM testing and eval platform emphasizing UI-driven experiments shared between engineers and subject-matter experts.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="giskard" data-stars="5427" data-maturity="96">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Collaborative LLM testing and eval platform emphasizing UI-driven experiments shared between engineers and subject-matter experts.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">freemium</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="giskard" data-stars="5427" data-maturity="96">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/giskard.html" class="hover:text-emerald-400">Giskard</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/giskard.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Giskard</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Open-source testing framework that scans LLM apps for hallucination, injection and bias vulnerabilities, with a commercial evaluation hub.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span><span class="text-xs px-2 py-0.5 rounded bg-slate-800/60 border border-slate-700 text-slate-200">★ 5.4k</span><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Mature</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="google stax" data-stars="0" data-maturity="0">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Open-source testing framework that scans LLM apps for hallucination, injection and bias vulnerabilities, with a commercial evaluation hub.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">open source</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">freemium</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">★ 5.4k</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Mature</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="google stax" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/google-stax.html" class="hover:text-emerald-400">Google Stax</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/google-stax.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Google Stax</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Experimental developer tool from Google Labs for LLM evaluation with human labeling and LLM-as-judge autoraters.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">free</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="hamming ai" data-stars="0" data-maturity="0">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Experimental developer tool from Google Labs for LLM evaluation with human labeling and LLM-as-judge autoraters.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">free</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="hamming ai" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/hamming-ai.html" class="hover:text-emerald-400">Hamming AI</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/hamming-ai.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Hamming AI</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Automated testing for voice agents that places thousands of simulated phone calls and scores transcripts against rubrics.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">paid</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="inspect ai" data-stars="2194" data-maturity="91">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Automated testing for voice agents that places thousands of simulated phone calls and scores transcripts against rubrics.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">paid</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="inspect ai" data-stars="2194" data-maturity="91">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/inspect-ai.html" class="hover:text-emerald-400">Inspect AI</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/inspect-ai.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Inspect AI</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Government-built open-source framework for rigorous LLM and agent evaluations, popular for safety benchmarks and sandboxed agentic tasks.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">free</span><span class="text-xs px-2 py-0.5 rounded bg-slate-800/60 border border-slate-700 text-slate-200">★ 2.2k</span><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Mature</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="judgment labs (judgeval)" data-stars="1036" data-maturity="86">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Government-built open-source framework for rigorous LLM and agent evaluations, popular for safety benchmarks and sandboxed agentic tasks.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">open source</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">free</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">★ 2.2k</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Mature</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="judgment labs (judgeval)" data-stars="1036" data-maturity="86">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/judgment-labs-judgeval.html" class="hover:text-emerald-400">Judgment Labs (judgeval)</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/judgment-labs-judgeval.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Judgment Labs (judgeval)</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Open-source agent behavior monitoring and evaluation library feeding agent post-training (RL/SFT).</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span><span class="text-xs px-2 py-0.5 rounded bg-slate-800/60 border border-slate-700 text-slate-200">★ 1k</span><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Mature</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="kashikoi" data-stars="0" data-maturity="0">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Open-source agent behavior monitoring and evaluation library feeding agent post-training (RL/SFT).</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">open source</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">freemium</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">★ 1k</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Mature</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="kashikoi" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/kashikoi.html" class="hover:text-emerald-400">Kashikoi</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/kashikoi.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Kashikoi</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Simulates multi-turn conversation flows to benchmark AI agents before deployment.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">enterprise</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="langwatch" data-stars="3299" data-maturity="93">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Simulates multi-turn conversation flows to benchmark AI agents before deployment.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">enterprise</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="langwatch" data-stars="3299" data-maturity="93">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/langwatch.html" class="hover:text-emerald-400">LangWatch</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/langwatch.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">LangWatch</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Open-source agent testing and observability built around the Scenario simulation framework, covering text, voice and adversarial tests.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span><span class="text-xs px-2 py-0.5 rounded bg-slate-800/60 border border-slate-700 text-slate-200">★ 3.3k</span><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Mature</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="llm stats" data-stars="0" data-maturity="0">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Open-source agent testing and observability built around the Scenario simulation framework, covering text, voice and adversarial tests.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">open source</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">freemium</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">★ 3.3k</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Mature</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="llm stats" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/llm-stats.html" class="hover:text-emerald-400">LLM Stats</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/llm-stats.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">LLM Stats</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Independent AI evaluations lab publishing model benchmarks and comparison data.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">free</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="maxim ai" data-stars="0" data-maturity="0">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Independent AI evaluations lab publishing model benchmarks and comparison data.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">free</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="maxim ai" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/maxim-ai.html" class="hover:text-emerald-400">Maxim AI</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/maxim-ai.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Maxim AI</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">End-to-end agent simulation, evaluation and observability platform pitched at cross-functional product and engineering teams.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="okareo" data-stars="0" data-maturity="0">
+<p class="text-sm mt-2" style="color:#9CA0A8;">End-to-end agent simulation, evaluation and observability platform pitched at cross-functional product and engineering teams.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">freemium</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="okareo" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/okareo.html" class="hover:text-emerald-400">Okareo</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/okareo.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Okareo</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Synthetic-user simulation that runs on every commit to catch regressions in agent tone, policy compliance, tool use and routing.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="openai evals" data-stars="18683" data-maturity="80">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Synthetic-user simulation that runs on every commit to catch regressions in agent tone, policy compliance, tool use and routing.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">freemium</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="openai evals" data-stars="18683" data-maturity="80">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/openai-evals.html" class="hover:text-emerald-400">OpenAI Evals</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/openai-evals.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">OpenAI Evals</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">OpenAI&#x27;s original open-source eval framework and registry; largely superseded by the hosted Evals API but still a reference implementation.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">free</span><span class="text-xs px-2 py-0.5 rounded bg-slate-800/60 border border-slate-700 text-slate-200">★ 18.7k</span><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Mature</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="openlayer" data-stars="16" data-maturity="62">
+<p class="text-sm mt-2" style="color:#9CA0A8;">OpenAI&#x27;s original open-source eval framework and registry; largely superseded by the hosted Evals API but still a reference implementation.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">open source</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">free</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">★ 18.7k</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Mature</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="openlayer" data-stars="16" data-maturity="62">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/openlayer.html" class="hover:text-emerald-400">Openlayer</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/openlayer.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Openlayer</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">AI evaluation and observability platform spanning development tests and production monitoring.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span><span class="text-xs px-2 py-0.5 rounded bg-slate-800/60 border border-slate-700 text-slate-200">★ 16</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">Established</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="patronus ai" data-stars="0" data-maturity="0">
+<p class="text-sm mt-2" style="color:#9CA0A8;">AI evaluation and observability platform spanning development tests and production monitoring.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">freemium</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">★ 16</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Established</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="patronus ai" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/patronus-ai.html" class="hover:text-emerald-400">Patronus AI</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/patronus-ai.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Patronus AI</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Evaluation API and research-driven judge models (e.g. Lynx, Glider) for hallucination detection plus domain benchmarks like FinanceBench.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="petri" data-stars="1230" data-maturity="87">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Evaluation API and research-driven judge models (e.g. Lynx, Glider) for hallucination detection plus domain benchmarks like FinanceBench.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">freemium</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="petri" data-stars="1230" data-maturity="87">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/petri.html" class="hover:text-emerald-400">Petri</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/petri.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Petri</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Open-source automated alignment auditing tool that probes target models with multi-turn simulated scenarios.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">free</span><span class="text-xs px-2 py-0.5 rounded bg-slate-800/60 border border-slate-700 text-slate-200">★ 1.2k</span><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Mature</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="promptfoo" data-stars="22159" data-maturity="100">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Open-source automated alignment auditing tool that probes target models with multi-turn simulated scenarios.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">open source</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">free</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">★ 1.2k</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Mature</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="promptfoo" data-stars="22159" data-maturity="100">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/promptfoo.html" class="hover:text-emerald-400">Promptfoo</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/promptfoo.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Promptfoo</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Config-file-driven open-source CLI for prompt evals, regression testing and LLM red-teaming that runs in CI.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span><span class="text-xs px-2 py-0.5 rounded bg-slate-800/60 border border-slate-700 text-slate-200">★ 22.2k</span><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Mature</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="quotient ai" data-stars="0" data-maturity="0">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Config-file-driven open-source CLI for prompt evals, regression testing and LLM red-teaming that runs in CI.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">open source</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">freemium</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">★ 22.2k</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Mature</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="quotient ai" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/quotient-ai.html" class="hover:text-emerald-400">Quotient AI</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/quotient-ai.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Quotient AI</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Evaluation and monitoring platform for detecting hallucinations and failures in AI agents.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="ragaai (catalyst)" data-stars="16163" data-maturity="79">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Evaluation and monitoring platform for detecting hallucinations and failures in AI agents.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">freemium</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="ragaai (catalyst)" data-stars="16163" data-maturity="79">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/ragaai-catalyst.html" class="hover:text-emerald-400">RagaAI (Catalyst)</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/ragaai-catalyst.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">RagaAI (Catalyst)</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Agent testing, evaluation and tracing platform with the open-source Catalyst SDK.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span><span class="text-xs px-2 py-0.5 rounded bg-slate-800/60 border border-slate-700 text-slate-200">★ 16.2k</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">Established</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="ragas" data-stars="14355" data-maturity="79">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Agent testing, evaluation and tracing platform with the open-source Catalyst SDK.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">open source</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">freemium</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">★ 16.2k</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Established</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="ragas" data-stars="14355" data-maturity="79">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/ragas.html" class="hover:text-emerald-400">Ragas</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/ragas.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Ragas</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">The de-facto open-source metric library for RAG evaluation (faithfulness, context precision/recall), used standalone or inside other platforms.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">free</span><span class="text-xs px-2 py-0.5 rounded bg-slate-800/60 border border-slate-700 text-slate-200">★ 14.4k</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">Established</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="scorecard" data-stars="0" data-maturity="0">
+<p class="text-sm mt-2" style="color:#9CA0A8;">The de-facto open-source metric library for RAG evaluation (faithfulness, context precision/recall), used standalone or inside other platforms.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">open source</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">free</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">★ 14.4k</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Established</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="simulations" data-name="scorecard" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/scorecard.html" class="hover:text-emerald-400">Scorecard</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/scorecard.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Scorecard</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Continuous evaluation platform providing fast feedback loops for testing and improving AI agents.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="testzeus (hercules)" data-stars="1042" data-maturity="86">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Continuous evaluation platform providing fast feedback loops for testing and improving AI agents.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">freemium</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">OTel-native</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Simulations</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="testzeus (hercules)" data-stars="1042" data-maturity="86">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/testzeus-hercules.html" class="hover:text-emerald-400">TestZeus (Hercules)</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/testzeus-hercules.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">TestZeus (Hercules)</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Open-source agentic end-to-end testing framework covering web, API and voice agent testing.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span><span class="text-xs px-2 py-0.5 rounded bg-slate-800/60 border border-slate-700 text-slate-200">★ 1k</span><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Mature</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="the llm data company (doteval)" data-stars="0" data-maturity="0">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Open-source agentic end-to-end testing framework covering web, API and voice agent testing.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">open source</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">freemium</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">★ 1k</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Mature</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="the llm data company (doteval)" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/the-llm-data-company-doteval.html" class="hover:text-emerald-400">The LLM Data Company (doteval)</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/the-llm-data-company-doteval.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">The LLM Data Company (doteval)</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">AI-assisted workspace (doteval) for writing and managing LLM evaluations.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">enterprise</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="trulens" data-stars="3377" data-maturity="93">
+<p class="text-sm mt-2" style="color:#9CA0A8;">AI-assisted workspace (doteval) for writing and managing LLM evaluations.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">enterprise</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="trulens" data-stars="3377" data-maturity="93">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/trulens.html" class="hover:text-emerald-400">TruLens</a></h3>
-<div class="flex flex-wrap gap-1 justify-end"><span class="text-xs px-2 py-0.5 rounded bg-rose-800/60 border border-rose-700 text-rose-200">acquired</span></div></div>
-<p class="text-sm text-slate-400 mt-2">Open-source library for feedback-function-based evaluation and tracing of RAG and agent apps, now stewarded by Snowflake.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">free</span><span class="text-xs px-2 py-0.5 rounded bg-slate-800/60 border border-slate-700 text-slate-200">★ 3.4k</span><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Mature</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="vals ai" data-stars="0" data-maturity="0">
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/trulens.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">TruLens</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(220,80,80,0.12);border:1px solid rgba(220,80,80,0.38);color:#f08a8a;">acquired</span></div></div>
+<p class="text-sm mt-2" style="color:#9CA0A8;">Open-source library for feedback-function-based evaluation and tracing of RAG and agent apps, now stewarded by Snowflake.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">open source</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">free</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">★ 3.4k</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Mature</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="vals ai" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/vals-ai.html" class="hover:text-emerald-400">Vals AI</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/vals-ai.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Vals AI</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Industry-specific LLM benchmarks and enterprise evaluation for legal, tax and finance tasks.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">enterprise</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="vertex ai gen ai evaluation service" data-stars="0" data-maturity="0">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Industry-specific LLM benchmarks and enterprise evaluation for legal, tax and finance tasks.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">enterprise</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="vertex ai gen ai evaluation service" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/vertex-ai-gen-ai-evaluation-service.html" class="hover:text-emerald-400">Vertex AI Gen AI Evaluation Service</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/vertex-ai-gen-ai-evaluation-service.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Vertex AI Gen AI Evaluation Service</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Managed evaluation service on Vertex AI for scoring models and agents with autoraters and custom metrics.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">paid</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="evals" data-name="zeroeval" data-stars="0" data-maturity="0">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Managed evaluation service on Vertex AI for scoring models and agents with autoraters and custom metrics.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">paid</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="evals" data-tags="" data-name="zeroeval" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/zeroeval.html" class="hover:text-emerald-400">ZeroEval</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/zeroeval.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">ZeroEval</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Auto-optimizer for AI agents using calibrated LLM judges and automatic evaluations.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">paid</span></div>
-</article></div></main>
-<footer class="border-t border-slate-800 mt-16"><div class="max-w-5xl mx-auto px-6 py-8 text-sm text-slate-500">
-<p>Agent Observability Index — independent directory, no vendor affiliation. Data verified against primary sources; corrections welcome via <a class="text-emerald-400" href="mailto:hi@panshi.io">email</a>.</p>
-<p class="mt-2">© 2026 Panshi · <a class="hover:text-slate-300" href="../index.html">Home</a> · <a class="hover:text-slate-300" href="../methodology.html">Methodology</a> · <a class="hover:text-slate-300" href="../advertise.html">Advertise</a></p>
-</div></footer></body></html>
+<p class="text-sm mt-2" style="color:#9CA0A8;">Auto-optimizer for AI agents using calibrated LLM judges and automatic evaluations.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Evals &amp; Testing</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">paid</span></div>
+</article></div></div>
+</main>
+<footer class="mt-24" style="border-top:1px solid rgba(255,255,255,0.08);background:#0B0C0D;">
+<div class="max-w-6xl mx-auto px-6 py-14 text-sm" style="color:#62666D;">
+<div class="flex items-center gap-2.5 font-semibold tracking-tight" style="color:#F7F8F8;">
+<span class="inline-block w-2.5 h-2.5 rounded-sm" style="background:#5E6AD2;"></span>
+<span>Panshi</span>
+</div>
+<p class="mt-4 max-w-md leading-relaxed">Built by an engineer running multi-agent automation in production. Agent Observability Index is an independent directory with no vendor affiliation — data verified against primary sources, corrections welcome.</p>
+<p class="mt-6 flex flex-wrap gap-x-6 gap-y-2 font-medium">
+<a class="transition-colors hover:text-white" href="/tools/">Tools</a><a class="transition-colors hover:text-white" href="/services">Services</a><a class="transition-colors hover:text-white" href="/pricing">Pricing</a><a class="transition-colors hover:text-white" href="/tools/blog/">Blog</a><a class="transition-colors hover:text-white" href="../methodology.html">Methodology</a><a class="ps-link" href="mailto:hi@panshi.io">hi@panshi.io</a>
+</p>
+<p class="mt-8 text-xs font-mono" style="color:#3f4248;">© 2026 panshi.io</p>
+</div>
+</footer>
+<script>
+(function () {
+  var box = document.getElementById('ps-acct');
+  if (!box) return;
+  var sp = "";
+  var nav = { points: "pts", account: "Account", history: "History", logout: "Log out", login: "Login" };
+  var CACHE_KEY = 'ps_acct';
+  function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+  function renderAccount(d) {
+    window.__PS_USER = true;
+    box.innerHTML =
+      '<div class="nav-dd">' +
+        '<button type="button" class="nav-dd__btn flex items-center gap-1.5 transition-colors hover:text-white" aria-haspopup="true" aria-expanded="false" style="color:#F7F8F8;">' +
+          '<span style="display:inline-block;width:7px;height:7px;border-radius:999px;background:#5E6AD2;"></span>' +
+          '<span style="font-weight:600;">' + esc(d.points) + ' ' + esc(nav.points) + '</span>' +
+          '<svg class="nav-dd__chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>' +
+        '</button>' +
+        '<div class="nav-dd__panel" role="menu" style="left:auto;right:0;width:220px;">' +
+          '<div style="padding:8px 10px 6px;font-size:12px;color:#62666D;border-bottom:1px solid rgba(255,255,255,0.06);margin-bottom:4px;word-break:break-all;">' + esc(d.email) + '</div>' +
+          '<a href="' + sp + '/account" class="ps-acct__item" role="menuitem" style="display:block;padding:9px 10px;border-radius:9px;font-size:14px;color:#9CA0A8;text-decoration:none;">' + esc(nav.account) + '</a>' +
+          '<a href="' + sp + '/history" class="ps-acct__item" role="menuitem" style="display:block;padding:9px 10px;border-radius:9px;font-size:14px;color:#9CA0A8;text-decoration:none;">' + esc(nav.history) + '</a>' +
+          '<button type="button" id="ps-logout" class="ps-acct__item" role="menuitem" style="display:block;width:100%;padding:9px 10px;border-radius:9px;font-size:14px;color:#9CA0A8;background:none;border:0;text-align:left;cursor:pointer;">' + esc(nav.logout) + '</button>' +
+        '</div>' +
+      '</div>';
+    var dd = box.querySelector('.nav-dd');
+    var btn = dd && dd.querySelector('.nav-dd__btn');
+    if (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        var open = dd.getAttribute('data-open') === 'true';
+        dd.setAttribute('data-open', open ? 'false' : 'true');
+        btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+      });
+      document.addEventListener('click', function (e) { if (!dd.contains(e.target)) dd.setAttribute('data-open','false'); });
+    }
+    var lo = box.querySelector('#ps-logout');
+    if (lo) lo.addEventListener('click', function () {
+      try { localStorage.removeItem(CACHE_KEY); } catch (e) {}
+      window.__PS_USER = false;
+      fetch('/u/logout', { method: 'POST' }).then(function () { location.reload(); });
+    });
+  }
+  function renderLogin() {
+    window.__PS_USER = false;
+    box.innerHTML = '<a href="' + sp + '/signin" class="transition-colors hover:text-white" style="color:#9CA0A8;">' + esc(nav.login) + '</a>';
+  }
+  var renderedFromCache = false;
+  try {
+    var raw = localStorage.getItem(CACHE_KEY);
+    if (raw) { var cached = JSON.parse(raw); if (cached && cached.email != null) { renderAccount(cached); renderedFromCache = true; } }
+  } catch (e) {}
+  fetch('/u/me').then(function(r){return r.json();}).then(function(d){
+    if (d && d.ok) {
+      try { localStorage.setItem(CACHE_KEY, JSON.stringify({ email: d.email, points: d.points })); } catch (e) {}
+      renderAccount(d);
+    } else {
+      try { localStorage.removeItem(CACHE_KEY); } catch (e) {}
+      if (renderedFromCache) renderLogin();
+    }
+  }).catch(function(){});
+})();
+</script>
+</body></html>

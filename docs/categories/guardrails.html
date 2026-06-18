@@ -1,156 +1,282 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8">
+<!doctype html><html lang="en" class="antialiased"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Guardrails &amp; Safety tools (2026) — 20 compared | Agent Observability Index</title>
 <meta name="description" content="Block prompt injection, PII leakage and unsafe outputs at runtime.">
-<link rel="canonical" href="https://tools.panshi.io/categories/guardrails.html">
-<meta name="theme-color" content="#020617">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://panshi.io/tools/categories/guardrails.html">
+<meta name="theme-color" content="#08090A">
+<link rel="icon" href="/tools/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Agent Observability Index">
 <meta property="og:title" content="Guardrails &amp; Safety tools (2026) — 20 compared | Agent Observability Index">
 <meta property="og:description" content="Block prompt injection, PII leakage and unsafe outputs at runtime.">
-<meta property="og:url" content="https://tools.panshi.io/categories/guardrails.html">
-<meta property="og:image" content="https://tools.panshi.io/og.png">
+<meta property="og:url" content="https://panshi.io/tools/categories/guardrails.html">
+<meta property="og:image" content="https://panshi.io/tools/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Guardrails &amp; Safety tools (2026) — 20 compared | Agent Observability Index">
 <meta name="twitter:description" content="Block prompt injection, PII leakage and unsafe outputs at runtime.">
-<meta name="twitter:image" content="https://tools.panshi.io/og.png">
-<link rel="stylesheet" href="/styles.css"><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1cd7fde310f94d97a9660eedd270b154"}'></script><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "CollectionPage", "name": "Guardrails & Safety", "description": "Block prompt injection, PII leakage and unsafe outputs at runtime.", "url": "https://tools.panshi.io/categories/guardrails.html"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tools.panshi.io/index.html"}, {"@type": "ListItem", "position": 2, "name": "Guardrails & Safety", "item": "https://tools.panshi.io/categories/guardrails.html"}]}]}</script></head>
-<body class="bg-slate-950 text-slate-200 antialiased">
-<nav class="border-b border-slate-800"><div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-<a href="../index.html" class="font-bold text-white">Agent<span class="text-emerald-400">Obs</span> Index</a>
-<div class="flex gap-5 text-sm">
-<a href="../index.html#tools" class="hover:text-white">Tools</a>
-<a href="../index.html#compare" class="hover:text-white">Comparisons</a>
-<a href="../blog/index.html" class="hover:text-white">Blog</a>
-<a href="../methodology.html" class="hover:text-white">Methodology</a>
-<a href="../advertise.html" class="text-emerald-400 hover:text-emerald-300">Get featured</a>
-</div></div></nav>
-<main class="max-w-5xl mx-auto px-6 py-12">
-<p class="text-sm text-slate-500 mb-2"><a href="../index.html" class="hover:text-slate-300">Home</a> / Guardrails &amp; Safety</p>
-<h1 class="text-3xl font-bold text-white">Guardrails &amp; Safety</h1><p class="mt-2 text-slate-400">Block prompt injection, PII leakage and unsafe outputs at runtime. 20 tools tracked.</p>
-<div class="grid md:grid-cols-2 gap-4 mt-8"><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="guardrails" data-name="arthur" data-stars="429" data-maturity="60">
+<meta name="twitter:image" content="https://panshi.io/tools/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/tools/styles.css"><style>
+:root{--accent:#5E6AD2;--accent-hover:#6E79E0;--bg:#08090A;--surface1:#0F1011;--surface2:#16171A;--hairline:rgba(255,255,255,.08);--hairline-strong:rgba(255,255,255,.14);--t1:#F7F8F8;--t2:#9CA0A8;--t3:#62666D;}
+html{background:#08090A;color-scheme:dark;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;scroll-behavior:smooth;}
+body{font-feature-settings:'cv11','ss01';letter-spacing:-0.011em;}
+h1,h2,h3{letter-spacing:-0.02em;}
+::selection{background:rgba(94,106,210,.32);color:#fff;}
+.ps-link{color:var(--accent);font-weight:500;transition:color .15s;}
+.ps-link:hover{color:var(--accent-hover);}
+/* dark recolor of long-form article body (blog posts) */
+.prose-dark{color:var(--t2);}
+.prose-dark p{color:var(--t2);}
+.prose-dark h2,.prose-dark h3,.prose-dark strong{color:var(--t1);}
+.prose-dark a{color:var(--accent);}
+.prose-dark a:hover{color:var(--accent-hover);}
+.prose-dark code{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.85em;background:rgba(255,255,255,.06);border:1px solid var(--hairline);border-radius:4px;padding:.05em .35em;color:var(--t1);}
+.prose-dark pre{background:#0a0b0c;border:1px solid var(--hairline);border-radius:10px;}
+.prose-dark table th{color:var(--t1);border-color:var(--hairline-strong)!important;}
+.prose-dark td,.prose-dark th{border-color:var(--hairline)!important;}
+/* search input */
+.ps-search{background:#0F1011;border:1px solid var(--hairline-strong);color:var(--t1);}
+.ps-search::placeholder{color:var(--t3);}
+.ps-search:focus{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent);}
+/* filter + sort chips (states toggled by inline JS) */
+.fbtn{background:transparent;border:1px solid var(--hairline-strong);color:var(--t2);transition:all .15s;}
+.fbtn:hover{border-color:rgba(255,255,255,.28);color:var(--t1);}
+.fbtn-on{background:var(--accent);border:1px solid var(--accent);color:#fff;}
+.fbtn-on:hover{background:var(--accent-hover);border-color:var(--accent-hover);color:#fff;}
+.sbtn{background:transparent;border:1px solid var(--hairline-strong);color:var(--t2);transition:all .15s;}
+.sbtn:hover{border-color:rgba(255,255,255,.28);color:var(--t1);}
+.sbtn-on{border-color:var(--accent);color:#aab2ee;}
+/* account dropdown (#ps-acct) — replicated from Brand.astro so the header account
+   menu behaves identically on directory/blog pages */
+.nav-dd{position:relative;}
+.nav-dd__btn{cursor:pointer;padding:0;margin:0;background:none;border:0;color:inherit;font:inherit;line-height:1;}
+.nav-dd__chev{opacity:.65;transition:transform .18s ease;}
+.nav-dd:hover .nav-dd__chev,.nav-dd[data-open="true"] .nav-dd__chev{transform:rotate(180deg);}
+.nav-dd__panel{position:absolute;top:100%;left:0;margin-top:12px;width:280px;background:#16171A;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:6px;box-shadow:0 16px 48px rgba(0,0,0,.55);opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .16s ease,transform .16s ease,visibility .16s;z-index:50;}
+.nav-dd__panel::before{content:'';position:absolute;top:-12px;left:0;right:0;height:12px;}
+.nav-dd:hover .nav-dd__panel,.nav-dd:focus-within .nav-dd__panel,.nav-dd[data-open="true"] .nav-dd__panel{opacity:1;visibility:visible;transform:translateY(0);}
+.ps-acct__item{transition:background .12s ease,color .12s ease;}
+.ps-acct__item:hover{background:rgba(255,255,255,.05);color:#F7F8F8;}
+</style><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "47f87bd8826546019d26f62a05a61859"}'></script><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "CollectionPage", "name": "Guardrails & Safety", "description": "Block prompt injection, PII leakage and unsafe outputs at runtime.", "url": "https://panshi.io/tools/categories/guardrails.html"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://panshi.io/tools/index.html"}, {"@type": "ListItem", "position": 2, "name": "Guardrails & Safety", "item": "https://panshi.io/tools/categories/guardrails.html"}]}]}</script></head>
+<body class="font-sans antialiased min-h-screen flex flex-col" style="background:#08090A;color:#9CA0A8;">
+<header class="sticky top-0 z-40 backdrop-blur-xl" style="background:rgba(8,9,10,0.72);border-bottom:1px solid rgba(255,255,255,0.08);">
+<div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+<a href="/" class="flex items-center gap-2.5 font-semibold tracking-tight" style="color:#F7F8F8;">
+<span class="inline-block w-2.5 h-2.5 rounded-sm" style="background:#5E6AD2;"></span>
+<span class="text-[15px]">Panshi</span>
+</a>
+<nav class="hidden sm:flex items-center gap-8 text-sm font-medium" style="color:#9CA0A8;">
+<a href="/tools/" class="transition-colors hover:text-white">Tools</a><a href="/services" class="transition-colors hover:text-white">Services</a><a href="/pricing" class="transition-colors hover:text-white">Pricing</a><a href="/tools/blog/" class="transition-colors hover:text-white">Blog</a><a href="/about" class="transition-colors hover:text-white">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<div id="ps-acct" class="text-sm" style="min-width:1px;"><a href="/signin" class="transition-colors hover:text-white" style="color:#9CA0A8;">Login</a></div>
+<div class="flex items-center gap-2.5 text-sm" data-lang-switch>
+<span style="color:#F7F8F8;font-weight:600;">EN</span><span style="color:#36383d;">/</span><a href="https://panshi.io/zh/" class="transition-colors hover:text-white" style="color:#62666D;">中</a>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<div class="max-w-5xl mx-auto px-6 py-12">
+<p class="text-sm mb-2" style="color:#62666D;"><a href="../index.html" class="hover:text-white" style="color:#62666D;">Home</a> / Guardrails &amp; Safety</p>
+<h1 class="text-3xl font-bold" style="color:#F7F8F8;">Guardrails &amp; Safety</h1><p class="mt-2" style="color:#9CA0A8;">Block prompt injection, PII leakage and unsafe outputs at runtime. 20 tools tracked.</p>
+<div class="grid md:grid-cols-2 gap-4 mt-8"><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="guardrails" data-tags="" data-name="arthur" data-stars="429" data-maturity="60">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/arthur.html" class="hover:text-emerald-400">Arthur</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/arthur.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Arthur</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Model monitoring and firewall (Arthur Shield) for enterprise AI, focused on risk, bias and policy enforcement.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span><span class="text-xs px-2 py-0.5 rounded bg-slate-800/60 border border-slate-700 text-slate-200">★ 429</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">Established</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="guardrails" data-name="calypsoai" data-stars="0" data-maturity="0">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Model monitoring and firewall (Arthur Shield) for enterprise AI, focused on risk, bias and policy enforcement.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">open source</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">freemium</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">★ 429</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Established</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="guardrails" data-tags="" data-name="calypsoai" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/calypsoai.html" class="hover:text-emerald-400">CalypsoAI</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/calypsoai.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">CalypsoAI</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Inference-perimeter security platform with scanners and red-team agents guarding enterprise model traffic.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">enterprise</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="guardrails" data-name="cisco ai defense (robust intelligence)" data-stars="0" data-maturity="0">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Inference-perimeter security platform with scanners and red-team agents guarding enterprise model traffic.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">enterprise</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="guardrails" data-tags="" data-name="cisco ai defense (robust intelligence)" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/cisco-ai-defense-robust-intelligence.html" class="hover:text-emerald-400">Cisco AI Defense (Robust Intelligence)</a></h3>
-<div class="flex flex-wrap gap-1 justify-end"><span class="text-xs px-2 py-0.5 rounded bg-rose-800/60 border border-rose-700 text-rose-200">acquired</span></div></div>
-<p class="text-sm text-slate-400 mt-2">AI model validation and runtime guardrails productized from Robust Intelligence inside Cisco&#x27;s security stack.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">enterprise</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="guardrails" data-name="coralogix ai (aporia)" data-stars="0" data-maturity="0">
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/cisco-ai-defense-robust-intelligence.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Cisco AI Defense (Robust Intelligence)</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(220,80,80,0.12);border:1px solid rgba(220,80,80,0.38);color:#f08a8a;">acquired</span></div></div>
+<p class="text-sm mt-2" style="color:#9CA0A8;">AI model validation and runtime guardrails productized from Robust Intelligence inside Cisco&#x27;s security stack.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">enterprise</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="guardrails" data-tags="" data-name="coralogix ai (aporia)" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/coralogix-ai-aporia.html" class="hover:text-emerald-400">Coralogix AI (Aporia)</a></h3>
-<div class="flex flex-wrap gap-1 justify-end"><span class="text-xs px-2 py-0.5 rounded bg-rose-800/60 border border-rose-700 text-rose-200">acquired</span></div></div>
-<p class="text-sm text-slate-400 mt-2">Aporia&#x27;s drift detection and AI guardrails folded into the Coralogix observability platform as its AI research arm.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">paid</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="guardrails" data-name="garak" data-stars="8094" data-maturity="99">
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/coralogix-ai-aporia.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Coralogix AI (Aporia)</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(220,80,80,0.12);border:1px solid rgba(220,80,80,0.38);color:#f08a8a;">acquired</span></div></div>
+<p class="text-sm mt-2" style="color:#9CA0A8;">Aporia&#x27;s drift detection and AI guardrails folded into the Coralogix observability platform as its AI research arm.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">paid</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="guardrails" data-tags="" data-name="garak" data-stars="8094" data-maturity="99">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/garak.html" class="hover:text-emerald-400">garak</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/garak.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">garak</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Open-source LLM vulnerability scanner that runs pre-built probes for jailbreaks, leakage and injection.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">free</span><span class="text-xs px-2 py-0.5 rounded bg-slate-800/60 border border-slate-700 text-slate-200">★ 8.1k</span><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Mature</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="guardrails" data-name="general analysis" data-stars="0" data-maturity="0">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Open-source LLM vulnerability scanner that runs pre-built probes for jailbreaks, leakage and injection.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">open source</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">free</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">★ 8.1k</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Mature</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="guardrails" data-tags="" data-name="general analysis" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/general-analysis.html" class="hover:text-emerald-400">General Analysis</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/general-analysis.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">General Analysis</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">AI red teaming and safety testing platform producing adversarial test suites for LLM applications.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">enterprise</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="guardrails" data-name="guardrails ai" data-stars="6999" data-maturity="98">
+<p class="text-sm mt-2" style="color:#9CA0A8;">AI red teaming and safety testing platform producing adversarial test suites for LLM applications.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">enterprise</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="guardrails" data-tags="" data-name="guardrails ai" data-stars="6999" data-maturity="98">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/guardrails-ai.html" class="hover:text-emerald-400">Guardrails AI</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/guardrails-ai.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Guardrails AI</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Open-source output-validation framework where composable validators enforce schemas, policies and safety constraints on LLM I/O.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span><span class="text-xs px-2 py-0.5 rounded bg-slate-800/60 border border-slate-700 text-slate-200">★ 7k</span><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Mature</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="guardrails" data-name="haize labs" data-stars="343" data-maturity="51">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Open-source output-validation framework where composable validators enforce schemas, policies and safety constraints on LLM I/O.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">open source</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">freemium</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">★ 7k</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Mature</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="guardrails" data-tags="" data-name="haize labs" data-stars="343" data-maturity="51">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/haize-labs.html" class="hover:text-emerald-400">Haize Labs</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/haize-labs.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Haize Labs</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Automated red-teaming (&#x27;haizing&#x27;) that stress-tests LLM systems to find jailbreaks and failure modes before deployment.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">paid</span><span class="text-xs px-2 py-0.5 rounded bg-slate-800/60 border border-slate-700 text-slate-200">★ 343</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">Growing</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="guardrails" data-name="lakera guard" data-stars="0" data-maturity="0">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Automated red-teaming (&#x27;haizing&#x27;) that stress-tests LLM systems to find jailbreaks and failure modes before deployment.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">paid</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">★ 343</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">Growing</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="guardrails" data-tags="" data-name="lakera guard" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/lakera-guard.html" class="hover:text-emerald-400">Lakera Guard</a></h3>
-<div class="flex flex-wrap gap-1 justify-end"><span class="text-xs px-2 py-0.5 rounded bg-rose-800/60 border border-rose-700 text-rose-200">acquired</span></div></div>
-<p class="text-sm text-slate-400 mt-2">Low-latency API guarding against prompt injection, data leakage and toxic content, backed by the Gandalf attack dataset.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="guardrails" data-name="llm guard (protect ai)" data-stars="3068" data-maturity="64">
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/lakera-guard.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Lakera Guard</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(220,80,80,0.12);border:1px solid rgba(220,80,80,0.38);color:#f08a8a;">acquired</span></div></div>
+<p class="text-sm mt-2" style="color:#9CA0A8;">Low-latency API guarding against prompt injection, data leakage and toxic content, backed by the Gandalf attack dataset.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">freemium</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="guardrails" data-tags="" data-name="llm guard (protect ai)" data-stars="3068" data-maturity="64">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/llm-guard-protect-ai.html" class="hover:text-emerald-400">LLM Guard (Protect AI)</a></h3>
-<div class="flex flex-wrap gap-1 justify-end"><span class="text-xs px-2 py-0.5 rounded bg-rose-800/60 border border-rose-700 text-rose-200">acquired</span></div></div>
-<p class="text-sm text-slate-400 mt-2">Open-source input/output scanner toolkit (35+ scanners) for PII, injection and toxicity checks on LLM traffic.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">free</span><span class="text-xs px-2 py-0.5 rounded bg-slate-800/60 border border-slate-700 text-slate-200">★ 3.1k</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">Established</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="guardrails" data-name="mindgard" data-stars="0" data-maturity="0">
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/llm-guard-protect-ai.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">LLM Guard (Protect AI)</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(220,80,80,0.12);border:1px solid rgba(220,80,80,0.38);color:#f08a8a;">acquired</span></div></div>
+<p class="text-sm mt-2" style="color:#9CA0A8;">Open-source input/output scanner toolkit (35+ scanners) for PII, injection and toxicity checks on LLM traffic.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">open source</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">free</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">★ 3.1k</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Established</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="guardrails" data-tags="" data-name="mindgard" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/mindgard.html" class="hover:text-emerald-400">Mindgard</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/mindgard.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Mindgard</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Automated AI red teaming platform testing LLMs, agents and multimodal models against MITRE ATLAS / OWASP-aligned attacks.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">enterprise</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="guardrails" data-name="nvidia nemo guardrails" data-stars="6416" data-maturity="87">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Automated AI red teaming platform testing LLMs, agents and multimodal models against MITRE ATLAS / OWASP-aligned attacks.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">enterprise</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="guardrails" data-tags="" data-name="nvidia nemo guardrails" data-stars="6416" data-maturity="87">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/nvidia-nemo-guardrails.html" class="hover:text-emerald-400">NVIDIA NeMo Guardrails</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/nvidia-nemo-guardrails.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">NVIDIA NeMo Guardrails</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Programmable conversational guardrails toolkit using the Colang DSL, covering input, dialog, retrieval, execution and output rails.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">free</span><span class="text-xs px-2 py-0.5 rounded bg-slate-800/60 border border-slate-700 text-slate-200">★ 6.4k</span><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Mature</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="guardrails" data-name="pillar security" data-stars="0" data-maturity="0">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Programmable conversational guardrails toolkit using the Colang DSL, covering input, dialog, retrieval, execution and output rails.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">open source</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">free</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">★ 6.4k</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Mature</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="guardrails" data-tags="" data-name="pillar security" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/pillar-security.html" class="hover:text-emerald-400">Pillar Security</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/pillar-security.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Pillar Security</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">AI security platform covering discovery, red teaming and runtime protection across the AI lifecycle.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">enterprise</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="guardrails" data-name="prompt security" data-stars="0" data-maturity="0">
+<p class="text-sm mt-2" style="color:#9CA0A8;">AI security platform covering discovery, red teaming and runtime protection across the AI lifecycle.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">enterprise</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="guardrails" data-tags="" data-name="prompt security" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/prompt-security.html" class="hover:text-emerald-400">Prompt Security</a></h3>
-<div class="flex flex-wrap gap-1 justify-end"><span class="text-xs px-2 py-0.5 rounded bg-rose-800/60 border border-rose-700 text-rose-200">acquired</span></div></div>
-<p class="text-sm text-slate-400 mt-2">Enterprise GenAI security platform monitoring employee and application LLM usage for injection, leakage and shadow AI.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">enterprise</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="guardrails" data-name="pyrit" data-stars="63" data-maturity="60">
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/prompt-security.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Prompt Security</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(220,80,80,0.12);border:1px solid rgba(220,80,80,0.38);color:#f08a8a;">acquired</span></div></div>
+<p class="text-sm mt-2" style="color:#9CA0A8;">Enterprise GenAI security platform monitoring employee and application LLM usage for injection, leakage and shadow AI.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">enterprise</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="guardrails" data-tags="" data-name="pyrit" data-stars="63" data-maturity="60">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/pyrit.html" class="hover:text-emerald-400">PyRIT</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/pyrit.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">PyRIT</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Python Risk Identification Toolkit automating single- and multi-turn adversarial probing of GenAI systems.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">open source</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">free</span><span class="text-xs px-2 py-0.5 rounded bg-slate-800/60 border border-slate-700 text-slate-200">★ 63</span><span class="text-xs px-2 py-0.5 rounded bg-sky-800/60 border border-sky-700 text-sky-200">Established</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="guardrails" data-name="repello ai" data-stars="0" data-maturity="0">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Python Risk Identification Toolkit automating single- and multi-turn adversarial probing of GenAI systems.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">open source</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">free</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">★ 63</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Established</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="guardrails" data-tags="" data-name="repello ai" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/repello-ai.html" class="hover:text-emerald-400">Repello AI</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/repello-ai.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Repello AI</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">AI red teaming platform whose ARTEMIS engine automates adversarial testing of LLM apps and agents.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">enterprise</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="guardrails" data-name="splx (splxai)" data-stars="0" data-maturity="0">
+<p class="text-sm mt-2" style="color:#9CA0A8;">AI red teaming platform whose ARTEMIS engine automates adversarial testing of LLM apps and agents.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">enterprise</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="guardrails" data-tags="" data-name="splx (splxai)" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/splx-splxai.html" class="hover:text-emerald-400">SPLX (SplxAI)</a></h3>
-<div class="flex flex-wrap gap-1 justify-end"><span class="text-xs px-2 py-0.5 rounded bg-rose-800/60 border border-rose-700 text-rose-200">acquired</span></div></div>
-<p class="text-sm text-slate-400 mt-2">Automated AI security testing and red teaming for AI assistants and agents from build to runtime.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">enterprise</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="guardrails" data-name="straiker" data-stars="0" data-maturity="0">
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/splx-splxai.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">SPLX (SplxAI)</a></h3>
+<div class="flex flex-wrap gap-1 justify-end"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(220,80,80,0.12);border:1px solid rgba(220,80,80,0.38);color:#f08a8a;">acquired</span></div></div>
+<p class="text-sm mt-2" style="color:#9CA0A8;">Automated AI security testing and red teaming for AI assistants and agents from build to runtime.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">enterprise</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="guardrails" data-tags="" data-name="straiker" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/straiker.html" class="hover:text-emerald-400">Straiker</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/straiker.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Straiker</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">AI-native security platform with red teaming and runtime guardrails for agentic applications.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">enterprise</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="guardrails" data-name="vijil" data-stars="0" data-maturity="0">
+<p class="text-sm mt-2" style="color:#9CA0A8;">AI-native security platform with red teaming and runtime guardrails for agentic applications.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">enterprise</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="guardrails" data-tags="" data-name="vijil" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/vijil.html" class="hover:text-emerald-400">Vijil</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/vijil.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Vijil</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Agent trust platform combining automated evaluation, red teaming and runtime defenses for AI agents.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded bg-violet-800/60 border border-violet-700 text-violet-200">self-hostable</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">freemium</span></div>
-</article><article class="bg-slate-900 rounded-xl p-5 border border-slate-800 hover:border-slate-600" data-cat="guardrails" data-name="zenity" data-stars="0" data-maturity="0">
+<p class="text-sm mt-2" style="color:#9CA0A8;">Agent trust platform combining automated evaluation, red teaming and runtime defenses for AI agents.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#9CA0A8;">self-hostable</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">freemium</span></div>
+</article><article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor='rgba(255,255,255,0.14)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'" data-cat="guardrails" data-tags="" data-name="zenity" data-stars="0" data-maturity="0">
 <div class="flex items-start justify-between gap-2">
-<h3 class="font-semibold text-white"><a href="../tools/zenity.html" class="hover:text-emerald-400">Zenity</a></h3>
+<h3 class="font-semibold" style="color:#F7F8F8;"><a href="../tools/zenity.html" class="ps-link" style="color:#F7F8F8;" onmouseover="this.style.color='#6E79E0'" onmouseout="this.style.color='#F7F8F8'">Zenity</a></h3>
 <div class="flex flex-wrap gap-1 justify-end"></div></div>
-<p class="text-sm text-slate-400 mt-2">Security and governance platform for enterprise AI agents and low-code copilots, including agent observability.</p>
-<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded bg-emerald-800/60 border border-emerald-700 text-emerald-200">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded bg-amber-800/60 border border-amber-700 text-amber-200">enterprise</span></div>
-</article></div></main>
-<footer class="border-t border-slate-800 mt-16"><div class="max-w-5xl mx-auto px-6 py-8 text-sm text-slate-500">
-<p>Agent Observability Index — independent directory, no vendor affiliation. Data verified against primary sources; corrections welcome via <a class="text-emerald-400" href="mailto:hi@panshi.io">email</a>.</p>
-<p class="mt-2">© 2026 Panshi · <a class="hover:text-slate-300" href="../index.html">Home</a> · <a class="hover:text-slate-300" href="../methodology.html">Methodology</a> · <a class="hover:text-slate-300" href="../advertise.html">Advertise</a></p>
-</div></footer></body></html>
+<p class="text-sm mt-2" style="color:#9CA0A8;">Security and governance platform for enterprise AI agents and low-code copilots, including agent observability.</p>
+<div class="flex flex-wrap gap-1.5 mt-3"><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(94,106,210,0.12);border:1px solid rgba(94,106,210,0.35);color:#aab2ee;">Guardrails &amp; Safety</span><span class="text-xs px-2 py-0.5 rounded" style="background:rgba(217,164,65,0.12);border:1px solid rgba(217,164,65,0.35);color:#e2b25c;">enterprise</span></div>
+</article></div></div>
+</main>
+<footer class="mt-24" style="border-top:1px solid rgba(255,255,255,0.08);background:#0B0C0D;">
+<div class="max-w-6xl mx-auto px-6 py-14 text-sm" style="color:#62666D;">
+<div class="flex items-center gap-2.5 font-semibold tracking-tight" style="color:#F7F8F8;">
+<span class="inline-block w-2.5 h-2.5 rounded-sm" style="background:#5E6AD2;"></span>
+<span>Panshi</span>
+</div>
+<p class="mt-4 max-w-md leading-relaxed">Built by an engineer running multi-agent automation in production. Agent Observability Index is an independent directory with no vendor affiliation — data verified against primary sources, corrections welcome.</p>
+<p class="mt-6 flex flex-wrap gap-x-6 gap-y-2 font-medium">
+<a class="transition-colors hover:text-white" href="/tools/">Tools</a><a class="transition-colors hover:text-white" href="/services">Services</a><a class="transition-colors hover:text-white" href="/pricing">Pricing</a><a class="transition-colors hover:text-white" href="/tools/blog/">Blog</a><a class="transition-colors hover:text-white" href="../methodology.html">Methodology</a><a class="ps-link" href="mailto:hi@panshi.io">hi@panshi.io</a>
+</p>
+<p class="mt-8 text-xs font-mono" style="color:#3f4248;">© 2026 panshi.io</p>
+</div>
+</footer>
+<script>
+(function () {
+  var box = document.getElementById('ps-acct');
+  if (!box) return;
+  var sp = "";
+  var nav = { points: "pts", account: "Account", history: "History", logout: "Log out", login: "Login" };
+  var CACHE_KEY = 'ps_acct';
+  function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+  function renderAccount(d) {
+    window.__PS_USER = true;
+    box.innerHTML =
+      '<div class="nav-dd">' +
+        '<button type="button" class="nav-dd__btn flex items-center gap-1.5 transition-colors hover:text-white" aria-haspopup="true" aria-expanded="false" style="color:#F7F8F8;">' +
+          '<span style="display:inline-block;width:7px;height:7px;border-radius:999px;background:#5E6AD2;"></span>' +
+          '<span style="font-weight:600;">' + esc(d.points) + ' ' + esc(nav.points) + '</span>' +
+          '<svg class="nav-dd__chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>' +
+        '</button>' +
+        '<div class="nav-dd__panel" role="menu" style="left:auto;right:0;width:220px;">' +
+          '<div style="padding:8px 10px 6px;font-size:12px;color:#62666D;border-bottom:1px solid rgba(255,255,255,0.06);margin-bottom:4px;word-break:break-all;">' + esc(d.email) + '</div>' +
+          '<a href="' + sp + '/account" class="ps-acct__item" role="menuitem" style="display:block;padding:9px 10px;border-radius:9px;font-size:14px;color:#9CA0A8;text-decoration:none;">' + esc(nav.account) + '</a>' +
+          '<a href="' + sp + '/history" class="ps-acct__item" role="menuitem" style="display:block;padding:9px 10px;border-radius:9px;font-size:14px;color:#9CA0A8;text-decoration:none;">' + esc(nav.history) + '</a>' +
+          '<button type="button" id="ps-logout" class="ps-acct__item" role="menuitem" style="display:block;width:100%;padding:9px 10px;border-radius:9px;font-size:14px;color:#9CA0A8;background:none;border:0;text-align:left;cursor:pointer;">' + esc(nav.logout) + '</button>' +
+        '</div>' +
+      '</div>';
+    var dd = box.querySelector('.nav-dd');
+    var btn = dd && dd.querySelector('.nav-dd__btn');
+    if (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        var open = dd.getAttribute('data-open') === 'true';
+        dd.setAttribute('data-open', open ? 'false' : 'true');
+        btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+      });
+      document.addEventListener('click', function (e) { if (!dd.contains(e.target)) dd.setAttribute('data-open','false'); });
+    }
+    var lo = box.querySelector('#ps-logout');
+    if (lo) lo.addEventListener('click', function () {
+      try { localStorage.removeItem(CACHE_KEY); } catch (e) {}
+      window.__PS_USER = false;
+      fetch('/u/logout', { method: 'POST' }).then(function () { location.reload(); });
+    });
+  }
+  function renderLogin() {
+    window.__PS_USER = false;
+    box.innerHTML = '<a href="' + sp + '/signin" class="transition-colors hover:text-white" style="color:#9CA0A8;">' + esc(nav.login) + '</a>';
+  }
+  var renderedFromCache = false;
+  try {
+    var raw = localStorage.getItem(CACHE_KEY);
+    if (raw) { var cached = JSON.parse(raw); if (cached && cached.email != null) { renderAccount(cached); renderedFromCache = true; } }
+  } catch (e) {}
+  fetch('/u/me').then(function(r){return r.json();}).then(function(d){
+    if (d && d.ok) {
+      try { localStorage.setItem(CACHE_KEY, JSON.stringify({ email: d.email, points: d.points })); } catch (e) {}
+      renderAccount(d);
+    } else {
+      try { localStorage.removeItem(CACHE_KEY); } catch (e) {}
+      if (renderedFromCache) renderLogin();
+    }
+  }).catch(function(){});
+})();
+</script>
+</body></html>

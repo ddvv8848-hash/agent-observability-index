@@ -218,7 +218,6 @@ def lang_chrome(lang, root, alt_url):
         f'<a href="/tools/" class="transition-colors hover:text-white">{L["tools"]}</a>'
         f'<a href="{sp}/services" class="transition-colors hover:text-white">{L["services"]}</a>'
         f'<a href="{sp}/pricing" class="transition-colors hover:text-white">{L["pricing"]}</a>'
-        f'<a href="{sp}/history" class="transition-colors hover:text-white">{L["history"]}</a>'
         f'<a href="{blog_url}" class="transition-colors hover:text-white">{L["blog"]}</a>'
         f'<a href="{sp}/about" class="transition-colors hover:text-white">{L["contact"]}</a>')
 
@@ -252,7 +251,6 @@ def lang_chrome(lang, root, alt_url):
         f'<a class="transition-colors hover:text-white" href="/tools/">{L["tools"]}</a>'
         f'<a class="transition-colors hover:text-white" href="{sp}/services">{L["services"]}</a>'
         f'<a class="transition-colors hover:text-white" href="{sp}/pricing">{L["pricing"]}</a>'
-        f'<a class="transition-colors hover:text-white" href="{sp}/history">{L["history"]}</a>'
         f'<a class="transition-colors hover:text-white" href="{blog_url}">{L["blog"]}</a>'
         f'<a class="transition-colors hover:text-white" href="{root}methodology.html">{L["methodology"]}</a>'
         '<a class="ps-link" href="mailto:hi@panshi.io">hi@panshi.io</a>')

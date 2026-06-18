@@ -1,14 +1,14 @@
 {
  "name": "Agent Observability Index",
- "url": "https://tools.panshi.io",
+ "url": "https://panshi.io/tools",
  "license": "CC-BY-4.0",
- "generated": "2026-06-14",
+ "generated": "2026-06-18",
  "count": 116,
  "tools": [
   {
    "name": "Agenta",
    "url": "https://agenta.ai",
-   "listing": "https://tools.panshi.io/tools/agenta.html",
+   "listing": "https://panshi.io/tools/tools/agenta.html",
    "category": "prompt-mgmt",
    "open_source": true,
    "self_hostable": true,
@@ -20,19 +20,19 @@
   {
    "name": "AgentOps",
    "url": "https://www.agentops.ai",
-   "listing": "https://tools.panshi.io/tools/agentops.html",
+   "listing": "https://panshi.io/tools/tools/agentops.html",
    "category": "debugging",
    "open_source": true,
    "self_hostable": false,
    "pricing_model": "freemium",
    "otel_native": true,
    "gh_stars": 5629,
-   "maturity": 86
+   "maturity": 75
   },
   {
    "name": "Amazon Bedrock AgentCore Observability",
    "url": "https://aws.amazon.com/bedrock/agentcore/",
-   "listing": "https://tools.panshi.io/tools/amazon-bedrock-agentcore-observability.html",
+   "listing": "https://panshi.io/tools/tools/amazon-bedrock-agentcore-observability.html",
    "category": "observability",
    "open_source": false,
    "self_hostable": false,
@@ -44,7 +44,7 @@
   {
    "name": "Amberflo",
    "url": "https://www.amberflo.io",
-   "listing": "https://tools.panshi.io/tools/amberflo.html",
+   "listing": "https://panshi.io/tools/tools/amberflo.html",
    "category": "cost",
    "open_source": false,
    "self_hostable": false,
@@ -56,7 +56,7 @@
   {
    "name": "Arize AX",
    "url": "https://arize.com",
-   "listing": "https://tools.panshi.io/tools/arize-ax.html",
+   "listing": "https://panshi.io/tools/tools/arize-ax.html",
    "category": "observability",
    "open_source": false,
    "self_hostable": true,
@@ -68,7 +68,7 @@
   {
    "name": "Arize Phoenix",
    "url": "https://phoenix.arize.com",
-   "listing": "https://tools.panshi.io/tools/arize-phoenix.html",
+   "listing": "https://panshi.io/tools/tools/arize-phoenix.html",
    "category": "observability",
    "open_source": true,
    "self_hostable": true,
@@ -80,7 +80,7 @@
   {
    "name": "Arthur",
    "url": "https://www.arthur.ai",
-   "listing": "https://tools.panshi.io/tools/arthur.html",
+   "listing": "https://panshi.io/tools/tools/arthur.html",
    "category": "guardrails",
    "open_source": true,
    "self_hostable": true,
@@ -92,7 +92,7 @@
   {
    "name": "Athina AI",
    "url": "https://www.athina.ai",
-   "listing": "https://tools.panshi.io/tools/athina-ai.html",
+   "listing": "https://panshi.io/tools/tools/athina-ai.html",
    "category": "evals",
    "open_source": false,
    "self_hostable": true,
@@ -104,7 +104,7 @@
   {
    "name": "Atla",
    "url": "https://www.atla-ai.com",
-   "listing": "https://tools.panshi.io/tools/atla.html",
+   "listing": "https://panshi.io/tools/tools/atla.html",
    "category": "evals",
    "open_source": false,
    "self_hostable": false,
@@ -116,7 +116,7 @@
   {
    "name": "Autoblocks",
    "url": "https://www.autoblocks.ai",
-   "listing": "https://tools.panshi.io/tools/autoblocks.html",
+   "listing": "https://panshi.io/tools/tools/autoblocks.html",
    "category": "evals",
    "open_source": false,
    "self_hostable": true,
@@ -128,7 +128,7 @@
   {
    "name": "Azure AI Foundry Observability",
    "url": "https://learn.microsoft.com/azure/ai-foundry/concepts/observability",
-   "listing": "https://tools.panshi.io/tools/azure-ai-foundry-observability.html",
+   "listing": "https://panshi.io/tools/tools/azure-ai-foundry-observability.html",
    "category": "observability",
    "open_source": false,
    "self_hostable": false,
@@ -140,7 +140,7 @@
   {
    "name": "Bespoken",
    "url": "https://bespoken.io",
-   "listing": "https://tools.panshi.io/tools/bespoken.html",
+   "listing": "https://panshi.io/tools/tools/bespoken.html",
    "category": "evals",
    "open_source": false,
    "self_hostable": true,
@@ -152,7 +152,7 @@
   {
    "name": "Bluejay",
    "url": "https://getbluejay.ai",
-   "listing": "https://tools.panshi.io/tools/bluejay.html",
+   "listing": "https://panshi.io/tools/tools/bluejay.html",
    "category": "evals",
    "open_source": false,
    "self_hostable": false,
@@ -164,7 +164,7 @@
   {
    "name": "Braintrust",
    "url": "https://www.braintrust.dev",
-   "listing": "https://tools.panshi.io/tools/braintrust.html",
+   "listing": "https://panshi.io/tools/tools/braintrust.html",
    "category": "evals",
    "open_source": false,
    "self_hostable": true,
@@ -176,7 +176,7 @@
   {
    "name": "CalypsoAI",
    "url": "https://calypsoai.com",
-   "listing": "https://tools.panshi.io/tools/calypsoai.html",
+   "listing": "https://panshi.io/tools/tools/calypsoai.html",
    "category": "guardrails",
    "open_source": false,
    "self_hostable": true,
@@ -188,7 +188,7 @@
   {
    "name": "Cekura",
    "url": "https://www.cekura.ai",
-   "listing": "https://tools.panshi.io/tools/cekura.html",
+   "listing": "https://panshi.io/tools/tools/cekura.html",
    "category": "evals",
    "open_source": false,
    "self_hostable": true,
@@ -200,7 +200,7 @@
   {
    "name": "Cisco AI Defense (Robust Intelligence)",
    "url": "https://www.cisco.com/site/us/en/products/security/ai-defense/index.html",
-   "listing": "https://tools.panshi.io/tools/cisco-ai-defense-robust-intelligence.html",
+   "listing": "https://panshi.io/tools/tools/cisco-ai-defense-robust-intelligence.html",
    "category": "guardrails",
    "open_source": false,
    "self_hostable": false,
@@ -212,7 +212,7 @@
   {
    "name": "CloudZero",
    "url": "https://www.cloudzero.com",
-   "listing": "https://tools.panshi.io/tools/cloudzero.html",
+   "listing": "https://panshi.io/tools/tools/cloudzero.html",
    "category": "cost",
    "open_source": false,
    "self_hostable": false,
@@ -224,7 +224,7 @@
   {
    "name": "Composo",
    "url": "https://www.composo.ai",
-   "listing": "https://tools.panshi.io/tools/composo.html",
+   "listing": "https://panshi.io/tools/tools/composo.html",
    "category": "evals",
    "open_source": false,
    "self_hostable": true,
@@ -236,7 +236,7 @@
   {
    "name": "Confident AI (DeepEval)",
    "url": "https://www.confident-ai.com",
-   "listing": "https://tools.panshi.io/tools/confident-ai-deepeval.html",
+   "listing": "https://panshi.io/tools/tools/confident-ai-deepeval.html",
    "category": "evals",
    "open_source": true,
    "self_hostable": true,
@@ -248,7 +248,7 @@
   {
    "name": "Coralogix AI (Aporia)",
    "url": "https://coralogix.com/ai-observability/",
-   "listing": "https://tools.panshi.io/tools/coralogix-ai-aporia.html",
+   "listing": "https://panshi.io/tools/tools/coralogix-ai-aporia.html",
    "category": "guardrails",
    "open_source": false,
    "self_hostable": false,
@@ -260,7 +260,7 @@
   {
    "name": "Coval",
    "url": "https://www.coval.dev",
-   "listing": "https://tools.panshi.io/tools/coval.html",
+   "listing": "https://panshi.io/tools/tools/coval.html",
    "category": "debugging",
    "open_source": false,
    "self_hostable": false,
@@ -272,7 +272,7 @@
   {
    "name": "Datadog LLM Observability",
    "url": "https://www.datadoghq.com/product/ai/llm-observability/",
-   "listing": "https://tools.panshi.io/tools/datadog-llm-observability.html",
+   "listing": "https://panshi.io/tools/tools/datadog-llm-observability.html",
    "category": "observability",
    "open_source": false,
    "self_hostable": false,
@@ -284,7 +284,7 @@
   {
    "name": "Deepchecks",
    "url": "https://www.deepchecks.com",
-   "listing": "https://tools.panshi.io/tools/deepchecks.html",
+   "listing": "https://panshi.io/tools/tools/deepchecks.html",
    "category": "evals",
    "open_source": true,
    "self_hostable": true,
@@ -296,7 +296,7 @@
   {
    "name": "Dynatrace AI Observability",
    "url": "https://www.dynatrace.com/solutions/ai-observability/",
-   "listing": "https://tools.panshi.io/tools/dynatrace-ai-observability.html",
+   "listing": "https://panshi.io/tools/tools/dynatrace-ai-observability.html",
    "category": "observability",
    "open_source": false,
    "self_hostable": false,
@@ -308,7 +308,7 @@
   {
    "name": "Evidently AI",
    "url": "https://www.evidentlyai.com",
-   "listing": "https://tools.panshi.io/tools/evidently-ai.html",
+   "listing": "https://panshi.io/tools/tools/evidently-ai.html",
    "category": "evals",
    "open_source": true,
    "self_hostable": true,
@@ -320,7 +320,7 @@
   {
    "name": "Fiddler AI",
    "url": "https://www.fiddler.ai",
-   "listing": "https://tools.panshi.io/tools/fiddler-ai.html",
+   "listing": "https://panshi.io/tools/tools/fiddler-ai.html",
    "category": "observability",
    "open_source": false,
    "self_hostable": true,
@@ -332,7 +332,7 @@
   {
    "name": "Finout",
    "url": "https://www.finout.io",
-   "listing": "https://tools.panshi.io/tools/finout.html",
+   "listing": "https://panshi.io/tools/tools/finout.html",
    "category": "cost",
    "open_source": false,
    "self_hostable": false,
@@ -344,7 +344,7 @@
   {
    "name": "Freeplay",
    "url": "https://freeplay.ai",
-   "listing": "https://tools.panshi.io/tools/freeplay.html",
+   "listing": "https://panshi.io/tools/tools/freeplay.html",
    "category": "prompt-mgmt",
    "open_source": false,
    "self_hostable": false,
@@ -356,7 +356,7 @@
   {
    "name": "Future AGI",
    "url": "https://futureagi.com",
-   "listing": "https://tools.panshi.io/tools/future-agi.html",
+   "listing": "https://panshi.io/tools/tools/future-agi.html",
    "category": "evals",
    "open_source": false,
    "self_hostable": false,
@@ -368,7 +368,7 @@
   {
    "name": "Galileo",
    "url": "https://galileo.ai",
-   "listing": "https://tools.panshi.io/tools/galileo.html",
+   "listing": "https://panshi.io/tools/tools/galileo.html",
    "category": "evals",
    "open_source": false,
    "self_hostable": true,
@@ -380,7 +380,7 @@
   {
    "name": "garak",
    "url": "https://github.com/NVIDIA/garak",
-   "listing": "https://tools.panshi.io/tools/garak.html",
+   "listing": "https://panshi.io/tools/tools/garak.html",
    "category": "guardrails",
    "open_source": true,
    "self_hostable": true,
@@ -392,7 +392,7 @@
   {
    "name": "General Analysis",
    "url": "https://generalanalysis.com",
-   "listing": "https://tools.panshi.io/tools/general-analysis.html",
+   "listing": "https://panshi.io/tools/tools/general-analysis.html",
    "category": "guardrails",
    "open_source": false,
    "self_hostable": true,
@@ -404,7 +404,7 @@
   {
    "name": "Gentrace",
    "url": "https://gentrace.ai",
-   "listing": "https://tools.panshi.io/tools/gentrace.html",
+   "listing": "https://panshi.io/tools/tools/gentrace.html",
    "category": "evals",
    "open_source": false,
    "self_hostable": true,
@@ -416,7 +416,7 @@
   {
    "name": "Giskard",
    "url": "https://www.giskard.ai",
-   "listing": "https://tools.panshi.io/tools/giskard.html",
+   "listing": "https://panshi.io/tools/tools/giskard.html",
    "category": "evals",
    "open_source": true,
    "self_hostable": true,
@@ -428,7 +428,7 @@
   {
    "name": "Google Stax",
    "url": "https://stax.withgoogle.com",
-   "listing": "https://tools.panshi.io/tools/google-stax.html",
+   "listing": "https://panshi.io/tools/tools/google-stax.html",
    "category": "evals",
    "open_source": false,
    "self_hostable": false,
@@ -440,7 +440,7 @@
   {
    "name": "Grafana Cloud AI Observability",
    "url": "https://grafana.com/products/cloud/ai-observability/",
-   "listing": "https://tools.panshi.io/tools/grafana-cloud-ai-observability.html",
+   "listing": "https://panshi.io/tools/tools/grafana-cloud-ai-observability.html",
    "category": "observability",
    "open_source": true,
    "self_hostable": true,
@@ -452,7 +452,7 @@
   {
    "name": "Guardrails AI",
    "url": "https://www.guardrailsai.com",
-   "listing": "https://tools.panshi.io/tools/guardrails-ai.html",
+   "listing": "https://panshi.io/tools/tools/guardrails-ai.html",
    "category": "guardrails",
    "open_source": true,
    "self_hostable": true,
@@ -464,7 +464,7 @@
   {
    "name": "Haize Labs",
    "url": "https://www.haizelabs.com",
-   "listing": "https://tools.panshi.io/tools/haize-labs.html",
+   "listing": "https://panshi.io/tools/tools/haize-labs.html",
    "category": "guardrails",
    "open_source": false,
    "self_hostable": false,
@@ -476,7 +476,7 @@
   {
    "name": "Hamming AI",
    "url": "https://hamming.ai",
-   "listing": "https://tools.panshi.io/tools/hamming-ai.html",
+   "listing": "https://panshi.io/tools/tools/hamming-ai.html",
    "category": "evals",
    "open_source": false,
    "self_hostable": false,
@@ -488,7 +488,7 @@
   {
    "name": "Helicone",
    "url": "https://www.helicone.ai",
-   "listing": "https://tools.panshi.io/tools/helicone.html",
+   "listing": "https://panshi.io/tools/tools/helicone.html",
    "category": "observability",
    "open_source": true,
    "self_hostable": true,
@@ -500,7 +500,7 @@
   {
    "name": "HoneyHive",
    "url": "https://www.honeyhive.ai",
-   "listing": "https://tools.panshi.io/tools/honeyhive.html",
+   "listing": "https://panshi.io/tools/tools/honeyhive.html",
    "category": "observability",
    "open_source": false,
    "self_hostable": true,
@@ -512,7 +512,7 @@
   {
    "name": "Humanloop",
    "url": "https://humanloop.com",
-   "listing": "https://tools.panshi.io/tools/humanloop.html",
+   "listing": "https://panshi.io/tools/tools/humanloop.html",
    "category": "prompt-mgmt",
    "open_source": false,
    "self_hostable": false,
@@ -524,7 +524,7 @@
   {
    "name": "Inspect AI",
    "url": "https://inspect.aisi.org.uk",
-   "listing": "https://tools.panshi.io/tools/inspect-ai.html",
+   "listing": "https://panshi.io/tools/tools/inspect-ai.html",
    "category": "evals",
    "open_source": true,
    "self_hostable": true,
@@ -536,7 +536,7 @@
   {
    "name": "Invariant Labs",
    "url": "https://invariantlabs.ai",
-   "listing": "https://tools.panshi.io/tools/invariant-labs.html",
+   "listing": "https://panshi.io/tools/tools/invariant-labs.html",
    "category": "debugging",
    "open_source": true,
    "self_hostable": true,
@@ -548,7 +548,7 @@
   {
    "name": "Judgment Labs (judgeval)",
    "url": "https://www.judgmentlabs.ai",
-   "listing": "https://tools.panshi.io/tools/judgment-labs-judgeval.html",
+   "listing": "https://panshi.io/tools/tools/judgment-labs-judgeval.html",
    "category": "evals",
    "open_source": true,
    "self_hostable": true,
@@ -560,7 +560,7 @@
   {
    "name": "Kashikoi",
    "url": "https://www.ycombinator.com/companies/kashikoi",
-   "listing": "https://tools.panshi.io/tools/kashikoi.html",
+   "listing": "https://panshi.io/tools/tools/kashikoi.html",
    "category": "evals",
    "open_source": false,
    "self_hostable": false,
@@ -572,7 +572,7 @@
   {
    "name": "Lago",
    "url": "https://www.getlago.com",
-   "listing": "https://tools.panshi.io/tools/lago.html",
+   "listing": "https://panshi.io/tools/tools/lago.html",
    "category": "cost",
    "open_source": true,
    "self_hostable": true,
@@ -584,7 +584,7 @@
   {
    "name": "Lakera Guard",
    "url": "https://www.lakera.ai",
-   "listing": "https://tools.panshi.io/tools/lakera-guard.html",
+   "listing": "https://panshi.io/tools/tools/lakera-guard.html",
    "category": "guardrails",
    "open_source": false,
    "self_hostable": true,
@@ -596,7 +596,7 @@
   {
    "name": "Laminar",
    "url": "https://laminar.sh",
-   "listing": "https://tools.panshi.io/tools/laminar.html",
+   "listing": "https://panshi.io/tools/tools/laminar.html",
    "category": "debugging",
    "open_source": true,
    "self_hostable": true,
@@ -608,7 +608,7 @@
   {
    "name": "Langfuse",
    "url": "https://langfuse.com",
-   "listing": "https://tools.panshi.io/tools/langfuse.html",
+   "listing": "https://panshi.io/tools/tools/langfuse.html",
    "category": "observability",
    "open_source": true,
    "self_hostable": true,
@@ -620,7 +620,7 @@
   {
    "name": "LangSmith",
    "url": "https://smith.langchain.com",
-   "listing": "https://tools.panshi.io/tools/langsmith.html",
+   "listing": "https://panshi.io/tools/tools/langsmith.html",
    "category": "observability",
    "open_source": false,
    "self_hostable": true,
@@ -632,7 +632,7 @@
   {
    "name": "Langtail",
    "url": "https://langtail.com",
-   "listing": "https://tools.panshi.io/tools/langtail.html",
+   "listing": "https://panshi.io/tools/tools/langtail.html",
    "category": "prompt-mgmt",
    "open_source": false,
    "self_hostable": false,
@@ -643,8 +643,8 @@
   },
   {
    "name": "Langtrace",
-   "url": "https://www.langtrace.ai",
-   "listing": "https://tools.panshi.io/tools/langtrace.html",
+   "url": "https://docs.langtrace.ai",
+   "listing": "https://panshi.io/tools/tools/langtrace.html",
    "category": "observability",
    "open_source": true,
    "self_hostable": true,
@@ -656,7 +656,7 @@
   {
    "name": "LangWatch",
    "url": "https://langwatch.ai",
-   "listing": "https://tools.panshi.io/tools/langwatch.html",
+   "listing": "https://panshi.io/tools/tools/langwatch.html",
    "category": "evals",
    "open_source": true,
    "self_hostable": true,
@@ -668,7 +668,7 @@
   {
    "name": "Latitude",
    "url": "https://latitude.so",
-   "listing": "https://tools.panshi.io/tools/latitude.html",
+   "listing": "https://panshi.io/tools/tools/latitude.html",
    "category": "prompt-mgmt",
    "open_source": true,
    "self_hostable": true,
@@ -680,7 +680,7 @@
   {
    "name": "LiteLLM",
    "url": "https://www.litellm.ai",
-   "listing": "https://tools.panshi.io/tools/litellm.html",
+   "listing": "https://panshi.io/tools/tools/litellm.html",
    "category": "cost",
    "open_source": true,
    "self_hostable": true,
@@ -692,7 +692,7 @@
   {
    "name": "LLM Guard (Protect AI)",
    "url": "https://github.com/protectai/llm-guard",
-   "listing": "https://tools.panshi.io/tools/llm-guard-protect-ai.html",
+   "listing": "https://panshi.io/tools/tools/llm-guard-protect-ai.html",
    "category": "guardrails",
    "open_source": true,
    "self_hostable": true,
@@ -704,7 +704,7 @@
   {
    "name": "LLM Stats",
    "url": "https://llm-stats.com",
-   "listing": "https://tools.panshi.io/tools/llm-stats.html",
+   "listing": "https://panshi.io/tools/tools/llm-stats.html",
    "category": "evals",
    "open_source": false,
    "self_hostable": false,
@@ -716,7 +716,7 @@
   {
    "name": "Lunary",
    "url": "https://lunary.ai",
-   "listing": "https://tools.panshi.io/tools/lunary.html",
+   "listing": "https://panshi.io/tools/tools/lunary.html",
    "category": "observability",
    "open_source": true,
    "self_hostable": true,
@@ -728,7 +728,7 @@
   {
    "name": "Maxim AI",
    "url": "https://www.getmaxim.ai",
-   "listing": "https://tools.panshi.io/tools/maxim-ai.html",
+   "listing": "https://panshi.io/tools/tools/maxim-ai.html",
    "category": "evals",
    "open_source": false,
    "self_hostable": true,
@@ -740,7 +740,7 @@
   {
    "name": "Metronome",
    "url": "https://metronome.com",
-   "listing": "https://tools.panshi.io/tools/metronome.html",
+   "listing": "https://panshi.io/tools/tools/metronome.html",
    "category": "cost",
    "open_source": false,
    "self_hostable": false,
@@ -752,7 +752,7 @@
   {
    "name": "Mindgard",
    "url": "https://mindgard.ai",
-   "listing": "https://tools.panshi.io/tools/mindgard.html",
+   "listing": "https://panshi.io/tools/tools/mindgard.html",
    "category": "guardrails",
    "open_source": false,
    "self_hostable": false,
@@ -764,7 +764,7 @@
   {
    "name": "MLflow (Tracing & GenAI)",
    "url": "https://mlflow.org",
-   "listing": "https://tools.panshi.io/tools/mlflow-tracing-genai.html",
+   "listing": "https://panshi.io/tools/tools/mlflow-tracing-genai.html",
    "category": "observability",
    "open_source": true,
    "self_hostable": true,
@@ -776,7 +776,7 @@
   {
    "name": "New Relic AI Monitoring",
    "url": "https://newrelic.com/platform/ai-monitoring",
-   "listing": "https://tools.panshi.io/tools/new-relic-ai-monitoring.html",
+   "listing": "https://panshi.io/tools/tools/new-relic-ai-monitoring.html",
    "category": "observability",
    "open_source": false,
    "self_hostable": false,
@@ -788,7 +788,7 @@
   {
    "name": "NVIDIA NeMo Guardrails",
    "url": "https://github.com/NVIDIA-NeMo/Guardrails",
-   "listing": "https://tools.panshi.io/tools/nvidia-nemo-guardrails.html",
+   "listing": "https://panshi.io/tools/tools/nvidia-nemo-guardrails.html",
    "category": "guardrails",
    "open_source": true,
    "self_hostable": true,
@@ -800,7 +800,7 @@
   {
    "name": "Okareo",
    "url": "https://okareo.com",
-   "listing": "https://tools.panshi.io/tools/okareo.html",
+   "listing": "https://panshi.io/tools/tools/okareo.html",
    "category": "evals",
    "open_source": false,
    "self_hostable": false,
@@ -812,7 +812,7 @@
   {
    "name": "OpenAI Evals",
    "url": "https://github.com/openai/evals",
-   "listing": "https://tools.panshi.io/tools/openai-evals.html",
+   "listing": "https://panshi.io/tools/tools/openai-evals.html",
    "category": "evals",
    "open_source": true,
    "self_hostable": true,
@@ -824,7 +824,7 @@
   {
    "name": "Openlayer",
    "url": "https://www.openlayer.com",
-   "listing": "https://tools.panshi.io/tools/openlayer.html",
+   "listing": "https://panshi.io/tools/tools/openlayer.html",
    "category": "evals",
    "open_source": false,
    "self_hostable": true,
@@ -836,7 +836,7 @@
   {
    "name": "OpenLIT",
    "url": "https://openlit.io",
-   "listing": "https://tools.panshi.io/tools/openlit.html",
+   "listing": "https://panshi.io/tools/tools/openlit.html",
    "category": "observability",
    "open_source": true,
    "self_hostable": true,
@@ -848,7 +848,7 @@
   {
    "name": "OpenMeter",
    "url": "https://openmeter.io",
-   "listing": "https://tools.panshi.io/tools/openmeter.html",
+   "listing": "https://panshi.io/tools/tools/openmeter.html",
    "category": "cost",
    "open_source": true,
    "self_hostable": true,
@@ -860,7 +860,7 @@
   {
    "name": "Opik (Comet)",
    "url": "https://www.comet.com/site/products/opik/",
-   "listing": "https://tools.panshi.io/tools/opik-comet.html",
+   "listing": "https://panshi.io/tools/tools/opik-comet.html",
    "category": "observability",
    "open_source": true,
    "self_hostable": true,
@@ -872,7 +872,7 @@
   {
    "name": "Orb",
    "url": "https://www.withorb.com",
-   "listing": "https://tools.panshi.io/tools/orb.html",
+   "listing": "https://panshi.io/tools/tools/orb.html",
    "category": "cost",
    "open_source": false,
    "self_hostable": false,
@@ -884,19 +884,19 @@
   {
    "name": "Orq.ai",
    "url": "https://orq.ai",
-   "listing": "https://tools.panshi.io/tools/orq-ai.html",
+   "listing": "https://panshi.io/tools/tools/orq-ai.html",
    "category": "prompt-mgmt",
    "open_source": false,
    "self_hostable": true,
    "pricing_model": "freemium",
-   "otel_native": null,
+   "otel_native": true,
    "gh_stars": null,
    "maturity": null
   },
   {
    "name": "Patronus AI",
    "url": "https://www.patronus.ai",
-   "listing": "https://tools.panshi.io/tools/patronus-ai.html",
+   "listing": "https://panshi.io/tools/tools/patronus-ai.html",
    "category": "evals",
    "open_source": false,
    "self_hostable": false,
@@ -908,7 +908,7 @@
   {
    "name": "Pay-i",
    "url": "https://www.pay-i.com",
-   "listing": "https://tools.panshi.io/tools/pay-i.html",
+   "listing": "https://panshi.io/tools/tools/pay-i.html",
    "category": "cost",
    "open_source": false,
    "self_hostable": false,
@@ -920,7 +920,7 @@
   {
    "name": "Petri",
    "url": "https://alignment.anthropic.com/2025/petri/",
-   "listing": "https://tools.panshi.io/tools/petri.html",
+   "listing": "https://panshi.io/tools/tools/petri.html",
    "category": "evals",
    "open_source": true,
    "self_hostable": true,
@@ -932,7 +932,7 @@
   {
    "name": "Phospho",
    "url": "https://phospho.ai",
-   "listing": "https://tools.panshi.io/tools/phospho.html",
+   "listing": "https://panshi.io/tools/tools/phospho.html",
    "category": "observability",
    "open_source": true,
    "self_hostable": true,
@@ -944,7 +944,7 @@
   {
    "name": "Pillar Security",
    "url": "https://www.pillar.security",
-   "listing": "https://tools.panshi.io/tools/pillar-security.html",
+   "listing": "https://panshi.io/tools/tools/pillar-security.html",
    "category": "guardrails",
    "open_source": false,
    "self_hostable": true,
@@ -956,7 +956,7 @@
   {
    "name": "Portkey",
    "url": "https://portkey.ai",
-   "listing": "https://tools.panshi.io/tools/portkey.html",
+   "listing": "https://panshi.io/tools/tools/portkey.html",
    "category": "observability",
    "open_source": true,
    "self_hostable": true,
@@ -968,7 +968,7 @@
   {
    "name": "PostHog LLM Analytics",
    "url": "https://posthog.com/llm-analytics",
-   "listing": "https://tools.panshi.io/tools/posthog-llm-analytics.html",
+   "listing": "https://panshi.io/tools/tools/posthog-llm-analytics.html",
    "category": "observability",
    "open_source": true,
    "self_hostable": true,
@@ -980,7 +980,7 @@
   {
    "name": "Prompt Security",
    "url": "https://www.prompt.security",
-   "listing": "https://tools.panshi.io/tools/prompt-security.html",
+   "listing": "https://panshi.io/tools/tools/prompt-security.html",
    "category": "guardrails",
    "open_source": false,
    "self_hostable": true,
@@ -992,7 +992,7 @@
   {
    "name": "Promptfoo",
    "url": "https://www.promptfoo.dev",
-   "listing": "https://tools.panshi.io/tools/promptfoo.html",
+   "listing": "https://panshi.io/tools/tools/promptfoo.html",
    "category": "evals",
    "open_source": true,
    "self_hostable": true,
@@ -1004,7 +1004,7 @@
   {
    "name": "PromptHub",
    "url": "https://www.prompthub.us",
-   "listing": "https://tools.panshi.io/tools/prompthub.html",
+   "listing": "https://panshi.io/tools/tools/prompthub.html",
    "category": "prompt-mgmt",
    "open_source": false,
    "self_hostable": false,
@@ -1016,7 +1016,7 @@
   {
    "name": "PromptLayer",
    "url": "https://www.promptlayer.com",
-   "listing": "https://tools.panshi.io/tools/promptlayer.html",
+   "listing": "https://panshi.io/tools/tools/promptlayer.html",
    "category": "prompt-mgmt",
    "open_source": false,
    "self_hostable": false,
@@ -1028,7 +1028,7 @@
   {
    "name": "Pydantic Logfire",
    "url": "https://pydantic.dev/logfire",
-   "listing": "https://tools.panshi.io/tools/pydantic-logfire.html",
+   "listing": "https://panshi.io/tools/tools/pydantic-logfire.html",
    "category": "observability",
    "open_source": true,
    "self_hostable": true,
@@ -1040,7 +1040,7 @@
   {
    "name": "PyRIT",
    "url": "https://github.com/Azure/PyRIT",
-   "listing": "https://tools.panshi.io/tools/pyrit.html",
+   "listing": "https://panshi.io/tools/tools/pyrit.html",
    "category": "guardrails",
    "open_source": true,
    "self_hostable": true,
@@ -1052,7 +1052,7 @@
   {
    "name": "Quotient AI",
    "url": "https://www.quotientai.co",
-   "listing": "https://tools.panshi.io/tools/quotient-ai.html",
+   "listing": "https://panshi.io/tools/tools/quotient-ai.html",
    "category": "evals",
    "open_source": false,
    "self_hostable": true,
@@ -1064,7 +1064,7 @@
   {
    "name": "RagaAI (Catalyst)",
    "url": "https://raga.ai",
-   "listing": "https://tools.panshi.io/tools/ragaai-catalyst.html",
+   "listing": "https://panshi.io/tools/tools/ragaai-catalyst.html",
    "category": "evals",
    "open_source": true,
    "self_hostable": true,
@@ -1076,7 +1076,7 @@
   {
    "name": "Ragas",
    "url": "https://www.ragas.io",
-   "listing": "https://tools.panshi.io/tools/ragas.html",
+   "listing": "https://panshi.io/tools/tools/ragas.html",
    "category": "evals",
    "open_source": true,
    "self_hostable": true,
@@ -1088,7 +1088,7 @@
   {
    "name": "Repello AI",
    "url": "https://repello.ai",
-   "listing": "https://tools.panshi.io/tools/repello-ai.html",
+   "listing": "https://panshi.io/tools/tools/repello-ai.html",
    "category": "guardrails",
    "open_source": false,
    "self_hostable": false,
@@ -1100,7 +1100,7 @@
   {
    "name": "Respan (formerly Keywords AI)",
    "url": "https://www.respan.ai",
-   "listing": "https://tools.panshi.io/tools/respan-formerly-keywords-ai.html",
+   "listing": "https://panshi.io/tools/tools/respan-formerly-keywords-ai.html",
    "category": "observability",
    "open_source": false,
    "self_hostable": false,
@@ -1112,7 +1112,7 @@
   {
    "name": "Roark",
    "url": "https://roark.ai",
-   "listing": "https://tools.panshi.io/tools/roark.html",
+   "listing": "https://panshi.io/tools/tools/roark.html",
    "category": "observability",
    "open_source": false,
    "self_hostable": false,
@@ -1124,19 +1124,19 @@
   {
    "name": "Scorecard",
    "url": "https://www.scorecard.io",
-   "listing": "https://tools.panshi.io/tools/scorecard.html",
+   "listing": "https://panshi.io/tools/tools/scorecard.html",
    "category": "evals",
    "open_source": false,
    "self_hostable": false,
    "pricing_model": "freemium",
-   "otel_native": null,
+   "otel_native": true,
    "gh_stars": null,
    "maturity": null
   },
   {
    "name": "Sentry AI Agent Monitoring",
    "url": "https://docs.sentry.io/product/insights/ai/agents/",
-   "listing": "https://tools.panshi.io/tools/sentry-ai-agent-monitoring.html",
+   "listing": "https://panshi.io/tools/tools/sentry-ai-agent-monitoring.html",
    "category": "observability",
    "open_source": true,
    "self_hostable": true,
@@ -1148,7 +1148,7 @@
   {
    "name": "SigNoz",
    "url": "https://signoz.io",
-   "listing": "https://tools.panshi.io/tools/signoz.html",
+   "listing": "https://panshi.io/tools/tools/signoz.html",
    "category": "observability",
    "open_source": true,
    "self_hostable": true,
@@ -1160,7 +1160,7 @@
   {
    "name": "SPLX (SplxAI)",
    "url": "https://splx.ai",
-   "listing": "https://tools.panshi.io/tools/splx-splxai.html",
+   "listing": "https://panshi.io/tools/tools/splx-splxai.html",
    "category": "guardrails",
    "open_source": false,
    "self_hostable": true,
@@ -1172,7 +1172,7 @@
   {
    "name": "Straiker",
    "url": "https://www.straiker.ai",
-   "listing": "https://tools.panshi.io/tools/straiker.html",
+   "listing": "https://panshi.io/tools/tools/straiker.html",
    "category": "guardrails",
    "open_source": false,
    "self_hostable": false,
@@ -1184,7 +1184,7 @@
   {
    "name": "TensorZero",
    "url": "https://www.tensorzero.com",
-   "listing": "https://tools.panshi.io/tools/tensorzero.html",
+   "listing": "https://panshi.io/tools/tools/tensorzero.html",
    "category": "observability",
    "open_source": true,
    "self_hostable": true,
@@ -1196,7 +1196,7 @@
   {
    "name": "TestZeus (Hercules)",
    "url": "https://testzeus.com",
-   "listing": "https://tools.panshi.io/tools/testzeus-hercules.html",
+   "listing": "https://panshi.io/tools/tools/testzeus-hercules.html",
    "category": "evals",
    "open_source": true,
    "self_hostable": true,
@@ -1208,7 +1208,7 @@
   {
    "name": "The LLM Data Company (doteval)",
    "url": "https://www.ycombinator.com/companies/the-llm-data-company",
-   "listing": "https://tools.panshi.io/tools/the-llm-data-company-doteval.html",
+   "listing": "https://panshi.io/tools/tools/the-llm-data-company-doteval.html",
    "category": "evals",
    "open_source": false,
    "self_hostable": false,
@@ -1220,7 +1220,7 @@
   {
    "name": "Tokencost",
    "url": "https://github.com/AgentOps-AI/tokencost",
-   "listing": "https://tools.panshi.io/tools/tokencost.html",
+   "listing": "https://panshi.io/tools/tools/tokencost.html",
    "category": "cost",
    "open_source": true,
    "self_hostable": true,
@@ -1232,7 +1232,7 @@
   {
    "name": "Traceloop (OpenLLMetry)",
    "url": "https://www.traceloop.com",
-   "listing": "https://tools.panshi.io/tools/traceloop-openllmetry.html",
+   "listing": "https://panshi.io/tools/tools/traceloop-openllmetry.html",
    "category": "observability",
    "open_source": true,
    "self_hostable": true,
@@ -1244,7 +1244,7 @@
   {
    "name": "Tropir",
    "url": "https://tropir.com",
-   "listing": "https://tools.panshi.io/tools/tropir.html",
+   "listing": "https://panshi.io/tools/tools/tropir.html",
    "category": "debugging",
    "open_source": false,
    "self_hostable": false,
@@ -1256,7 +1256,7 @@
   {
    "name": "Trubrics",
    "url": "https://www.trubrics.com",
-   "listing": "https://tools.panshi.io/tools/trubrics.html",
+   "listing": "https://panshi.io/tools/tools/trubrics.html",
    "category": "observability",
    "open_source": true,
    "self_hostable": false,
@@ -1268,7 +1268,7 @@
   {
    "name": "TrueFoundry",
    "url": "https://www.truefoundry.com",
-   "listing": "https://tools.panshi.io/tools/truefoundry.html",
+   "listing": "https://panshi.io/tools/tools/truefoundry.html",
    "category": "observability",
    "open_source": false,
    "self_hostable": true,
@@ -1280,7 +1280,7 @@
   {
    "name": "TruLens",
    "url": "https://www.trulens.org",
-   "listing": "https://tools.panshi.io/tools/trulens.html",
+   "listing": "https://panshi.io/tools/tools/trulens.html",
    "category": "evals",
    "open_source": true,
    "self_hostable": true,
@@ -1292,7 +1292,7 @@
   {
    "name": "Vals AI",
    "url": "https://www.vals.ai",
-   "listing": "https://tools.panshi.io/tools/vals-ai.html",
+   "listing": "https://panshi.io/tools/tools/vals-ai.html",
    "category": "evals",
    "open_source": false,
    "self_hostable": false,
@@ -1304,7 +1304,7 @@
   {
    "name": "Vantage",
    "url": "https://www.vantage.sh",
-   "listing": "https://tools.panshi.io/tools/vantage.html",
+   "listing": "https://panshi.io/tools/tools/vantage.html",
    "category": "cost",
    "open_source": false,
    "self_hostable": false,
@@ -1316,7 +1316,7 @@
   {
    "name": "Vellum",
    "url": "https://www.vellum.ai",
-   "listing": "https://tools.panshi.io/tools/vellum.html",
+   "listing": "https://panshi.io/tools/tools/vellum.html",
    "category": "prompt-mgmt",
    "open_source": false,
    "self_hostable": false,
@@ -1328,7 +1328,7 @@
   {
    "name": "Vertex AI Gen AI Evaluation Service",
    "url": "https://cloud.google.com/vertex-ai/generative-ai/docs/models/evaluation-overview",
-   "listing": "https://tools.panshi.io/tools/vertex-ai-gen-ai-evaluation-service.html",
+   "listing": "https://panshi.io/tools/tools/vertex-ai-gen-ai-evaluation-service.html",
    "category": "evals",
    "open_source": false,
    "self_hostable": false,
@@ -1340,7 +1340,7 @@
   {
    "name": "Vijil",
    "url": "https://vijil.ai",
-   "listing": "https://tools.panshi.io/tools/vijil.html",
+   "listing": "https://panshi.io/tools/tools/vijil.html",
    "category": "guardrails",
    "open_source": false,
    "self_hostable": true,
@@ -1352,7 +1352,7 @@
   {
    "name": "W&B Weave",
    "url": "https://wandb.ai/site/weave",
-   "listing": "https://tools.panshi.io/tools/w-b-weave.html",
+   "listing": "https://panshi.io/tools/tools/w-b-weave.html",
    "category": "observability",
    "open_source": true,
    "self_hostable": true,
@@ -1364,7 +1364,7 @@
   {
    "name": "WhyLabs (whylogs/LangKit)",
    "url": "https://whylabs.ai",
-   "listing": "https://tools.panshi.io/tools/whylabs-whylogs-langkit.html",
+   "listing": "https://panshi.io/tools/tools/whylabs-whylogs-langkit.html",
    "category": "observability",
    "open_source": true,
    "self_hostable": true,
@@ -1376,7 +1376,7 @@
   {
    "name": "Zenity",
    "url": "https://zenity.io",
-   "listing": "https://tools.panshi.io/tools/zenity.html",
+   "listing": "https://panshi.io/tools/tools/zenity.html",
    "category": "guardrails",
    "open_source": false,
    "self_hostable": false,
@@ -1388,7 +1388,7 @@
   {
    "name": "ZeroEval",
    "url": "https://zeroeval.com",
-   "listing": "https://tools.panshi.io/tools/zeroeval.html",
+   "listing": "https://panshi.io/tools/tools/zeroeval.html",
    "category": "evals",
    "open_source": false,
    "self_hostable": false,
