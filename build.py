@@ -200,14 +200,14 @@ def lang_chrome(lang, root, alt_url):
     html_lang = "zh-CN" if lang == "zh" else "en"
     sp = "/zh" if lang == "zh" else ""          # language path prefix (Brand: sp)
     logo_href = f"{sp}/"                          # Brand: a href={`${sp}/`}
-    blog_url = "/tools/blog/zh/" if lang == "zh" else "/tools/blog/"  # Brand: blogUrl
+    resources_href = f"{sp}/nav/" if lang == "zh" else "/tools/"  # Brand: resourcesHref (EN=Observability本目录, zh=AI导航)
 
     L = {
-        "zh": {"tools": "工具", "services": "服务", "pricing": "定价", "history": "我的记录",
-               "blog": "博客", "contact": "联系", "login": "登录", "account": "我的账户",
+        "zh": {"sentinel": "磐石哨兵", "tools": "工具", "services": "服务", "observability": "AI 导航", "pricing": "定价", "history": "我的记录",
+               "login": "登录", "account": "我的账户",
                "logout": "退出登录", "points": "点", "methodology": "方法论"},
-        "en": {"tools": "Tools", "services": "Services", "pricing": "Pricing", "history": "History",
-               "blog": "Blog", "contact": "Contact", "login": "Login", "account": "Account",
+        "en": {"sentinel": "Panshi Sentinel", "tools": "Tools", "services": "Services", "observability": "Observability", "pricing": "Pricing", "history": "History",
+               "login": "Login", "account": "Account",
                "logout": "Log out", "points": "pts", "methodology": "Methodology"},
     }[lang]
 
@@ -215,11 +215,11 @@ def lang_chrome(lang, root, alt_url):
     # (Tools is a plain link to the directory, mirroring Brand's footer Tools link;
     #  the catalog dropdown lives on the Astro /services page.)
     nav_links = (
-        f'<a href="/tools/" class="transition-colors hover:text-white">{L["tools"]}</a>'
-        f'<a href="{sp}/services" class="transition-colors hover:text-white">{L["services"]}</a>'
-        f'<a href="{sp}/pricing" class="transition-colors hover:text-white">{L["pricing"]}</a>'
-        f'<a href="{blog_url}" class="transition-colors hover:text-white">{L["blog"]}</a>'
-        f'<a href="{sp}/about" class="transition-colors hover:text-white">{L["contact"]}</a>')
+        f'<a href="{sp}/relay" class="transition-colors hover:text-white">{L["sentinel"]}</a>'
+        f'<a href="{sp}/services" class="transition-colors hover:text-white">{L["tools"]}</a>'
+        f'<a href="{sp}/solutions" class="transition-colors hover:text-white">{L["services"]}</a>'
+        f'<a href="{resources_href}" class="transition-colors hover:text-white">{L["observability"]}</a>'
+        f'<a href="{sp}/pricing" class="transition-colors hover:text-white">{L["pricing"]}</a>')
 
     # Account affordance — server-rendered 登录/Login link (same markup as Brand);
     # the acct_script below replaces it with the points menu when /u/me has a session.
@@ -248,10 +248,11 @@ def lang_chrome(lang, root, alt_url):
 
     # Footer links — same item set as Brand's footer (+ directory-specific methodology).
     footer_links = (
-        f'<a class="transition-colors hover:text-white" href="/tools/">{L["tools"]}</a>'
-        f'<a class="transition-colors hover:text-white" href="{sp}/services">{L["services"]}</a>'
+        f'<a class="transition-colors hover:text-white" href="{sp}/relay">{L["sentinel"]}</a>'
+        f'<a class="transition-colors hover:text-white" href="{sp}/services">{L["tools"]}</a>'
+        f'<a class="transition-colors hover:text-white" href="{sp}/solutions">{L["services"]}</a>'
+        f'<a class="transition-colors hover:text-white" href="{resources_href}">{L["observability"]}</a>'
         f'<a class="transition-colors hover:text-white" href="{sp}/pricing">{L["pricing"]}</a>'
-        f'<a class="transition-colors hover:text-white" href="{blog_url}">{L["blog"]}</a>'
         f'<a class="transition-colors hover:text-white" href="{root}methodology.html">{L["methodology"]}</a>'
         '<a class="ps-link" href="mailto:hi@panshi.io">hi@panshi.io</a>')
 
@@ -820,67 +821,7 @@ maturity     = min(100, popularity + maintenance + openness)</pre>
         for fn in os.listdir("static"):
             shutil.copy(os.path.join("static", fn), os.path.join(OUT, fn))
 
-    # blog — generated in BOTH languages so a zh visitor lands on Chinese content
-    # and the per-page EN/中 toggle always resolves to a real counterpart (no 404).
-    #   EN: /tools/blog/  +  /tools/blog/<slug>.html      (root "../")
-    #   ZH: /tools/blog/zh/  +  /tools/blog/zh/<slug>.html (root "../../")
-    BLOG_T = {
-        "en": {"home": "Home", "blog": "Blog", "h1": "Blog",
-               "lead": "Field notes on AI agent observability, GEO and choosing a neutral tooling stack.",
-               "meta": "Field notes on AI agent observability, GEO and neutral tooling selection.",
-               "title": lambda p: p["title"], "desc": lambda p: p["description"],
-               "body": lambda p: p["body"], "faqs": lambda p: p.get("faq", [])},
-        "zh": {"home": "首页", "blog": "博客", "h1": "博客",
-               "lead": "关于 AI agent 可观测性、GEO 以及如何选择中立工具栈的实践笔记。",
-               "meta": "关于 AI agent 可观测性、GEO 与中立工具选型的实践笔记。",
-               "title": lambda p: p.get("title_zh") or p["title"], "desc": lambda p: p.get("description_zh") or p["description"],
-               "body": lambda p: p.get("body_zh") or p["body"], "faqs": lambda p: p.get("faq_zh") or p.get("faq", [])},
-    }
-    for blang in ("en", "zh"):
-        T = BLOG_T[blang]
-        prefix = "blog/" if blang == "en" else "blog/zh/"
-        proot = "../" if blang == "en" else "../../"
-        home_href = ("../index.html" if blang == "en" else "../../index.html")
-        for post in POSTS:
-            ptitle, pdesc, pbodytext = T["title"](post), T["desc"](post), T["body"](post)
-            fhtml, fsch = faq(T["faqs"](post))
-            # cross-language counterpart for the switcher
-            alt = (f"{BASE}/blog/zh/{post['slug']}.html" if blang == "en" else f"{BASE}/blog/{post['slug']}.html")
-            pbody = f"""<div class="max-w-3xl mx-auto px-6 py-12">
-<p class="text-sm mb-2" style="color:#62666D;"><a href="{home_href}" class="hover:text-white" style="color:#62666D;">{T['home']}</a> / <a href="index.html" class="hover:text-white" style="color:#62666D;">{T['blog']}</a></p>
-<h1 class="text-3xl font-bold leading-tight" style="color:#F7F8F8;">{esc(ptitle)}</h1>
-<p class="text-sm mt-3" style="color:#62666D;">{esc(post['date'])} · {esc(', '.join(post.get('tags', [])))}</p>
-<div class="mt-8 prose-dark">{pbodytext}</div>
-{fhtml}</div>"""
-            art = {"@type": "Article", "headline": ptitle, "description": pdesc,
-                   "datePublished": post["date"], "inLanguage": ("zh-CN" if blang == "zh" else "en"),
-                   "author": {"@type": "Organization", "name": SITE},
-                   "publisher": {"@type": "Organization", "name": "Panshi"},
-                   "url": f"{BASE}/{prefix}{post['slug']}.html"}
-            pld = {"@context": "https://schema.org", "@graph": [art, fsch,
-                   crumbs([(T['home'], "index.html"), (T['blog'], f"{prefix}index.html"), (ptitle, f"{prefix}{post['slug']}.html")])]}
-            paths.append(page(f"{ptitle} | {SITE}", pdesc, pbody,
-                              f"{prefix}{post['slug']}.html", root=proot, jsonld=pld,
-                              og_type="article", lang=blang, alt_url=alt))
-        if POSTS:
-            items = "".join(
-                f'<article class="rounded-xl p-5 transition-all" style="background:#0F1011;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.borderColor=\'rgba(255,255,255,0.14)\'" onmouseout="this.style.borderColor=\'rgba(255,255,255,0.08)\'">'
-                f'<h2 class="font-semibold" style="color:#F7F8F8;"><a class="transition-colors" style="color:#F7F8F8;" href="{esc(po["slug"])}.html" onmouseover="this.style.color=\'#6E79E0\'" onmouseout="this.style.color=\'#F7F8F8\'">{esc(T["title"](po))}</a></h2>'
-                f'<p class="text-xs mt-1" style="color:#62666D;">{esc(po["date"])}</p>'
-                f'<p class="text-sm mt-2" style="color:#9CA0A8;">{esc(T["desc"](po))}</p></article>'
-                for po in POSTS)
-            bbody = f"""<div class="max-w-3xl mx-auto px-6 py-12">
-<h1 class="text-3xl font-bold" style="color:#F7F8F8;">{T['h1']}</h1>
-<p class="mt-2" style="color:#9CA0A8;">{T['lead']}</p>
-<div class="grid gap-4 mt-8">{items}</div></div>"""
-            balt = (f"{BASE}/blog/zh/" if blang == "en" else f"{BASE}/blog/")
-            bld = {"@context": "https://schema.org", "@graph": [
-                {"@type": "Blog", "name": f"{SITE} Blog", "url": f"{BASE}/{prefix}index.html",
-                 "inLanguage": ("zh-CN" if blang == "zh" else "en")},
-                crumbs([(T['home'], "index.html"), (T['blog'], f"{prefix}index.html")])]}
-            paths.append(page(f"{T['h1']} | {SITE}", T["meta"],
-                              bbody, f"{prefix}index.html", root=proot, jsonld=bld,
-                              lang=blang, alt_url=balt))
+    # blog generation removed — 全站零Blog (2026-06-21)
 
     sm = "".join(f"<url><loc>{BASE}/{p}</loc><lastmod>{BUILD_DATE}</lastmod></url>" for p in sorted(set(paths)))
     open(os.path.join(OUT,"sitemap.xml"),"w").write(f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sm}</urlset>')
@@ -902,9 +843,6 @@ maturity     = min(100, popularity + maintenance + openness)</pre>
     for t in tools:
         lt.append(f"- [{t['name']}]({BASE}/tools/{slug(t['name'])}.html): {t['one_liner']}")
     lt.append("")
-    lt.append("## Articles")
-    for po in POSTS:
-        lt.append(f"- [{po['title']}]({BASE}/blog/{po['slug']}.html): {po['description']}")
     lt.append(f"- [Methodology]({BASE}/methodology.html)")
     open(os.path.join(OUT, "llms.txt"), "w", encoding="utf-8").write("\n".join(lt) + "\n")
     # machine-readable data export (CC-BY) — crawlable by AI engines / list authors

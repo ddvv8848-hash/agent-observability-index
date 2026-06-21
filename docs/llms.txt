@@ -166,9 +166,4 @@
 - [Zenity](https://panshi.io/tools/tools/zenity.html): Security and governance platform for enterprise AI agents and low-code copilots, including agent observability.
 - [ZeroEval](https://panshi.io/tools/tools/zeroeval.html): Auto-optimizer for AI agents using calibrated LLM judges and automatic evaluations.
 
-## Articles
-- [Is your API relay watering down your models? A detection methodology](https://panshi.io/tools/blog/relay-upstream-model-fraud-detection.html): API relays often swap the Claude/GPT you pay for with cheaper models, even prompting them to claim they are still Claude. How behavioral-fingerprint detection works, why asking the model is useless, and the real accuracy.
-- [How we made a 116-tool directory citable by AI answer engines](https://panshi.io/tools/blog/geo-case-study-ai-tools-directory.html): A concrete GEO (Generative Engine Optimization) case study: the exact five changes we made to panshi.io/tools so ChatGPT, Perplexity and Google AI Overviews can cite it — with the research behind each.
-- [OpenTelemetry-native or not: the lock-in question in LLM observability](https://panshi.io/tools/blog/opentelemetry-native-llm-observability-lock-in.html): Of the 37 LLM tracing/observability tools we track, 29 are OpenTelemetry-native and 8 are not. Here is why that single fact decides your migration cost — and how to tell the difference.
-- [Self-hosting LLM observability: what we actually measured](https://panshi.io/tools/blog/self-hosting-llm-observability-what-we-measured.html): We self-hosted open-source LLM observability tools and measured the two things that matter: how much instrumentation overhead they add, and how heavy they are to run. Real numbers, honest caveats.
 - [Methodology](https://panshi.io/tools/methodology.html)
